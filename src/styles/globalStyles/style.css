@@ -11,4 +11,28 @@ a {
 
 li {
   list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.button {
+  width: 148px;
+  height: 37px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #514A7E;
+  background-color: #FFFDF5;
+  border: 1px solid #514A7E;
+}
+
+.button:hover {
+  background-color: #514A7E;
+  color: #FFFDF5;
 }/*# sourceMappingURL=style.css.map */
