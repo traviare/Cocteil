@@ -1,1 +1,29 @@
 // для переменных
+
+//цвета
+$backgroundColorDark: #514A7E;
+$backgroundColorLight: #FFFDF5;
+$textColor: #7D7D7D;
+$textColorTitle: #121212;
+
+//шрифты и текст
+$homePageTitleSize: 60px;
+$titleSizeTwo: 40px;
+$titleSizeThree: 20px;
+$homePagetextSize: 16px;
+$textSizeOne: 14px;
+$textSizeTwo: 12px;
+$fontFamilyText: "Roboto",
+sans-serif;
+
+@mixin fontText {
+    font-family: $fontFamilyText;
+    font-weight: 100;
+    font-style: normal;
+}
+
+@mixin fontTextRegular {
+    font-family: $fontFamilyText;
+    font-weight: 400;
+    font-style: normal;
+}
