@@ -1,0 +1,16 @@
+<svg width="36.000000" height="36.000000" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip144_152">
+			<rect id="clarity:menu-line" rx="-0.500000" width="35.000000" height="35.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="clarity:menu-line" rx="-0.500000" width="35.000000" height="35.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip144_152)">
+		<path id="Vector" d="M32 29L4 29C3.73 29 3.48 28.89 3.29 28.7C3.1 28.51 3 28.26 3 28C3 27.73 3.1 27.48 3.29 27.29C3.48 27.1 3.73 27 4 27L32 27C32.26 27 32.51 27.1 32.7 27.29C32.89 27.48 33 27.73 33 28C33 28.26 32.89 28.51 32.7 28.7C32.51 28.89 32.26 29 32 29Z" fill="#121212" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M32 19L4 19C3.73 19 3.48 18.89 3.29 18.7C3.1 18.51 3 18.26 3 18C3 17.73 3.1 17.48 3.29 17.29C3.48 17.1 3.73 17 4 17L32 17C32.26 17 32.51 17.1 32.7 17.29C32.89 17.48 33 17.73 33 18C33 18.26 32.89 18.51 32.7 18.7C32.51 18.89 32.26 19 32 19Z" fill="#121212" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M32 9L4 9C3.73 9 3.48 8.89 3.29 8.7C3.1 8.51 3 8.26 3 8C3 7.73 3.1 7.48 3.29 7.29C3.48 7.1 3.73 7 4 7L32 7C32.26 7 32.51 7.1 32.7 7.29C32.89 7.48 33 7.73 33 8C33 8.26 32.89 8.51 32.7 8.7C32.51 8.89 32.26 9 32 9Z" fill="#121212" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

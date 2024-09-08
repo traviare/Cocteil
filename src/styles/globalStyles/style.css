@@ -35,4 +35,24 @@ li {
 .button:hover {
   background-color: #514A7E;
   color: #FFFDF5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 49px;
+  position: sticky;
+}
+
+.right-group {
+  display: flex;
+}
+
+.header-form {
+  display: flex;
+}
+.header-form__btn {
+  background-color: inherit;
+  border: none;
 }/*# sourceMappingURL=style.css.map */
