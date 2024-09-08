@@ -13,6 +13,17 @@ li {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+}
+
+.body {
+  background-color: #FFFDF5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -35,4 +46,124 @@ li {
 .button:hover {
   background-color: #514A7E;
   color: #FFFDF5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 49px;
+  position: sticky;
+}
+
+.menu-btn {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.right-group a:not(:last-child) {
+  margin-right: 20px;
+}
+
+.right-group {
+  display: flex;
+}
+
+.header-form {
+  display: flex;
+  margin-right: 20px;
+}
+.header-form__btn {
+  background-color: inherit;
+  border: none;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.header-form__input {
+  background-color: inherit;
+  border: none;
+  border-bottom: 0.5px solid #7D7D7D;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #7D7D7D;
+  font-size: 12px;
+  width: 308px;
+  outline: none;
+}
+
+.right-group a {
+  display: flex;
+  align-items: end;
+}
+
+.header-form__input:focus {
+  border-bottom: 1px solid #7D7D7D;
+  color: #121212;
+}
+
+.home-page__wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.home-page__link-wrap {
+  width: 193px;
+  margin: 0 auto;
+}
+
+.wrap__left-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-content__img {
+  width: 278px;
+  height: 242px;
+}
+.left-content__title {
+  font-size: 60px;
+  font-weight: 300;
+  color: #121212;
+  margin-top: 60px;
+  max-width: 537px;
+}
+.left-content__title-accent {
+  font-family: "Bad Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #514A7E;
+}
+.left-content__text {
+  max-width: 249px;
+  margin-top: 60px;
+}
+
+.right-content__img {
+  width: 476px;
+  height: 416px;
+}
+
+.link__content-wrap {
+  width: 193px;
+  height: 193px;
+  border-radius: 50%;
+  border: 1px solid #514A7E;
+  display: flex;
+  align-items: center;
+}
+.link__text {
+  color: #514A7E;
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 38px;
+}
+.link__icon {
+  margin-left: 77px;
+}
+
+.link__content-wrap:hover {
+  background-color: #514A7E;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }/*# sourceMappingURL=style.css.map */

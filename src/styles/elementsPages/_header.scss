@@ -1,0 +1,54 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 49px;
+    position: sticky;
+}
+
+.menu-btn {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.right-group a:not(:last-child) {
+    margin-right: 20px;
+}
+
+.right-group {
+    display: flex;
+}
+
+.header-form {
+    display: flex;
+    margin-right: 20px;
+
+    &__btn {
+        background-color: inherit;
+        border: none;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    &__input {
+        background-color: inherit;
+        border: none;
+        border-bottom: 0.5px solid $textColor;
+        @include fontText;
+        color: $textColor;
+        font-size: $textSizeTwo;
+        width: 308px;
+        outline: none;
+    }
+}
+
+.right-group a {
+    display: flex;
+    align-items: end;
+}
+
+.header-form__input:focus {
+    border-bottom: 1px solid $textColor;
+    color: $textColorTitle;
+}
