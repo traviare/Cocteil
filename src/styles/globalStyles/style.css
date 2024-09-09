@@ -35,4 +35,78 @@ li {
 .button:hover {
   background-color: #514A7E;
   color: #FFFDF5;
+}
+
+.faqS {
+  background-color: #FFFDF5;
+  margin: 150px 135px 150px 135px;
+  position: relative;
+}
+
+.faqS__title {
+  color: #121212;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 87.3%;
+  text-align: left;
+}
+
+.faqS__span {
+  position: absolute;
+  top: 8%;
+  left: 47%;
+  color: #514A7E;
+  font-family: Bad Script;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 87.3%;
+  text-align: left;
+}
+
+.faqS__accordion {
+  margin-top: 60px;
+}
+
+.faqS__accordion-trigger {
+  color: #121212;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 23px;
+  text-align: left;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  border-bottom: 0.5px solid #7D7D7D;
+  padding-bottom: 10px;
+  margin-bottom: 19px;
+  background-color: transparent;
+  position: relative;
+}
+
+.faqS__accordion-content {
+  display: none;
+}
+
+.faqS__accordion-item.open .faqS__accordion-content {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.faqS__accordion-trigger::after {
+  content: "+";
+  position: absolute;
+  font-size: 24px;
+  right: 10px;
+  transition: transform 0.3s;
+  color: #514A7E;
+}
+
+.faqS__accordion-item.active .faqS__accordion-trigger::after {
+  transform: rotate(45deg);
 }/*# sourceMappingURL=style.css.map */
