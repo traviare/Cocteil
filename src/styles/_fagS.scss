@@ -16,11 +16,10 @@ position:absolute;
 top: 8%;
 left: 47%;//при разрешении 1440px
 color: $backgroundColorDark;
-font-family: Bad Script;
 font-size: $titleSizeTwo;
-font-weight: 400;
 line-height: 87.3%;
 text-align: left; 
+@include fontBadScript;
 }
 .faqS__accordion{
 margin-top:60px;
@@ -43,11 +42,13 @@ position: relative;
 }
 .faqS__accordion-content{
 display:none;
+color: black;
 }
 .faqS__accordion-item.open .faqS__accordion-content {
 display: block;
 margin-bottom: 20px;
 font-size: $titleSizeThree;
+@include fontText;
 }
 .faqS__accordion-trigger::after {
 content: '+';
