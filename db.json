@@ -1,0 +1,62 @@
+{
+  "products-list": [
+    {
+      "id": "1",
+      "name": "Платье женское",
+      "article": "09456786",
+      "color": "красный",
+      "size": 35,
+      "price": 10,
+      "categoty": "",
+      "picture": "dress1.png"
+    },
+    {
+      "id": "2"
+    },
+    {
+      "id": "3"
+    }
+  ],
+  "cart": [
+    {
+      "id": "1",
+      "name": "Платье женское",
+      "article": "09456786",
+      "color": "красный",
+      "size": 35,
+      "price": 10,
+      "quantity": 4,
+      "picture": "dress1.png"
+    },
+    {
+      "id": "2",
+      "name": "Платье женское",
+      "article": "09456787",
+      "color": "красный",
+      "size": 35,
+      "price": 30,
+      "quantity": 8,
+      "picture": "dress2.png"
+    },
+    {
+      "id": "3",
+      "name": "Платье женское",
+      "article": "09456788",
+      "color": "красный",
+      "size": 35,
+      "price": 30,
+      "quantity": 11,
+      "picture": "dress1.png"
+    },
+    {
+      "id": "4",
+      "name": "Платье женское",
+      "article": "09456789",
+      "color": "красный",
+      "size": 35,
+      "price": 30,
+      "quantity": 3,
+      "picture": "dress2.png"
+    }
+  ]
+}
