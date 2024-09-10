@@ -5,13 +5,15 @@ import { burgerMenu } from "./vars";
 
 // Появление бургер меню
 export function openBurgerMenu() {
-  burgerMenu.style.display = "block";
+  burgerMenu.classList.remove("burger-menu-display");
 }
 
 // Закрытие бургер меню
-// export function closeBurgerMenu() {
-//   burgerMenu.style.display = "none";
-// }
+export function closeBurgerMenu() {
+  burgerMenu.classList.add("burger-menu-display");
+}
+
+//end
 
 // Функции для аккордеона / faqS
 const toggleAccordionItem = (item) => {

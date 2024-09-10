@@ -1,13 +1,18 @@
 .burger-menu {
     position: absolute;
-    display: none;
     top: 0;
     left: 0;
+    right: 0;
     z-index: 1000;
-    width: 278px;
     height: 890px;
-    background-color: $backgroundColorMenu;
     transition: 5s;
+
+    &__wrap {
+        width: 278px;
+        height: 100%;
+        background-color: $backgroundColorMenu;
+        margin-left: 15px;
+    }
 
     &__logo {
         width: 118px;
@@ -27,6 +32,10 @@
         padding-bottom: 20px;
 
     }
+}
+
+.burger-menu-display {
+    display: none;
 }
 
 .burger-menu__li:hover {

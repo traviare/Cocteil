@@ -4,16 +4,16 @@
     background-color: $backgroundColorLight;
     padding-top: 49px;
 
+    &__container {
+        position: relative;
+    }
+
     &__menu {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-}
-
-.left-group {
-    position: relative;
 }
 
 .menu-btn {
