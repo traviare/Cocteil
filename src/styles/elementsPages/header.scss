@@ -1,9 +1,19 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 49px;
     position: sticky;
+    top: 0px;
+    background-color: $backgroundColorLight;
+    padding-top: 49px;
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+.left-group {
+    position: relative;
 }
 
 .menu-btn {

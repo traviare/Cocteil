@@ -10,3 +10,9 @@ export const productsContainer = document.querySelector(".shopping-cart");
 export const totalQuantity = document.querySelectorAll(".total-quantity");
 export const totalPrice = document.querySelector(".total-info__total-price");
 /*end*/
+
+/*Violetta*/
+export const body = document.querySelector(".body");
+export const burgerMenuBtn = document.querySelector(".menu-btn");
+export const burgerMenu = document.querySelector(".burger-menu");
+/*end*/

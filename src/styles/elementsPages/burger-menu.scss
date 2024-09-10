@@ -1,0 +1,36 @@
+.burger-menu {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 278px;
+    height: 890px;
+    background-color: $backgroundColorMenu;
+    transition: 5s;
+
+    &__logo {
+        width: 118px;
+        height: 118px;
+    }
+
+    &__ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 18px;
+    }
+
+    &__li {
+        color: $backgroundColorLight;
+        @include fontText;
+        font-size: $textSizeOne;
+        padding-bottom: 20px;
+
+    }
+}
+
+.burger-menu__li:hover {
+    @include fontTextRegular;
+    font-size: $titleSizeThree;
+    transition: 0.2s;
+}
