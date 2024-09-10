@@ -14,7 +14,8 @@ $titleSizeThree: 20px;
 $homePagetextSize: 16px;
 $textSizeOne: 14px;
 $textSizeTwo: 12px;
-$fontFamilyText: "Roboto", sans-serif;
+$fontFamilyText: "Roboto",
+sans-serif;
 
 @mixin fontText {
   font-family: $fontFamilyText;
@@ -46,6 +47,7 @@ $fontFamilyText: "Roboto", sans-serif;
 @mixin cursorPointer {
   &:hover {
     cursor: pointer;
+
   }
 }
 
@@ -61,4 +63,5 @@ $fontFamilyText: "Roboto", sans-serif;
   background: transparent;
   border: none;
 }
+
 /*end*/
