@@ -1,5 +1,12 @@
 @import "../_template.scss";
-@import "../vars.scss";
-@import "../elementsPages/_container.scss";
-@import "../elementsPages/_button.scss";
+@import "../_vars.scss";
+@import "../elementsPages/body.scss";
+@import "../elementsPages/container.scss";
+@import "../elementsPages/button.scss";
+@import "../elementsPages/header.scss";
+@import "../elementsPages/burger-menu.scss";
+@import "../elementsPages/home-page.scss";
+@import "../elementsPages/fagS.scss";
+@import "../elementsPages/shopping-cart.scss";
+@import "../elementsPages/delivery-information.scss";
 @import "../elementsPages/_card.scss";

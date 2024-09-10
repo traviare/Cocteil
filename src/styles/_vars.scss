@@ -1,10 +1,12 @@
 // для переменных
 
 //цвета
-$backgroundColorDark: #514A7E;
-$backgroundColorLight: #FFFDF5;
-$textColor: #7D7D7D;
+$backgroundColorDark: #514a7e;
+$backgroundColorLight: #fffdf5;
+$backgroundColorMenu: #121212;
+$textColor: #7d7d7d;
 $textColorTitle: #121212;
+$shadowColor: rgba(81, 74, 126, 0.4);
 
 //шрифты и текст
 $homePageTitleSize: 60px;
@@ -17,13 +19,56 @@ $fontFamilyText: "Roboto",
 sans-serif;
 
 @mixin fontText {
-    font-family: $fontFamilyText;
-    font-weight: 100;
-    font-style: normal;
+  font-family: $fontFamilyText;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@mixin fontTextLight {
+  font-family: $fontFamilyText;
+  font-weight: 300;
+  font-style: normal;
 }
 
 @mixin fontTextRegular {
-    font-family: $fontFamilyText;
-    font-weight: 400;
-    font-style: normal;
+  font-family: $fontFamilyText;
+  font-weight: 400;
+  font-style: normal;
 }
+
+@mixin fontBadScript {
+  font-family: "Bad Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Dasha*/
+@mixin descriptionTextStyle {
+  font-family: $fontFamilyText;
+  font-size: $textSizeOne;
+  font-weight: 300;
+  line-height: 118%;
+  color: $textColor;
+}
+
+@mixin cursorPointer {
+  &:hover {
+    cursor: pointer;
+
+  }
+}
+
+@mixin roundButton {
+  background-color: $backgroundColorDark;
+  border: none;
+  border-radius: 100%;
+  box-shadow: 0 4px 10px 0 $shadowColor;
+}
+
+@mixin transparentButton {
+  outline: none;
+  background: transparent;
+  border: none;
+}
+
+/*end*/
