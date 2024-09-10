@@ -48,7 +48,7 @@ function addProductToContainer(product) {
   const totalPriceProduct = (product.price * product.quantity).toFixed(2);
   const productElement = `<div class="product">
             <div class="product__image-container">
-              <img class="product__image" src="../src/assets/images/products/${product.picture}" alt="picture of product" />
+              <img class="product__image" src="../src/assets/images/cardImages/${product.picture}" alt="picture of product" />
             </div>
             <div class="product__description">
               <div class="product__names">
@@ -67,15 +67,15 @@ function addProductToContainer(product) {
               </div>
               <div class="product__quantity">
                 <button class="product__button product__minus-btn">
-                  <img src="../src/assets/images/minus-btn.svg" alt="icon minus" />
+                  <img src="../src/assets/images/globalImages/minus-btn.svg" alt="icon minus" />
                 </button>
                 <p class="product__quantity-value">${product.quantity}</p>
                 <button class="product__button product__plus-btn">
-                  <img src="../src/assets/images/plus-btn.svg" alt="icon plus" />
+                  <img src="../src/assets/images/globalImages/plus-btn.svg" alt="icon plus" />
                 </button>
               </div>
                 <button class="product__delete-btn">
-                  <img src="../src/assets/images/delete-btn.svg" alt="icon for delete product" />Удалить
+                  <img src="../src/assets/images/globalImages/delete-btn.svg" alt="icon for delete product" />Удалить
                 </button>
             </div>
             <div class="product__price">
