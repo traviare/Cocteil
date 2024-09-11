@@ -3,6 +3,7 @@
 //цвета
 $backgroundColorDark: #514a7e;
 $backgroundColorLight: #fffdf5;
+$backgroundColorMenu: #121212;
 $textColor: #7d7d7d;
 $textColorTitle: #121212;
 $shadowColor: rgba(81, 74, 126, 0.4);
@@ -20,6 +21,12 @@ sans-serif;
 @mixin fontText {
   font-family: $fontFamilyText;
   font-weight: 100;
+  font-style: normal;
+}
+
+@mixin fontTextLight {
+  font-family: $fontFamilyText;
+  font-weight: 300;
   font-style: normal;
 }
 

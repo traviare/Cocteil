@@ -1,0 +1,45 @@
+.burger-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 890px;
+    transition: 5s;
+
+    &__wrap {
+        width: 278px;
+        height: 100%;
+        background-color: $backgroundColorMenu;
+        margin-left: 15px;
+    }
+
+    &__logo {
+        width: 118px;
+        height: 118px;
+    }
+
+    &__ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 18px;
+    }
+
+    &__li {
+        color: $backgroundColorLight;
+        @include fontText;
+        font-size: $textSizeOne;
+        padding-bottom: 20px;
+
+    }
+}
+
+.burger-menu-display {
+    display: none;
+}
+
+.burger-menu__li:hover {
+    @include fontTextRegular;
+    font-size: $titleSizeThree;
+    transition: 0.2s;
+}

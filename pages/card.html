@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../src/styles/globalStyles/style.scss" />
+  <title>Card</title>
+</head>
+
+<body>
+  <div class="container card__container">
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__menu">
+          <div class="left-group">
+            <button class="menu-btn">
+              <img class="menu-btn__icon" src="../src/assets/images/globalImages/header_menu-line.svg" alt="">
+            </button>
+            <div class="burger-menu burger-menu-display">
+              <div class="burger-menu__wrap">
+                <img class="burger-menu__logo" src="../src/assets/images/globalImages/cocteil-logo.svg" alt="">
+                <nav class="burger-menu__nav">
+                  <ul class="burger-menu__ul">
+                    <li class="burger-menu__li"><a class="burger-menu__a" href="#">Джинсы</a></li>
+                    <li class="burger-menu__li"><a class="burger-menu__a" href="#">Блузки и рубашки</a></li>
+                    <li class="burger-menu__li"><a class="burger-menu__a" href="#">Платья и сарафаны</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="right-group">
+            <form class="header-form" action="">
+              <button class="header-form__btn">
+                <img src="../src/assets/images/globalImages/header_search-line.svg" alt="">
+              </button>
+              <input class="header-form__input" type="text" placeholder="Поиск">
+            </form>
+            <a href="#"><img src="../src/assets/images/globalImages/header_avatar-line.svg" alt=""
+                class="header-authorization"></a>
+            <a href="./pages/shopping-cart.html"><img
+                src="./src/assets/images/globalImages/header_shopping-bag-line.svg" alt="" class="header-basket"></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="breadcrumbs"></div>
+    <div class="card-title">
+      <p class="card-title__text">Блузка женская</p>
+      <p class="card-title__id">Арт 06578990-086</p>
+    </div>
+    <div class="card-content">
+      <div class="card-content__left">
+        <div class="card-slider">
+          <div class="card-slider__main">
+            <img src="../src/assets/images/cardImages/card-main.png" class="card-slider__main-image" alt="" />
+            <button class="card-slider__main-arrow">
+              <img src="../src/assets/images/cardImages/main-arrow.png" alt="" />
+            </button>
+          </div>
+          <div class="card-slider__list">
+            <div class="card-slider__item">
+              <img src="../src/assets/images/cardImages/card-slider1.png" alt="" />
+            </div>
+            <div class="card-slider__item">
+              <img src="../src/assets/images/cardImages/card-slider2.png" alt="" />
+            </div>
+            <div class="card-slider__item">
+              <img src="../src/assets/images/cardImages/card-slider3.png" alt="" />
+            </div>
+            <div class="card-slider__item">
+              <img src="../src/assets/images/cardImages/card-slider4.png" alt="" />
+              <button class="card-slider__item-arrow">
+                <img src="../src/assets/images/cardImages/item-arrow.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-content__right">
+        <div class="card-price">50.00 б.р.</div>
+        <div class="card-color">
+          <div class="card-color__title">Цвета</div>
+          <div class="card-color__select">
+            <ul class="card-color__select-list">
+              <li class="card-color__select-item">
+                <button class="color__select-btn color-btn__white"></button>
+              </li>
+              <li class="card-color__select-item">
+                <button class="color__select-btn color-btn__black"></button>
+              </li>
+              <li class="card-color__select-item">
+                <button class="color__select-btn color-btn__green"></button>
+              </li>
+              <li class="card-color__select-item">
+                <button class="color__select-btn color-btn__serise"></button>
+              </li>
+              <li class="card-color__select-item">
+                <button class="color__select-btn color-btn__yellow"></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-size">
+          <div class="card-size__title">Размер</div>
+          <div class="card-size__select">
+            <ul class="card-size__select-list">
+              <li class="card-size__select-item">
+                <button class="size__select-btn">
+                  <div class="size-letter">S</div>
+                  <div class="size-figure">42</div>
+                </button>
+              </li>
+              <li class="card-size__select-item">
+                <button class="size__select-btn">
+                  <p class="size-letter">M</p>
+                  <p class="size-figure">44</p>
+                </button>
+              </li>
+              <li class="card-size__select-item">
+                <button class="size__select-btn">
+                  <div class="size-letter">L</div>
+                  <div class="size-figure">46</div>
+                </button>
+              </li>
+              <li class="card-size__select-item">
+                <button class="size__select-btn">
+                  <div class="size-letter">XL</div>
+                  <div class="size-figure">48</div>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="card-size__table">
+            <a href="#" class="card-size__table-link">Таблица размеров</a>
+          </div>
+        </div>
+        <div class="to-cart">
+          <button class="to-cart__btn">
+            <div class="to-cart__group">
+              <span class="to-cart__text">В корзину</span>
+              <img class="to-cart__image" src="../src/assets/images/cardImages/cart-icon.png" alt="cart icon" />
+            </div>
+          </button>
+          <div class="to-cart__favorite">
+            <img src="../src/assets/images/cardImages/heart-icon.png" alt="heart icon" class="to-cart__favorite-icon" />
+          </div>
+        </div>
+        <div class="card-rate">
+          <img src="../src/assets/images/cardImages/rate-stars.png" class="card-rate__stars" alt="" />
+          <div class="card-rate__links">
+            <a href="#" class="card-rate__links-view">Смотреть все отзывы</a>
+            <a href="#" class="card-rate__links-set">Добавить отзыв</a>
+          </div>
+        </div>
+        <div class="card-desc">
+          <p class="card-desc__title">Описание</p>
+          <p class="card-desc__text">
+            Здесь будет какое-то неболшое описание о вещи Здесь будет какое-то
+            неболшое описание о вещи
+          </p>
+        </div>
+      </div>
+    </div>
+    <button class="page-up__btn"><a href="#"></a></button>
+    <div class="reviews">
+      <h2 class="reviews__title">Отзывы о товаре</h2>
+      <div class="reviews__fullview">
+        <div class="review">
+          <div class="review__avatar">
+            <img src="../src/assets/images/cardImages/review-avatar1.png" alt="" class="review__avatar-image" />
+          </div>
+          <div class="review__content">
+            <div class="review__rate">
+              <img src="../src/assets/images/cardImages/review-stars5.png" alt="" class="review__rate-image" />
+            </div>
+            <div class="review__text">
+              Платье село отлично! Хороший материал. Буду заказывать еще,
+              осталась очень довольна.
+            </div>
+            <div class="review__data">
+              <div class="review__author">Анна Котлова</div>
+              <div class="review__date">23.05.2021</div>
+            </div>
+          </div>
+        </div>
+        <div class="review">
+          <div class="review__avatar">
+            <img src="../src/assets/images/cardImages/review-avatar2.png" alt="" class="review__avatar-image" />
+          </div>
+          <div class="review__content">
+            <div class="review__rate">
+              <img src="../src/assets/images/cardImages/review-stars5.png" alt="" class="review__rate-image" />
+            </div>
+            <div class="review__text">
+              Заказываю постоянно одежду в этом магазине! Хорошие цены,
+              хорошее качество! Приятные менеджеры! Все быстро, доступно,
+              удобно! Спасибо.
+            </div>
+            <div class="review__data">
+              <div class="review__author">Кристина Василюк</div>
+              <div class="review__date">23.05.2021</div>
+            </div>
+          </div>
+        </div>
+        <button class="review-next__btn">
+          <img src="../src/assets/images/cardImages/review-next-btn.png" alt="review next button"
+            class="review-next__image" />
+        </button>
+      </div>
+      <button class="review__btn">Добавить отзыв</button>
+    </div>
+  </div>
+  <script type="module" src="../main.js"></script>
+</body>
+
+</html>
