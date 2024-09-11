@@ -1,0 +1,26 @@
+.page-nav {
+    font-size: $titleSizeThree;
+    @include fontTextLight;
+    color: $textColor;
+    display: flex;
+}
+
+.page-nav ul {
+    display: flex;
+}
+
+.page-nav li {
+    margin-right: 5px;
+}
+
+.page-nav li:not(:last-child)::after {
+    content: "/";
+}
+
+.page-nav li:last-child {
+    color: $backgroundColorDark;
+}
+
+.page-nav li:not(:last-child):hover {
+    color: $textColorTitle;
+}
