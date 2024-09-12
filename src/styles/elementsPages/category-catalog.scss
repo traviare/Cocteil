@@ -50,8 +50,8 @@
 }
 
 .product-filtr {
-    margin-right: 61px;
-    max-width: 138px;
+    margin-right: 41px;
+    width: 158px;
 
     &__btn-name {
         color: $textColorTitle;
@@ -65,4 +65,25 @@
         display: flex;
         align-items: end;
     }
+}
+
+.price-range {
+
+    &__inputs {
+        display: flex;
+        gap: 10px;
+        font-size: 11px;
+    }
+
+    &__field {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+}
+
+.price-range__field input {
+    width: 45px;
+    height: 100%;
+    font-size: 11px;
 }
