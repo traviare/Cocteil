@@ -1,16 +1,14 @@
-@import "../vars";
-@import "../template";
-@import "./delivery-information.scss";
-
 .main {
   min-height: 100vh;
   padding: 40px 10%;
   background-color: $backgroundColorLight;
+
   &__top-block {
     display: flex;
     align-items: center;
     margin-bottom: 55px;
   }
+
   &__back-button {
     width: 43px;
     height: 43px;
@@ -18,6 +16,7 @@
     @include roundButton;
     @include cursorPointer;
   }
+
   &__title {
     margin-right: 16px;
     @include descriptionTextStyle;
@@ -25,20 +24,24 @@
     line-height: 87%;
     color: $textColorTitle;
   }
+
   &__icon-container {
     width: 34px;
     height: 34px;
   }
+
   &__icon {
     width: 100%;
     height: 100%;
   }
+
   &__quantity {
     align-self: flex-start;
     @include fontTextRegular;
     font-size: $homePagetextSize;
     color: $backgroundColorDark;
   }
+
   &__circle-icon {
     position: fixed;
     top: 50%;
@@ -52,6 +55,7 @@
   flex-direction: column;
   gap: 60px;
   width: 76%;
+
   &__button {
     width: 150px;
     height: 37px;
@@ -68,40 +72,48 @@
 .product {
   display: flex;
   gap: 50px;
+
   &__image-container {
     width: 178px;
     height: 165px;
     box-shadow: 0 4px 10px 0 $shadowColor;
   }
+
   &__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   &__description {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+
   &__names {
     display: flex;
     align-items: center;
     gap: 14px;
   }
+
   &__title {
     @include fontTextRegular;
     font-size: $titleSizeThree;
     line-height: 118%;
     color: $textColorTitle;
   }
+
   &__art {
     @include descriptionTextStyle;
   }
+
   &__characteristics {
     display: flex;
     gap: 20px;
     @include descriptionTextStyle;
   }
+
   &__quantity {
     display: flex;
     justify-content: space-around;
@@ -109,6 +121,7 @@
     width: 100px;
     height: 32px;
   }
+
   &__button {
     display: flex;
     justify-content: center;
@@ -118,6 +131,7 @@
     @include transparentButton;
     @include cursorPointer;
   }
+
   &__quantity-value {
     @include fontTextRegular;
     font-size: $titleSizeThree;
@@ -134,26 +148,31 @@
     @include transparentButton;
     @include cursorPointer;
   }
+
   &__price {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+
   &__price &__title {
     margin-bottom: 30px;
   }
+
   &__price-value {
     @include fontTextRegular;
     font-size: $titleSizeThree;
     color: $backgroundColorDark;
   }
+
   &__delivery-info {
     display: flex;
     gap: 7px;
     @include descriptionTextStyle;
     @include transparentButton;
-    color: $backgroundColorDark;
     @include cursorPointer;
+    color: $backgroundColorDark;
+
     &::after {
       content: "";
       width: 11px;
@@ -171,17 +190,20 @@
   display: flex;
   align-items: flex-end;
   gap: 50px;
+
   &__title {
     @include fontTextRegular;
     font-size: $titleSizeThree;
     line-height: 118%;
     color: $textColorTitle;
   }
+
   &__total-price {
     padding-left: 10px;
     font-size: $titleSizeTwo;
     color: $backgroundColorDark;
   }
+
   &__description {
     @include descriptionTextStyle;
   }

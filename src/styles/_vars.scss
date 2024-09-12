@@ -3,6 +3,7 @@
 //цвета
 $backgroundColorDark: #514a7e;
 $backgroundColorLight: #fffdf5;
+$backgroundColorMenu: #121212;
 $textColor: #7d7d7d;
 $textColorTitle: #121212;
 $shadowColor: rgba(81, 74, 126, 0.4);
@@ -14,11 +15,18 @@ $titleSizeThree: 20px;
 $homePagetextSize: 16px;
 $textSizeOne: 14px;
 $textSizeTwo: 12px;
-$fontFamilyText: "Roboto", sans-serif;
+$fontFamilyText: "Roboto",
+sans-serif;
 
 @mixin fontText {
   font-family: $fontFamilyText;
   font-weight: 100;
+  font-style: normal;
+}
+
+@mixin fontTextLight {
+  font-family: $fontFamilyText;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -46,6 +54,7 @@ $fontFamilyText: "Roboto", sans-serif;
 @mixin cursorPointer {
   &:hover {
     cursor: pointer;
+
   }
 }
 
@@ -61,4 +70,5 @@ $fontFamilyText: "Roboto", sans-serif;
   background: transparent;
   border: none;
 }
+
 /*end*/

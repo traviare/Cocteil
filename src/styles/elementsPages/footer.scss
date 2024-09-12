@@ -1,0 +1,64 @@
+.footer {
+    font-family: $fontFamilyText;
+    background-color: $backgroundColorDark;
+    color: $backgroundColorLight;
+    padding: 81px 120px 85px;
+    
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title{
+        font-size: $titleSizeThree;
+        margin-bottom: 20px;
+    }
+
+    &__description-contacts {
+        font-size: $textSizeTwo;
+    }
+}
+
+.footer-nav {
+    &__item {
+        font-size: $textSizeTwo;
+        margin-bottom: 10px;
+    }
+}
+
+
+.footer-socials{
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__phone {
+        a {
+            display: flex;
+            align-items: flex-end;
+            gap: 11px;
+        }
+    }
+
+    &__hours {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 11px;
+    }
+
+}
+
+
+.footer-logo {
+    align-self: flex-end;
+    max-width: 84px;
+    max-height: 84px;
+
+    img {
+        width: 100%;
+    }
+}

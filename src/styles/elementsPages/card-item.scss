@@ -1,0 +1,51 @@
+.card-item {
+  width: 24%;
+
+  &__image {
+    object-fit: cover;
+    margin-bottom: 5px;
+  }
+
+  &__price {
+    font-size: 14px;
+    @include fontTextRegular;
+    color: $textColorTitle;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  &__name {
+    font-size: 12px;
+    @include fontTextRegular;
+    color: $textColor;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 4px;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__btn {
+    padding: 10px 9px 10px 25px;
+    @include fontTextRegular;
+    font-size: 14px;
+    color: $textColorTitle;
+    border: 0.5px solid #514a7e;
+    background: transparent;
+  }
+
+  &__link-arrow {
+    margin-left: 15px;
+  }
+}
