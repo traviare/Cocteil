@@ -25,7 +25,7 @@
       "color": "синий",
       "size": 35,
       "price": 40,
-      "quantity":1,
+      "quantity": 1,
       "picture": "dress1.png"
     },
     {
@@ -35,7 +35,7 @@
       "color": "красный",
       "size": 36,
       "price": 30,
-      "quantity":4,
+      "quantity": 5,
       "picture": "dress2.png"
     },
     {
@@ -45,7 +45,7 @@
       "color": "зеленый",
       "size": 34,
       "price": 20,
-      "quantity":2,
+      "quantity": 2,
       "picture": "dress2.png"
     },
     {
@@ -55,7 +55,7 @@
       "color": "красный",
       "size": 38,
       "price": 10,
-      "quantity":3,
+      "quantity": 3,
       "picture": "dress1.png"
     }
   ]

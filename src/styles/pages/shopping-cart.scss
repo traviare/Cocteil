@@ -152,8 +152,8 @@
     gap: 7px;
     @include descriptionTextStyle;
     @include transparentButton;
-    @include cursorPointer;
     color: $backgroundColorDark;
+    @include cursorPointer;
     &::after {
       content: "";
       width: 11px;
