@@ -15,3 +15,8 @@ export const totalPrice = document.querySelector(".total-info__total-price");
 export const burgerMenuBtn = document.querySelector(".menu-btn");
 export const burgerMenu = document.querySelector(".burger-menu");
 /*end*/
+
+/*Alice*/
+export const itemsToShow = 3; // Количество карточек для отображения
+export const carouselInner = document.querySelector('.buyNow__carousel-inner');
+/*end*/ 

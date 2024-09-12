@@ -2,9 +2,7 @@
 background-color: $backgroundColorLight;
 max-width: 1200px;
 margin: 0 auto;
-padding-right: 15px;
-padding-left: 15px;
-padding-top: 5%;
+padding: 5% 15px;
 }
 .faqS__title{
 color: $textColorTitle;
@@ -21,9 +19,8 @@ line-height: 87.3%;
 text-align: left; 
 @include fontBadScript;
 }
-.faqS__accordion{
-margin-top:60px;
-}
+.faqS__accordion{margin-top:60px;}
+
 .faqS__accordion-trigger{
 color: $textColorTitle;
 font-size: $titleSizeThree;

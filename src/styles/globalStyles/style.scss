@@ -1,5 +1,5 @@
-@import "../_template.scss";
-@import "../_vars.scss";
+@import "/src/styles/_template";
+@import "/src/styles/_vars";
 @import "../elementsPages/body.scss";
 @import "../elementsPages/container.scss";
 @import "../elementsPages/button.scss";
@@ -9,5 +9,9 @@
 @import "../elementsPages/fagS.scss";
 @import "../elementsPages/shopping-cart.scss";
 @import "../elementsPages/delivery-information.scss";
-@import "../elementsPages/_card.scss";
+@import "../elementsPages/footer.scss";
+@import "../elementsPages/card.scss";
+@import "../elementsPages/page-nav.scss";
+@import "../elementsPages/category-catalog.scss";
+@import "../elementsPages/card-item.scss";
 @import "../elementsPages/_flashSale";
