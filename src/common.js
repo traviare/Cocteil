@@ -55,7 +55,15 @@ export async function loadProducts() {
 }
 
 function displayProducts(products) {
-  products.forEach(product => {
+  const filteredProducts = products.filter(product => product.discount && product.discount > 0);
+
+  if (filteredProducts.length === 0) {
+      carouselInner.innerHTML = '<p>Нет доступных товаров со скидкой.</p>';
+      return;
+  }
+
+  // Отображаем отфильтрованные продукты
+  filteredProducts.forEach(product => {
       carouselInner.innerHTML += `
       <div class='buyNow__carousel-card'>
               <img class='buyNow__carousel-img' src='${product.picture[0]}' alt='${product.name}'/>
