@@ -6,8 +6,78 @@
     <title>Document</title>
     <link rel="stylesheet" href="../src/styles/globalStyles/style.scss" />
   </head>
-  <body>
-    <main>
+  <body class="body-flex">
+    <!-- Violetta -->
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__menu">
+          <div class="left-group">
+            <button class="menu-btn">
+              <img
+                class="menu-btn__icon"
+                src="../src/assets/images/globalImages/header_menu-line.svg"
+                alt=""
+              />
+            </button>
+            <div class="burger-menu burger-menu-display">
+              <div class="burger-menu__wrap">
+                <img
+                  class="burger-menu__logo"
+                  src="../src/assets/images/globalImages/cocteil-logo.svg"
+                  alt=""
+                />
+                <nav class="burger-menu__nav">
+                  <ul class="burger-menu__ul">
+                    <li class="burger-menu__li">
+                      <a
+                        class="burger-menu__a"
+                        href="./pages/jeans-catalog.html"
+                        >Джинсы</a
+                      >
+                    </li>
+                    <li class="burger-menu__li">
+                      <a class="burger-menu__a" href="#">Блузки и рубашки</a>
+                    </li>
+                    <li class="burger-menu__li">
+                      <a class="burger-menu__a" href="#">Платья и сарафаны</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="right-group">
+            <form class="header-form">
+              <button class="header-form__btn">
+                <img
+                  src="../src/assets/images/globalImages/header_search-line.svg"
+                  alt=""
+                />
+              </button>
+              <input
+                class="header-form__input"
+                type="text"
+                placeholder="Поиск"
+              />
+            </form>
+            <a href="#"
+              ><img
+                src="../src/assets/images/globalImages/header_avatar-line.svg"
+                alt=""
+                class="header-authorization"
+            /></a>
+            <a href="./shopping-cart.html"
+              ><img
+                src="../src/assets/images/globalImages/header_shopping-bag-line.svg"
+                alt=""
+                class="header-basket"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end -->
+    <main class="body-flex__main">
       <article class="order">
         <h1 class="order__title">Оформление заказа</h1>
         <form name="formOrder" class="order-form">
@@ -77,7 +147,16 @@
                   name="address"
                   id="address"
                   placeholder="Ваш адрес (только РБ)"
+                  list="suggested-addresses"
                 />
+                <datalist class="order-form__datalist" id="suggested-addresses">
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </datalist>
+
                 <span class="helper helper--address"> </span>
                 <textarea
                   class="order-form__input order-form__input--comment"
@@ -160,11 +239,12 @@
               >Выберите способ доставки.</span
             >
           </fieldset>
-          <p class="order-form__explanation order-form__explanation--important">
+          <!--<p class="order-form__explanation order-form__explanation--important">
             Сроки доставки указаны при условии наличия товара. Заказ, сделанный
             со вт по чт отправляется в пн. Заказ, сделанный с пт по вс
             отправляется в пт.
           </p>
+        -->
           <fieldset class="order-form__block">
             <p class="order-form__title">Выберите способ оплаты</p>
             <div
@@ -209,35 +289,191 @@
             />
           </button>
         </form>
-        <div class="order__circle-icon">
-          <img
-            src="../src/assets/images/globalImages/circle.svg"
-            alt="half a circle image"
-          />
-        </div>
       </article>
+      <div class="circle-icon">
+        <img
+          src="../src/assets/images/globalImages/circle.svg"
+          alt="half a circle image"
+        />
+      </div>
       <article class="confirmation">
         <h2 class="confirmation__title">Подтверждение заказа</h2>
-        <button class="confirmation__close"><img src="../src/assets/images/globalImages/cart-page-cross-icon.svg" alt="cross icon" /></button>
-        <p class="confirmation__information">Фамилия: <span class="confirmation__value confirmation__value--surname"></span></p>
-        <p class="confirmation__information">Имя: <span class="confirmation__value confirmation__value--username"></span></p>
-        <p class="confirmation__information">Отчество: <span class="confirmation__value confirmation__value--patronymic"></span></p>
-        <p class="confirmation__information">Номер телефона: <span class="confirmation__value confirmation__value--telephone"></span></p>
-        <p class="confirmation__information">Электронная почта: <span class="confirmation__value confirmation__value--email"></span></p>
-        <p class="confirmation__information">Оплата: <span class="confirmation__value confirmation__value--pay-type"></span></p>
-        <p class="confirmation__information">Способ доставки: <span class="confirmation__value confirmation__value--delivery-type"></span></p>
-        <p class="confirmation__information">Время доставки: <span class="confirmation__value confirmation__value--delivery-time"></span></p>
-        <p class="confirmation__information">Адрес: <span class="confirmation__value confirmation__value--address"></span></p>
-        <button class="confirmation__button" type="submit">Подтвердить<img src="../src/assets/images/globalImages/short-light-arrow.svg" alt="short light right arrow"></button>
+
+        <p class="confirmation__information">
+          Фамилия:
+          <span class="confirmation__value confirmation__value--surname"></span>
+        </p>
+        <p class="confirmation__information">
+          Имя:
+          <span
+            class="confirmation__value confirmation__value--username"
+          ></span>
+        </p>
+        <p class="confirmation__information">
+          Отчество:
+          <span
+            class="confirmation__value confirmation__value--patronymic"
+          ></span>
+        </p>
+        <p class="confirmation__information">
+          Номер телефона:
+          <span
+            class="confirmation__value confirmation__value--telephone"
+          ></span>
+        </p>
+        <p class="confirmation__information">
+          Электронная почта:
+          <span class="confirmation__value confirmation__value--email"></span>
+        </p>
+        <p class="confirmation__information">
+          Оплата:
+          <span
+            class="confirmation__value confirmation__value--pay-type"
+          ></span>
+        </p>
+        <p class="confirmation__information">
+          Способ доставки:
+          <span
+            class="confirmation__value confirmation__value--delivery-type"
+          ></span>
+        </p>
+        <p class="confirmation__information">
+          Время доставки:
+          <span
+            class="confirmation__value confirmation__value--delivery-time"
+          ></span>
+        </p>
+        <p class="confirmation__information">
+          Адрес:
+          <span class="confirmation__value confirmation__value--address"></span>
+        </p>
+        <button class="confirmation__button" type="submit">
+          Подтвердить<img
+            src="../src/assets/images/globalImages/short-light-arrow.svg"
+            alt="short light right arrow"
+          />
+        </button>
       </article>
       <article class="order-message">
-        <h2 class="order-message__title">Ваша заявка обрабатывается.</h2>
-        <p class="order-message__text">
-          Наш специалист с Вами свяжется в ближайшее время
-        </p>
-        <span class="order-message__accent">Спасибо!</span>
+        <div class="order-message__container">
+          <h2 class="order-message__title">Ваша заявка обрабатывается.</h2>
+          <p class="order-message__text">
+            Наш специалист с Вами свяжется в ближайшее время
+          </p>
+          <span class="order-message__accent">Спасибо!</span>
+        </div>
       </article>
     </main>
+    <!-- Ekaterina -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrap">
+          <nav class="footer-nav footer-nav__info">
+            <h4 class="footer__title">Информация</h4>
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Главная</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Акции</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Каталог</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Возврат</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Доставка</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Партнёрам</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Способы оплаты</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Как сделать заказ?</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="footer-nav footer-nav__cabinet">
+            <h4 class="footer__title">Мой кабинет</h4>
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Мои заказы</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Мои адреса</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Мои скидки</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">Моя информация</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer-nav footer-nav__contacts">
+            <h4 class="footer__title">Контактная информация</h4>
+            <p class="footer__description-contacts">
+              ИП Вишневский Иван Сергеевич<br />государственная регистрация
+              №690867884<br />
+              от 31.07.2020. Логойским горисполкомом<br />
+              Защита прав потребителей +375259990755
+            </p>
+          </div>
+          <div class="footer-nav footer-socials">
+            <h4 class="footer__title">Соц. сети</h4>
+            <div class="footer-nav__item footer-socials__list">
+              <a href="#"
+                ><img
+                  src="../src/assets/images/globalImages/footer-social-tg.svg"
+                  alt="Telegram-icon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../src/assets/images/globalImages/footer-social-insta.svg"
+                  alt="Instagram-icon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../src/assets/images/globalImages/footer-social-mail.svg"
+                  alt="Email-icon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../src/assets/images/globalImages/footer-social-whatsapp.svg"
+                  alt="WhatsApp-icon"
+              /></a>
+            </div>
+            <div class="footer-nav__item footer-socials__phone">
+              <a href="tel:+375255990755"
+                ><img
+                  src="../src/assets/images/globalImages/footer-phone-number-icon.svg"
+                  alt="Phone-icon"
+                />+375255990755</a
+              >
+            </div>
+            <div class="footer-nav__item footer-socials__hours">
+              <img
+                src="../src/assets/images/globalImages/footer-hour-icon.svg"
+                alt="Hour-icon"
+              />
+              <span>круглосуточно, без выходных</span>
+            </div>
+          </div>
+          <div class="footer-logo">
+            <img
+              src="../src/assets/images/globalImages/footer-logo.png"
+              alt="footer-logo"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end -->
     <script type="module" src="../src/app/order.js"></script>
+    <script type="module" src="../main.js"></script>
   </body>
 </html>

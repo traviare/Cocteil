@@ -11,6 +11,8 @@ export const totalQuantity = document.querySelectorAll(".total-quantity");
 export const totalPrice = document.querySelector(".total-info__total-price");
 export const buyButton = document.querySelector(".shopping-cart__button");
 export const orderForm = document.forms.formOrder;
+export const confirmationButton = document.querySelector(".confirmation__button");
+export const confirmationBlock = document.querySelector(".confirmation");
 /*end*/
 
 /*Violetta*/

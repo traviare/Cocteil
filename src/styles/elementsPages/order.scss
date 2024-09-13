@@ -9,14 +9,13 @@
     line-height: 87%;
     color: $textColorTitle;
   }
-  &__circle-icon {
-    position: fixed;
-    top: 75%;
-    right: 0;
-    height: 429px;
-  }
 }
-
+.circle-icon {
+  position: fixed;
+  top: 75%;
+  right: 0;
+  height: 429px;
+}
 .order-form {
   display: flex;
   flex-direction: column;
@@ -86,7 +85,7 @@
     font-size: $textSizeTwo;
     font-weight: 300;
     color: $textColor;
-    &--important {
+    /*&--important {
       display: flex;
       align-items: center;
       gap: 28px;
@@ -100,7 +99,7 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
-    }
+    }*/
   }
   &__radiobutton {
     @include cursorPointer;
@@ -157,18 +156,6 @@
     font-size: $titleSizeThree;
     color: $textColorTitle;
   }
-  &__close {
-    position: absolute;
-    top: 80px;
-    right: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 47px;
-    height: 47px;
-    @include roundButton;
-    @include cursorPointer;
-  }
   &__button {
     display: flex;
     justify-content: center;
@@ -192,19 +179,48 @@
 }
 
 .order-message {
-  position: relative;
-  width: max-content;
-  min-height: 87px;
-  margin: 90px auto;
-  display: none;
-  flex-direction: column;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 30px;
+  flex-grow: 1;
+  &__container {
+    position: relative;
+    width: max-content;
+    min-height: 87px;
+    margin: auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
   &__title {
+    position: relative;
     @include fontTextLight;
     font-size: $titleSizeTwo;
     line-height: 87%;
     color: $textColorTitle;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      left: -250px;
+      width: 73px;
+      height: 73px;
+      border-radius: 100%;
+      background-color: $backgroundColorDark;
+      box-shadow: 0 4px 20px 0 rgba(51, 51, 51, 0.05);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -130px;
+      left: -70px;
+      width: 47px;
+      height: 47px;
+      border-radius: 100%;
+      background-color: $backgroundColorDark;
+      box-shadow: 0 4px 20px 0 rgba(51, 51, 51, 0.05);
+    }
   }
   &__text {
     @include descriptionTextStyle;
@@ -219,27 +235,5 @@
     font-size: $titleSizeTwo;
     line-height: 87%;
     color: $backgroundColorDark;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    top: -60px;
-    left: -168px;
-    width: 73px;
-    height: 73px;
-    border-radius: 100%;
-    background-color: $backgroundColorDark;
-    box-shadow: 0 4px 20px 0 rgba(51, 51, 51, 0.05);
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -50px;
-    left: -70px;
-    width: 47px;
-    height: 47px;
-    border-radius: 100%;
-    background-color: $backgroundColorDark;
-    box-shadow: 0 4px 20px 0 rgba(51, 51, 51, 0.05);
   }
 }

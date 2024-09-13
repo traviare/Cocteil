@@ -1,14 +1,18 @@
-import { orderForm } from "../vars";
+import { orderForm, confirmationButton, confirmationBlock } from "../vars";
+import { CartProducts, addOrderDB } from "./database";
+import {
+  nameValidation,
+  addressValidation,
+  emailValidation,
+  telephoneNumberValidation,
+  hideHelper,
+} from "./validation-fields";
 
-export const deliveryTypes = orderForm.elements["delivery-type"];
-export const payTypes = orderForm.elements["pay-type"];
+//form fields
 const inputs = Array.from(orderForm.elements[0].elements);
+const deliveryTypes = orderForm.elements["delivery-type"];
+const payTypes = orderForm.elements["pay-type"];
 const [validField, inputValues] = initializationInputsInformation();
-const confirmationButton = document.querySelector(".confirmation__button");
-const messageOrder = document.querySelector(".order-message");
-
-const confirmationBlock = document.querySelector(".confirmation");
-
 
 inputs.forEach((input) => {
   input.addEventListener("input", changeInputData);
@@ -20,105 +24,49 @@ inputs.forEach((input) => {
   element.addEventListener("change", getOptionsValue)
 );
 
+orderForm.addEventListener("submit", validationForm);
 confirmationButton.addEventListener("click", createOrder);
 
-function createOrder(evt) {
-  confirmationBlock.style.display = "none";
-  messageOrder.style.display = "flex";
-  orderForm.reset();
-}
-orderForm.addEventListener("submit", validationForm);
-
+//processing input fields
 function changeInputData(evt) {
   const curField = evt.target;
-  const curValue = curField.value.trim();
+  let curValue = curField.value.trim();
   const fieldName = curField.name;
+  if (fieldName === "comment") {
+    inputValues["comment"] = curValue;
+    return;
+  }
+
+  let result = false;
   switch (fieldName) {
     case "surname":
     case "username":
     case "patronymic":
-      nameValidation(curValue, fieldName);
+      result = nameValidation(curValue, fieldName);
+      curValue = upperCaseFirst(curValue);
       break;
     case "email":
-      emailValidation(curValue);
+      result = emailValidation(curValue);
       break;
     case "telephone":
-      telephoneNumberValidation(curValue, curField);
+      result = telephoneNumberValidation(curValue, curField);
       break;
     case "address":
-      inputValues["address"] = curValue;
-      validField["address"] = true;
+      result = addressValidation(curValue);
       break;
     case "agreement":
-      validField["agreement"] = inputValues["agreement"] = true;
-      hiddenHelper("agreement");
-      break;
-    case "comment":
-      inputValues["comment"] = curValue;
+      result = true;
+      hideHelper("agreement");
       break;
     default:
       break;
   }
+
+  validField[fieldName] = result;
+  inputValues[fieldName] = result ? curValue : "";
 }
 
-function nameValidation(strValue, fieldName) {
-  const regexp = /^[А-Яа-яёa-zA-Z]*$/;
-  let messageError = "";
-  if (strValue.length < 2 || strValue.length > 20) {
-    messageError =
-      "Текст должен быть не короче 2 символов. Максимальная длина текста 20 символов.";
-  } else if (strValue.includes(" ")) {
-    messageError = "Поле должно содежать одно слово.";
-  } else if (!regexp.test(strValue)) {
-    messageError =
-      "Поле может содержать только буквы белорусского и латинского алфавитов.";
-  } else {
-    validField[fieldName] = true;
-    inputValues[fieldName] = strValue;
-  }
-  hiddenHelper(fieldName);
-  if (messageError) {
-    showHelper(messageError, fieldName);
-  }
-}
-
-function emailValidation(strValue) {
-  const regexp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  let messageError = "";
-  if (!strValue.includes("@")) {
-    messageError = "Электронный адрес должен содержать символ @.";
-  } else if (!regexp.test(strValue)) {
-    messageError = "Некорректный формат адреса электронной почты.";
-  } else {
-    validField["email"] = true;
-    inputValues["email"] = strValue;
-  }
-  hiddenHelper("email");
-  if (messageError) {
-    showHelper(messageError, "email");
-  }
-}
-
-function telephoneNumberValidation(strValue, inputField) {
-  const regexp = /^\+[1-9]{1}\d{10,11}$/;
-  let messageError = "";
-  if (strValue[0] !== "+") {
-    messageError = "Введите номер телефона с кодом страны.";
-    inputField.value = strValue.length >= 3 ? "+" + strValue : strValue;
-  } else if (/[а-яА-ЯёЁa-zA-Z]/.test(strValue)) {
-    messageError = "Номер телефона может содержать только цифры.";
-  } else if (!regexp.test(strValue)) {
-    messageError = "Некорректный формат номера телефона.";
-  } else {
-    validField["telephone"] = true;
-    inputValues["telephone"] = strValue;
-  }
-  hiddenHelper("telephone");
-  if (messageError) {
-    showHelper(messageError, "telephone");
-  }
-}
-
+//validation of the entire form
 function validationForm(evt) {
   evt.preventDefault();
   for (let key in inputValues) {
@@ -131,26 +79,39 @@ function validationForm(evt) {
     resultValidation = resultValidation && validField[key];
   }
   if (resultValidation) {
-    console.log("Форма отправлена");
+    console.log("Форма заполнена");
     orderConfirmation();
   }
 }
 
+//show order confirmation message
 function orderConfirmation() {
   const orderFormBlock = document.querySelector(".order");
   orderFormBlock.style.display = "none";
   confirmationBlock.style.display = "flex";
   fillConfirmationFields();
-  //orderForm.reset();
 }
 
+//adding an order to the database
+function createOrder() {
+  confirmationBlock.style.display = "none";
+  const messageOrder = document.querySelector(".order-message__container");
+  messageOrder.style.display = "flex";
+  const quantityProduct = CartProducts.getCartProducts().then((data) => {
+    inputValues["order-description"] = Array.from(data);
+    addOrderDB(inputValues);
+    return data.length;
+  });
+  quantityProduct.then((quantity) => CartProducts.clearCartProduct(quantity));
+  orderForm.reset();
+}
+
+//filling fields of the confirmation message
 function fillConfirmationFields() {
-  console.log(inputValues);
   for (let key in inputValues) {
     if (["comment", "agreement"].includes(key)) {
       continue;
     }
-    console.log(key);
     const valueField = document.querySelector(`.confirmation__value--${key}`);
     switch (inputValues[key]) {
       case "belposhta":
@@ -179,27 +140,41 @@ function fillConfirmationFields() {
         break;
     }
   }
+  const valueField = document.querySelector(
+    `.confirmation__value--delivery-time`
+  );
+  const timeDelivery = getTimeDelivery(inputValues["delivery-type"]);
+  console.log(timeDelivery);
+  valueField.textContent = timeDelivery;
+  inputValues["delivery-time"] = timeDelivery;
 }
 
+//delivery date calculation
+function getTimeDelivery(typeDelivery) {
+  const optionsData = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+
+  const currentDate = new Date();
+  if (typeDelivery === "courier-minsk") {
+    return currentDate.toLocaleString("ru", optionsData);
+  }
+  currentDate.setDate(currentDate.getDate() + 3);
+  return currentDate.toLocaleString("ru", optionsData);
+}
+
+//getting the value of a field with radio buttons
 function getOptionsValue(evt) {
   inputValues[evt.target.name] = evt.target.value;
   validField[evt.target.name] = true;
-  hiddenHelper(evt.target.name);
+  hideHelper(evt.target.name);
 }
 
-function showHelper(errorMsg, fieldName) {
-  const curHelper = document.querySelector(`.helper--${fieldName}`);
-  curHelper.textContent = "Поле заполнено некорректно." + errorMsg;
-  curHelper.style.display = "block";
-}
-
-function hiddenHelper(fieldName) {
-  const curHelper = document.querySelector(`.helper--${fieldName}`);
-  curHelper.style.display = "none";
-}
-
+//message about required field completion
 function mandatoryFillingMessage(fieldName) {
-  hiddenHelper(fieldName);
+  hideHelper(fieldName);
   const curHelper = document.querySelector(`.helper--${fieldName}`);
   curHelper.style.display = "block";
   if (["pay-type", "delivery-type", "agreement"].includes(fieldName)) {
@@ -208,6 +183,7 @@ function mandatoryFillingMessage(fieldName) {
   curHelper.textContent = "Обязательное поле для заполнения.";
 }
 
+//field input style on focus
 function focusStyle(evt) {
   evt.target.style.borderBottom = "2px solid #514a7e";
   evt.target.style.color = "#514a7e";
@@ -217,6 +193,7 @@ function focusStyle(evt) {
   }
 }
 
+//field input style when focus is lost
 function blurStyle(evt) {
   if (evt.target.value.length === 0 && evt.target.name !== "comment") {
     mandatoryFillingMessage(evt.target.name);
@@ -224,6 +201,7 @@ function blurStyle(evt) {
   evt.target.style.borderBottom = "0.5px solid #7d7d7d";
 }
 
+//initialization of data on validation and value of input fields
 function initializationInputsInformation() {
   const validInfo = {},
     inputValues = {};
@@ -238,4 +216,11 @@ function initializationInputsInformation() {
   inputValues["delivery-type"] = "";
   inputValues["pay-type"] = "";
   return [validInfo, inputValues];
+}
+
+//capitalize the first letter of a line
+function upperCaseFirst(str) {
+  if (!str) return str;
+
+  return str[0].toUpperCase() + str.slice(1);
 }

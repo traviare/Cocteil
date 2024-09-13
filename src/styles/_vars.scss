@@ -69,4 +69,13 @@ $fontFamilyText: "Roboto", sans-serif;
   border: none;
 }
 
+@mixin circleIconStyle {
+  .circle-icon {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    height: 429px;
+  }
+}
+
 /*end*/

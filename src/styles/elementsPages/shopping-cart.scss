@@ -1,5 +1,4 @@
 .main {
-  min-height: 100vh;
   padding: 40px 10%;
   background-color: $backgroundColorLight;
 
@@ -9,13 +8,13 @@
     margin-bottom: 55px;
   }
 
-  &__back-button {
+  /*&__back-button {
     width: 43px;
     height: 43px;
     margin-right: 50px;
     @include roundButton;
     @include cursorPointer;
-  }
+  }*/
 
   &__title {
     margin-right: 16px;
