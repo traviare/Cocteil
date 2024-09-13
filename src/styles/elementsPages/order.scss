@@ -1,0 +1,239 @@
+.order {
+  padding: 56px 10%;
+  background-color: $backgroundColorLight;
+  &__title {
+    margin-bottom: 60px;
+    font-family: $fontFamilyText;
+    font-weight: 300;
+    font-size: $titleSizeTwo;
+    line-height: 87%;
+    color: $textColorTitle;
+  }
+}
+.circle-icon {
+  position: fixed;
+  top: 75%;
+  right: 0;
+  height: 429px;
+}
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  &__block {
+    border: none;
+  }
+  &__data-container {
+    display: flex;
+    gap: 125px;
+    justify-content: space-between;
+    &--pay-type {
+      gap: 67px;
+      max-width: 60%;
+    }
+  }
+
+  &__data-container-item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 30px;
+  }
+
+  &__delivery {
+    display: block;
+    margin-bottom: 22px;
+  }
+  &__title {
+    margin-bottom: 40px;
+    @include fontTextRegular;
+    font-size: $titleSizeThree;
+    line-height: 87%;
+    color: $textColorTitle;
+  }
+  &__input {
+    @include descriptionTextStyle;
+    font-size: $homePagetextSize;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 0.5px solid $textColor;
+    @include cursorPointer;
+    &--comment {
+      padding: 12px 8px;
+      min-width: 371px;
+      min-height: 90px;
+      border-bottom: none;
+      box-shadow: 0 4px 10px 0 $shadowColor;
+      resize: none;
+    }
+  }
+  &__label {
+    @include fontTextRegular;
+    font-size: $homePagetextSize;
+    color: $backgroundColorDark;
+  }
+  &__agreement {
+    @include fontText;
+    font-size: $textSizeTwo;
+    line-height: 118%;
+    color: $textColor;
+  }
+
+  &__explanation {
+    font-family: $fontFamilyText;
+    font-size: $textSizeTwo;
+    font-weight: 300;
+    color: $textColor;
+    /*&--important {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: $backgroundColorDark;
+      &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url("../../assets/images/globalImages/order-page-message-icon.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }*/
+  }
+  &__radiobutton {
+    @include cursorPointer;
+  }
+  &__button {
+    margin: 0 auto;
+    width: 193px;
+    height: 193px;
+    @include fontTextRegular;
+    font-size: $titleSizeThree;
+    color: $backgroundColorDark;
+    @include transparentButton;
+    border-radius: 100%;
+    border: 1px solid $backgroundColorDark;
+    @include cursorPointer;
+  }
+  &__button-arrow {
+    padding-left: 40px;
+  }
+}
+
+.helper {
+  display: none;
+  margin-top: -20px;
+  @include descriptionTextStyle;
+  font-size: $homePagetextSize;
+  color: red;
+  &--delivery-type,
+  &--pay-type {
+    margin-top: 10px;
+  }
+}
+
+.confirmation {
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+  padding: 82px 10%;
+  background-color: $backgroundColorLight;
+  &__title {
+    margin-bottom: 60px;
+    font-family: $fontFamilyText;
+    font-weight: 300;
+    font-size: $titleSizeTwo;
+    line-height: 87%;
+    color: $textColorTitle;
+  }
+  &__information {
+    @include descriptionTextStyle;
+    font-size: $titleSizeThree;
+  }
+  &__value {
+    @include fontTextRegular;
+    font-size: $titleSizeThree;
+    color: $textColorTitle;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    width: 148px;
+    height: 37px;
+    font-family: $fontFamilyText;
+    font-weight: 400;
+    font-size: 14px;
+    color: $backgroundColorLight;
+    background-color: $backgroundColorDark;
+    box-shadow: 0 4px 10px 0 $shadowColor;
+    border: none;
+    @include cursorPointer;
+    img {
+      width: 25px;
+      rotate: 180deg;
+    }
+  }
+}
+
+.order-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  &__container {
+    position: relative;
+    width: max-content;
+    min-height: 87px;
+    margin: auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  &__title {
+    position: relative;
+    @include fontTextLight;
+    font-size: $titleSizeTwo;
+    line-height: 87%;
+    color: $textColorTitle;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      left: -250px;
+      width: 73px;
+      height: 73px;
+      border-radius: 100%;
+      background-color: $backgroundColorDark;
+      box-shadow: 0 4px 20px 0 rgba(51, 51, 51, 0.05);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -130px;
+      left: -70px;
+      width: 47px;
+      height: 47px;
+      border-radius: 100%;
+      background-color: $backgroundColorDark;
+      box-shadow: 0 4px 20px 0 rgba(51, 51, 51, 0.05);
+    }
+  }
+  &__text {
+    @include descriptionTextStyle;
+    font-size: $homePagetextSize;
+    color: $textColorTitle;
+  }
+  &__accent {
+    position: absolute;
+    right: -140px;
+    bottom: -10px;
+    @include fontBadScript;
+    font-size: $titleSizeTwo;
+    line-height: 87%;
+    color: $backgroundColorDark;
+  }
+}

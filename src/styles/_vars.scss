@@ -15,8 +15,7 @@ $titleSizeThree: 20px;
 $homePagetextSize: 16px;
 $textSizeOne: 14px;
 $textSizeTwo: 12px;
-$fontFamilyText: "Roboto",
-sans-serif;
+$fontFamilyText: "Roboto", sans-serif;
 
 @mixin fontText {
   font-family: $fontFamilyText;
@@ -54,7 +53,6 @@ sans-serif;
 @mixin cursorPointer {
   &:hover {
     cursor: pointer;
-
   }
 }
 
@@ -69,6 +67,15 @@ sans-serif;
   outline: none;
   background: transparent;
   border: none;
+}
+
+@mixin circleIconStyle {
+  .circle-icon {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    height: 429px;
+  }
 }
 
 /*end*/

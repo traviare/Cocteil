@@ -9,10 +9,19 @@ import {
   totalPrice,
   productsContainer,
   totalQuantity,
+  buyButton,
 } from "../vars";
+
+buyButton.addEventListener("click", function (evt) {
+  document.location = "/pages/order.html";
+});
 
 //displaying products in the cart
 CartProducts.getCartProducts().then((data) => {
+  if (data.length > 0) {
+    buyButton.classList.remove("disabled");
+    buyButton.removeAttribute("disabled");
+  }
   data.forEach((item) => addProductToContainer(item));
   calculateTotalPriceByData(data);
   calculateTotalQuantityByData(data);
