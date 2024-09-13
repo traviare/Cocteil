@@ -1,8 +1,8 @@
 .faqS{
-// max-width: 1170px;
 background-color: $backgroundColorLight;
-margin: 150px 135px 150px 135px;
-position:relative;
+max-width: 1200px;
+margin: 0 auto;
+padding: 5% 15px;
 }
 .faqS__title{
 color: $textColorTitle;
@@ -12,18 +12,15 @@ line-height: 87.3%;
 text-align: left;
 }
 .faqS__span{
-position:absolute;
-top: 8%;
-left: 47%;//при разрешении 1440px
+margin-left: 570px;
 color: $backgroundColorDark;
 font-size: $titleSizeTwo;
 line-height: 87.3%;
 text-align: left; 
 @include fontBadScript;
 }
-.faqS__accordion{
-margin-top:60px;
-}
+.faqS__accordion{margin-top:60px;}
+
 .faqS__accordion-trigger{
 color: $textColorTitle;
 font-size: $titleSizeThree;

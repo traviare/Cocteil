@@ -37,3 +37,64 @@ export const handleDocumentClick = (event) => {
   }
 };
 //end faqS
+
+/*carousel*/
+import { itemsToShow, carouselInner} from "./vars";
+export async function loadProducts() {
+  try {
+      const response = await fetch('./db.json');
+      if (!response.ok) {
+          throw new Error('Сеть не отвечает');
+      }
+      const data = await response.json();
+      displayProducts(data['products-catalog']);
+      startCarousel(); // Запускаем карусель после загрузки продуктов
+  } catch (error) {
+      console.error('Ошибка загрузки данных:', error);
+  }
+}
+
+function displayProducts(products) {
+  const filteredProducts = products.filter(product => product.discount && product.discount > 0);
+
+  if (filteredProducts.length === 0) {
+      carouselInner.innerHTML = '<p>Нет доступных товаров со скидкой.</p>';
+      return;
+  }
+
+  // Отображаем отфильтрованные продукты
+  filteredProducts.forEach(product => {
+      carouselInner.innerHTML += `
+      <div class='buyNow__carousel-card'>
+              <img class='buyNow__carousel-img' src='${product.picture[0]}' alt='${product.name}'/>
+              <div class='buyNow__carousel-price'>
+                  <span class='buyNow__carousel-currentPrice'>${product.price} ₽</span>
+                  <span class='buyNow__carousel-startPrice'>${product.discount}</span>
+              </div>
+              <div class='buyNow__carousel-descriptinAndBasket'>
+                  <p class='buyNow__carousel-description'>${product.name}</p>
+                  <img class='buyNow__carousel-svgBasket' src="./src/assets/images/globalImages/header_shopping-bag-line.svg" alt='basketSvg'/>
+              </div>
+              <div class='buyNow__carousel-info'>
+                  <button class='buyNow__carousel-thoroughBtn'>Подробнее ⟶</button>
+                  <span class='buyNow__carousel-stars'>${product.rating} ★</span>
+              </div>  
+          </div>
+      `
+      ;
+  });
+}
+
+function startCarousel() {
+  const totalCards = document.querySelectorAll('.buyNow__carousel-card').length;
+   let currentIndex = 0; // Текущий индекс для прокрутки
+  
+  setInterval(() => {
+      currentIndex = (currentIndex + itemsToShow) % totalCards; // Обновляем индекс
+
+      // Сдвигаем карусель
+      carouselInner.style.transform = `translateX(-${(currentIndex * 100) / itemsToShow}%)`;
+  }, 5000); // Интервал в 5 секунды
+}
+
+/*end*/
