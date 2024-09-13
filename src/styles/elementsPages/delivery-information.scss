@@ -28,7 +28,6 @@
     width: 47px;
     height: 47px;
     @include roundButton;
-    //outline: none;
     @include cursorPointer;
   }
   &__description {

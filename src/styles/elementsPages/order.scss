@@ -22,13 +22,7 @@
   flex-direction: column;
   gap: 60px;
   &__block {
-    //display: flex;
-    //justify-content: space-between;
-    //gap: 30px;
     border: none;
-    //&--data {
-    //  gap: 125px;
-    //}
   }
   &__data-container {
     display: flex;
@@ -130,7 +124,122 @@
 
 .helper {
   display: none;
+  margin-top: -20px;
   @include descriptionTextStyle;
   font-size: $homePagetextSize;
   color: red;
+  &--delivery-type,
+  &--pay-type {
+    margin-top: 10px;
+  }
+}
+
+.confirmation {
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+  padding: 82px 10%;
+  background-color: $backgroundColorLight;
+  &__title {
+    margin-bottom: 60px;
+    font-family: $fontFamilyText;
+    font-weight: 300;
+    font-size: $titleSizeTwo;
+    line-height: 87%;
+    color: $textColorTitle;
+  }
+  &__information {
+    @include descriptionTextStyle;
+    font-size: $titleSizeThree;
+  }
+  &__value {
+    @include fontTextRegular;
+    font-size: $titleSizeThree;
+    color: $textColorTitle;
+  }
+  &__close {
+    position: absolute;
+    top: 80px;
+    right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 47px;
+    height: 47px;
+    @include roundButton;
+    @include cursorPointer;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    width: 148px;
+    height: 37px;
+    font-family: $fontFamilyText;
+    font-weight: 400;
+    font-size: 14px;
+    color: $backgroundColorLight;
+    background-color: $backgroundColorDark;
+    box-shadow: 0 4px 10px 0 $shadowColor;
+    border: none;
+    @include cursorPointer;
+    img {
+      width: 25px;
+      rotate: 180deg;
+    }
+  }
+}
+
+.order-message {
+  position: relative;
+  width: max-content;
+  min-height: 87px;
+  margin: 90px auto;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  &__title {
+    @include fontTextLight;
+    font-size: $titleSizeTwo;
+    line-height: 87%;
+    color: $textColorTitle;
+  }
+  &__text {
+    @include descriptionTextStyle;
+    font-size: $homePagetextSize;
+    color: $textColorTitle;
+  }
+  &__accent {
+    position: absolute;
+    right: -140px;
+    bottom: -10px;
+    @include fontBadScript;
+    font-size: $titleSizeTwo;
+    line-height: 87%;
+    color: $backgroundColorDark;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: -168px;
+    width: 73px;
+    height: 73px;
+    border-radius: 100%;
+    background-color: $backgroundColorDark;
+    box-shadow: 0 4px 20px 0 rgba(51, 51, 51, 0.05);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: -70px;
+    width: 47px;
+    height: 47px;
+    border-radius: 100%;
+    background-color: $backgroundColorDark;
+    box-shadow: 0 4px 20px 0 rgba(51, 51, 51, 0.05);
+  }
 }

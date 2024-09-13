@@ -1,22 +1,4 @@
 {
-  "products-list": [
-    {
-      "id": "1",
-      "name": "Платье женское",
-      "article": "09456786",
-      "color": "красный",
-      "size": 35,
-      "price": 10,
-      "categoty": "",
-      "picture": "dress1.png"
-    },
-    {
-      "id": "2"
-    },
-    {
-      "id": "3"
-    }
-  ],
   "cart": [
     {
       "id": "1",

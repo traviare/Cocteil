@@ -170,8 +170,8 @@
     gap: 7px;
     @include descriptionTextStyle;
     @include transparentButton;
-    @include cursorPointer;
     color: $backgroundColorDark;
+    @include cursorPointer;
 
     &::after {
       content: "";
@@ -206,5 +206,12 @@
 
   &__description {
     @include descriptionTextStyle;
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  &:hover {
+    cursor: not-allowed;
   }
 }
