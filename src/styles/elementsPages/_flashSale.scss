@@ -66,7 +66,16 @@
     line-height: 14px;
     text-align: left;
 }
-.buyNow__carousel-svgBasket{cursor: pointer;}
+.buyNow__carousel-basket{
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    background: transparent;
+}
+.buyNow__carousel-svgBasket:hover {
+    background-color: $backgroundColorDark;
+    border-radius: 10px;
+}
 
 .buyNow__carousel-thoroughBtn{
     color: rgb(18, 18, 18);
@@ -89,4 +98,116 @@
 }
 .buyNow__carousel-stars{
     color:$backgroundColorDark;
+}
+
+@media screen and (min-width: 1500px) and (max-width: 5000px){
+    .buyNow{
+        max-width: 100%;
+        padding: 5%;
+    }
+    .buyNow__title, .buyNow__span{
+        font-size: 60px;
+    }
+    .buyNow__span {
+        margin-left: 400px;
+    }
+    .buyNow__carousel-currentPrice{
+        font-size: 28px;
+    }
+    .buyNow__carousel-startPrice, .buyNow__carousel-description{
+        font-size: 22px;
+    }
+    .buyNow__carousel-basket img {
+        width: 30px; 
+    }
+    .buyNow__carousel-descriptinAndBasket,
+    .buyNow__carousel-info,.buyNow__carousel-price{
+    padding-top:10px;
+}
+.buyNow__carousel-thoroughBtn{
+    padding: 16px 25px;
+    font-size: 24px;
+}
+.buyNow__carousel-stars{
+    font-size: 22px;
+    font-weight: 300;
+}
+}
+@media screen and (min-width: 700px) and (max-width: 1024px){
+    .buyNow__title, .buyNow__span{
+        font-size: 32px;
+    }
+    .buyNow__span{
+        margin-left: 210px;
+    }
+    .buyNow__carousel-thoroughBtn{
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    .buyNow__carousel-descriptinAndBasket,
+    .buyNow__carousel-info,.buyNow__carousel-price{
+    padding-top:5px;
+    }
+    .buyNow__carousel-basket img {
+        width: 16px; 
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 700px){
+    .buyNow__title, .buyNow__span{
+        font-size: 25px;
+    }
+    .buyNow__span{
+        margin-left: 165px;
+    }
+    .buyNow__carousel-startPrice, .buyNow__carousel-description{
+        font-size: 12px;
+    }
+    .buyNow__carousel-thoroughBtn{
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+    .buyNow__carousel-descriptinAndBasket,
+    .buyNow__carousel-info,.buyNow__carousel-price{
+    padding-top:2px;
+    }
+    .buyNow__carousel-currentPrice{
+        font-size: 12px;
+    }
+    .buyNow__carousel-startPrice, .buyNow__carousel-stars, .buyNow__carousel-description{
+        font-size: 10px;
+    }
+    .buyNow__carousel-basket img {
+        width: 14px; 
+    }
+}
+@media screen and (min-width: 250px) and (max-width: 500px){
+    .buyNow{
+        padding-top: 10%;
+    }
+    .buyNow__title, .buyNow__span{
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+    }
+    .buyNow__span{
+        margin-left: 210px;
+    }
+    .buyNow__carousel-startPrice{
+        font-size: 14px;
+    }
+    .buyNow__carousel-description, .buyNow__carousel-stars, .buyNow__carousel-startPrice{
+        font-size: 10px;
+    }
+    .buyNow__carousel-thoroughBtn{
+        display:none;
+    }
+    .buyNow__carousel-currentPrice{
+        font-size: 12px;
+    }
+    .buyNow__carousel-basket img {
+        width: 12px; 
+    }
+    .buyNow__carousel-card {
+        padding: 5%;
+    }
 }
