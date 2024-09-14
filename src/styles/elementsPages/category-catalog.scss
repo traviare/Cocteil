@@ -40,18 +40,15 @@
 }
 
 
-.product-filtr__size,
-.product-filtr__colors {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    width: 98px;
-
-}
-
 .product-filtr {
     margin-right: 41px;
     width: 158px;
+
+    &__btn-wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 98px;
+    }
 
     &__btn-name {
         color: $textColorTitle;
@@ -67,7 +64,17 @@
     }
 }
 
+.product-filtr__size,
+.product-filtr__colors {
+    margin-top: 30px;
+
+}
+
 .price-range {
+
+    &__wrap {
+        margin-top: 30px;
+    }
 
     &__inputs {
         display: flex;
@@ -113,9 +120,14 @@
     background-color: inherit;
 }
 
-.price-range__field input::-webkit-outer-spin-button,
-.price-range__field input::-webkit-inner-spin-button {
-    appearance: none;
+.price-range__field input[type="number"]::-webkit-inner-spin-button,
+.price-range__field input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.price-range__field input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 .range-input {
@@ -128,25 +140,25 @@
     height: 5px;
     width: 100%;
     background: none;
-    appearance: none;
+    -webkit-appearance: none;
     pointer-events: none;
 }
 
-.range-input input::-webkit-slider-thumb {
+.range-input input[type="range"]::-webkit-slider-thumb {
     height: 11px;
     width: 11px;
     border-radius: 50%;
     pointer-events: auto;
-    appearance: none;
+    -webkit-appearance: none;
     background-color: $backgroundColorDark;
 }
 
-// .range-input input::-moz-range-thumb {
-//     height: 11px;
-//     width: 11px;
-//     border-radius: 50%;
-//     border: none;
-//     pointer-events: auto;
-//     appearance: none;
-//     background-color: $backgroundColorDark;
-// }
+.range-input input[type="range"]::-moz-range-thumb {
+    height: 11px;
+    width: 11px;
+    border: none;
+    border-radius: 50%;
+    pointer-events: auto;
+    -moz-appearance: none;
+    background-color: $backgroundColorDark;
+}
