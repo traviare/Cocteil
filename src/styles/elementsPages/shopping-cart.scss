@@ -1,20 +1,21 @@
 .main {
   padding: 40px 10%;
   background-color: $backgroundColorLight;
+  @media (max-width: $tablet) {
+    padding: 40px 5%;
+  }
 
   &__top-block {
     display: flex;
     align-items: center;
     margin-bottom: 55px;
+    @media (max-width: $tablet) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+    }
   }
-
-  /*&__back-button {
-    width: 43px;
-    height: 43px;
-    margin-right: 50px;
-    @include roundButton;
-    @include cursorPointer;
-  }*/
 
   &__title {
     margin-right: 16px;
@@ -46,6 +47,9 @@
     top: 50%;
     right: 0;
     height: 429px;
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 }
 
@@ -54,6 +58,13 @@
   flex-direction: column;
   gap: 60px;
   width: 76%;
+  @media (max-width: $desktop-md) {
+    width: 90%;
+  }
+  @media (max-width: $tablet) {
+    gap: 40px;
+    width: 100%;
+  }
 
   &__button {
     width: 150px;
@@ -71,6 +82,15 @@
 .product {
   display: flex;
   gap: 50px;
+  @media (max-width: $tablet) {
+    gap: 25px;
+  }
+  @media (max-width: $mobile) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    gap: 15px;
+  }
 
   &__image-container {
     width: 178px;
@@ -86,6 +106,7 @@
 
   &__description {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -94,6 +115,7 @@
     display: flex;
     align-items: center;
     gap: 14px;
+    flex-wrap: wrap;
   }
 
   &__title {
@@ -101,6 +123,9 @@
     font-size: $titleSizeThree;
     line-height: 118%;
     color: $textColorTitle;
+    @media (max-width: $mobile) {
+      font-size: $homePagetextSize;
+    }
   }
 
   &__art {
@@ -110,7 +135,11 @@
   &__characteristics {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
     @include descriptionTextStyle;
+    @media (max-width: $mobile) {
+      gap: 10px;
+    }
   }
 
   &__quantity {
@@ -150,12 +179,20 @@
 
   &__price {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 100px;
+    @media (max-width: $mobile) {
+      grid-area: 2/1/3/3;
+    }
   }
 
   &__price &__title {
     margin-bottom: 30px;
+    @media (max-width: $mobile) {
+      margin-bottom: 15px;
+    }
   }
 
   &__price-value {
@@ -171,13 +208,12 @@
     @include transparentButton;
     color: $backgroundColorDark;
     @include cursorPointer;
-
     &::after {
       content: "";
       width: 11px;
       height: 100%;
       padding-left: 7px;
-      background-image: url("../../assets/images/short-dark-arrow.svg");
+      background-image: url("../../assets/images/globalImages/short-dark-arrow.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -189,6 +225,10 @@
   display: flex;
   align-items: flex-end;
   gap: 50px;
+  @media (max-width: $mobile) {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
 
   &__title {
     @include fontTextRegular;
