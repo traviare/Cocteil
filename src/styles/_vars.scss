@@ -17,6 +17,11 @@ $textSizeOne: 14px;
 $textSizeTwo: 12px;
 $fontFamilyText: "Roboto", sans-serif;
 
+$desktop-lg: 1440px;
+$desktop-md: 1200px;
+$tablet: 1024px;
+$mobile: 767px;
+
 @mixin fontText {
   font-family: $fontFamilyText;
   font-weight: 100;
@@ -67,15 +72,6 @@ $fontFamilyText: "Roboto", sans-serif;
   outline: none;
   background: transparent;
   border: none;
-}
-
-@mixin circleIconStyle {
-  .circle-icon {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    height: 429px;
-  }
 }
 
 /*end*/
