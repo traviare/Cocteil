@@ -41,33 +41,39 @@ export const handleDocumentClick = (event) => {
 //end faqS
 
 /*carousel*/
-import { itemsToShow, carouselInner} from "./vars";
+import { itemsToShow, carouselInner } from "./vars";
+
 export async function loadProducts() {
   try {
-      const response = await fetch('./db.json');
-      if (!response.ok) {
-          throw new Error('Сеть не отвечает');
-      }
-      const data = await response.json();
-      displayProducts(data['products-catalog']);
-      startCarousel(); // Запускаем карусель после загрузки продуктов
+    const response = await fetch("./db.json");
+    if (!response.ok) {
+      throw new Error("Сеть не отвечает");
+    }
+    const data = await response.json();
+    displayProducts(data["products-catalog"]);
+    startCarousel(); // Запускаем карусель после загрузки продуктов
   } catch (error) {
-      console.error('Ошибка загрузки данных:', error);
+    console.error("Ошибка загрузки данных:", error);
   }
 }
 
 function displayProducts(products) {
-  const filteredProducts = products.filter(product => product.discount && product.discount > 0);
+  const filteredProducts = products.filter(
+    (product) => product.discount && product.discount > 0
+  );
 
   if (filteredProducts.length === 0) {
-      carouselInner.innerHTML = '<p>Нет доступных товаров со скидкой.</p>';
-      return;
+    carouselInner.innerHTML = "<p>Нет доступных товаров со скидкой.</p>";
+    return;
   }
 
   // Отображаем отфильтрованные продукты
-  filteredProducts.forEach(product => {
-    let finalPrice = product.price - (product.price * product.discount / 100); /*формула для вычисления итоговой суммы товара с учетом скидки, которая указанна в json*/
-      carouselInner.innerHTML += `
+  filteredProducts.forEach((product) => {
+    let finalPrice =
+      product.price -
+      (product.price * product.discount) /
+        100; /*формула для вычисления итоговой суммы товара с учетом скидки, которая указанна в json*/
+    carouselInner.innerHTML += `
       <div class='buyNow__carousel-card' data-id='${product.id}' data-name='${product.name}' data-price='${finalPrice}'>
               <img class='buyNow__carousel-img' src='${product.picture[0]}' alt='${product.name}'/>
               <div class='buyNow__carousel-price'>
@@ -83,10 +89,9 @@ function displayProducts(products) {
                   <span class='buyNow__carousel-stars'>${product.rating} ★</span>
               </div>  
           </div>
-      `
-      ;
+      `;
 
-      // Добавляем обработчик событий для кнопок "Добавить в корзину"
+    // Добавляем обработчик событий для кнопок "Добавить в корзину"
     // const addToCartButtons = document.querySelectorAll('.buyNow__carousel-basket');
     // addToCartButtons.forEach(button => {
     //     button.addEventListener('click', (event) => {
@@ -117,19 +122,21 @@ function displayProducts(products) {
 
 //   // Сохраняем обновлённую корзину в localStorage
 //   localStorage.setItem('cart', JSON.stringify(cart));
-  
+
 //   console.log(`${product.name} добавлен в корзину!`);
 // }
 
 function startCarousel() {
-  const totalCards = document.querySelectorAll('.buyNow__carousel-card').length;
-   let currentIndex = 0; // Текущий индекс для прокрутки
-  
-  setInterval(() => {
-      currentIndex = (currentIndex + itemsToShow) % totalCards; // Обновляем индекс
+  const totalCards = document.querySelectorAll(".buyNow__carousel-card").length;
+  let currentIndex = 0; // Текущий индекс для прокрутки
 
-      // Сдвигаем карусель
-      carouselInner.style.transform = `translateX(-${(currentIndex * 100) / itemsToShow}%)`;
+  setInterval(() => {
+    currentIndex = (currentIndex + itemsToShow) % totalCards; // Обновляем индекс
+
+    // Сдвигаем карусель
+    carouselInner.style.transform = `translateX(-${
+      (currentIndex * 100) / itemsToShow
+    }%)`;
   }, 5000); // Интервал в 5 секунды
 }
 
@@ -140,7 +147,7 @@ function startCarousel() {
 // Страница с каталогом товаров
 import { catalogJeans, catalogDress, catalogShirts } from "./vars";
 
-export async function loadProducts() {
+export async function loadProductsCatalog() {
   try {
     const response = await fetch("../db.json");
     if (!response.ok) {
@@ -299,6 +306,5 @@ rangeInput.forEach((input) => {
     }
   });
 });
-
 
 // Страница с каталогом товаров end

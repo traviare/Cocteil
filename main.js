@@ -10,5 +10,9 @@ import { handleDocumentClick } from "./src/common";
 document.addEventListener("click", handleDocumentClick);
 
 // Автоматическая прокрутка карусели
-import { loadProducts } from './src/common';
-document.addEventListener('DOMContentLoaded', loadProducts);
+import { loadProducts } from "./src/common";
+document.addEventListener("DOMContentLoaded", loadProducts);
+
+//отображение товаров в каталоге
+import { loadProductsCatalog } from "./src/common";
+loadProductsCatalog();
