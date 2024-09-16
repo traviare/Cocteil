@@ -7,16 +7,23 @@ $backgroundColorMenu: #121212;
 $textColor: #7d7d7d;
 $textColorTitle: #121212;
 $shadowColor: rgba(81, 74, 126, 0.4);
+$shadowColorTwo: rgba(51, 51, 51, 0.05);
+$errorColor:#ff0000;
 
 //шрифты и текст
 $homePageTitleSize: 60px;
 $titleSizeTwo: 40px;
 $titleSizeThree: 20px;
+$titleSizeFour: 32px;
 $homePagetextSize: 16px;
 $textSizeOne: 14px;
 $textSizeTwo: 12px;
-$fontFamilyText: "Roboto",
-sans-serif;
+$fontFamilyText: "Roboto", sans-serif;
+
+$desktop-md: 1200px;
+$tablet: 1024px;
+$mobile: 767px;
+$mobile-sm: 425px;
 
 @mixin fontText {
   font-family: $fontFamilyText;
@@ -54,7 +61,6 @@ sans-serif;
 @mixin cursorPointer {
   &:hover {
     cursor: pointer;
-
   }
 }
 
@@ -71,4 +77,14 @@ sans-serif;
   border: none;
 }
 
+@mixin closeButtonStyle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 47px;
+  @include roundButton;
+  @include cursorPointer;
+}
 /*end*/

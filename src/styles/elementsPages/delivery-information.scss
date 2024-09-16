@@ -19,18 +19,11 @@
     color: $textColorTitle;
   }
   &__close-button {
-    position: absolute;
     top: 45px;
     right: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 47px;
-    height: 47px;
-    @include roundButton;
-    //outline: none;
-    @include cursorPointer;
+    @include closeButtonStyle;
   }
+
   &__description {
     @include descriptionTextStyle;
     font-size: $homePagetextSize;

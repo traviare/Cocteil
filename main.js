@@ -9,6 +9,6 @@ burgerMenu.addEventListener("click", closeBurgerMenu);
 import { handleDocumentClick } from "./src/common";
 document.addEventListener("click", handleDocumentClick);
 
-// каталог
-import { loadProducts } from "./src/common";
-loadProducts();
+// Автоматическая прокрутка карусели
+import { loadProducts } from './src/common';
+document.addEventListener('DOMContentLoaded', loadProducts);

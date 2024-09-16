@@ -1,0 +1,334 @@
+.order {
+  padding: 56px 9%;
+  background-color: $backgroundColorLight;
+  @media (max-width: $tablet) {
+    padding: 50px 5%;
+  }
+  &__title {
+    margin-bottom: 60px;
+    font-family: $fontFamilyText;
+    font-weight: 300;
+    font-size: $titleSizeTwo;
+    line-height: 87%;
+    color: $textColorTitle;
+    @media (max-width: $mobile) {
+      font-size: $titleSizeFour;
+    }
+  }
+}
+
+.circle-icon {
+  position: fixed;
+  top: 75%;
+  right: 0;
+  height: 429px;
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  @media (max-width: $tablet) {
+    gap: 40px;
+  }
+  &__block {
+    border: none;
+  }
+  &__data-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 125px;
+    @media (max-width: 1024px) {
+      gap: 50px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 30px;
+    }
+    &--pay-type {
+      gap: 67px;
+      max-width: 60%;
+      @media (max-width: $tablet) {
+        gap: 40px;
+        max-width: 100%;
+      }
+      @media (max-width: $mobile) {
+        gap: 20px;
+      }
+    }
+    &--delivery-type {
+      @media (max-width: $mobile) and (min-width: $mobile-sm) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+  &__data-container-item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+  &__delivery {
+    display: block;
+    margin-bottom: 22px;
+    @media (max-width: $mobile) {
+      margin-bottom: 10px;
+    }
+  }
+  &__title {
+    margin-bottom: 40px;
+    @include fontTextRegular;
+    font-size: $titleSizeThree;
+    line-height: 87%;
+    color: $textColorTitle;
+    @media (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
+  }
+  &__input {
+    @include descriptionTextStyle;
+    font-size: $homePagetextSize;
+    background-color: transparent;
+    border-bottom: 0.5px solid $textColor;
+    outline: none;
+    border: none;
+    @include cursorPointer;
+    &--comment {
+      padding: 12px 8px;
+      min-height: 90px;
+      border-bottom: none;
+      box-shadow: 0 4px 10px 0 $shadowColor;
+      resize: none;
+    }
+  }
+  &__label {
+    @include fontTextRegular;
+    font-size: $homePagetextSize;
+    color: $backgroundColorDark;
+  }
+  &__agreement {
+    @include fontText;
+    font-size: $textSizeTwo;
+    line-height: 118%;
+    color: $textColor;
+  }
+  &__explanation {
+    font-family: $fontFamilyText;
+    font-size: $textSizeTwo;
+    font-weight: 300;
+    color: $textColor;
+  }
+  &__radiobutton {
+    @include cursorPointer;
+  }
+}
+
+.button-confirm {
+  position: relative;
+  width: 193px;
+  height: 193px;
+  margin: 0 auto;
+  @include fontTextRegular;
+  font-size: $titleSizeThree;
+  color: $backgroundColorDark;
+  @include transparentButton;
+  border-radius: 100%;
+  border: 1px solid $backgroundColorDark;
+  @include cursorPointer;
+  @media (max-width: $tablet) {
+    width: 150px;
+    height: 150px;
+    font-size: $homePagetextSize;
+  }
+  &:hover {
+    color: $backgroundColorLight;
+    background-color: $backgroundColorDark;
+    .button-confirm__arrow--light {
+      visibility: visible;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    top: 58%;
+    left: 20%;
+    padding-left: 40px;
+    width: 61%;
+    &--light {
+      visibility: hidden;
+    }
+  }
+}
+
+.helper {
+  display: none;
+  margin-top: -20px;
+  @include descriptionTextStyle;
+  font-size: $homePagetextSize;
+  color: $errorColor;
+  &--delivery-type,
+  &--pay-type {
+    margin-top: 10px;
+  }
+}
+
+.confirmation {
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+  padding: 82px 10%;
+  background-color: $backgroundColorLight;
+  @media (max-width: $tablet) {
+    padding: 50px 5%;
+  }
+  @media (max-width: $mobile) {
+    padding: 30px 5%;
+    gap: 15px;
+  }
+  &__title {
+    margin-bottom: 60px;
+    font-family: $fontFamilyText;
+    font-weight: 300;
+    font-size: $titleSizeTwo;
+    line-height: 87%;
+    color: $textColorTitle;
+    @media (max-width: $mobile) {
+      margin-bottom: 30px;
+      font-size: $titleSizeFour;
+    }
+  }
+  &__information {
+    @include descriptionTextStyle;
+    font-size: $titleSizeThree;
+  }
+  &__value {
+    @include fontTextRegular;
+    font-size: $titleSizeThree;
+    color: $textColorTitle;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    width: 148px;
+    height: 37px;
+    @include fontTextRegular;
+    font-size: $textSizeOne;
+    color: $backgroundColorLight;
+    background-color: $backgroundColorDark;
+    border: none;
+    box-shadow: 0 4px 10px 0 $shadowColor;
+    @include cursorPointer;
+    img {
+      width: 25px;
+      rotate: 180deg;
+    }
+  }
+}
+
+.order-message {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  min-height: 330px;
+  padding: 5%;
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-height: 87px;
+    margin: auto;
+    @media (max-width: $mobile) {
+      gap: 15px;
+    }
+  }
+  &__close-button {
+    position: absolute;
+    top: 100px;
+    right: 5%;
+    @include closeButtonStyle;
+  }
+  &__title {
+    position: relative;
+    @include fontTextLight;
+    font-size: $titleSizeTwo;
+    text-align: center;
+    line-height: 87%;
+    color: $textColorTitle;
+    @media screen {
+      font-size: $titleSizeFour;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -170%;
+      left: -45%;
+      width: 73px;
+      height: 73px;
+      background-color: $backgroundColorDark;
+      border-radius: 100%;
+      box-shadow: 0 4px 20px 0 $shadowColorTwo;
+      @media (max-width: $desktop-md) {
+        left: -30%;
+      }
+      @media (max-width: $tablet) {
+        left: -15%;
+        width: 60px;
+        height: 60px;
+      }
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -260%;
+      left: -10%;
+      width: 47px;
+      height: 47px;
+      background-color: $backgroundColorDark;
+      border-radius: 100%;
+      box-shadow: 0 4px 20px 0 $shadowColorTwo;
+      @media (max-width: $tablet) {
+        bottom: -350%;
+        left: 5%;
+      }
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+  }
+  &__text {
+    @include descriptionTextStyle;
+    font-size: $homePagetextSize;
+    text-align: center;
+    color: $textColorTitle;
+  }
+  &__accent {
+    position: absolute;
+    right: -140px;
+    bottom: -10px;
+    @include fontBadScript;
+    font-size: $titleSizeTwo;
+    line-height: 87%;
+    color: $backgroundColorDark;
+    @media (max-width: $tablet) {
+      right: -70px;
+      bottom: -50px;
+    }
+    @media (max-width: $mobile) {
+      right: 40px;
+      bottom: -50px;
+    }
+  }
+}

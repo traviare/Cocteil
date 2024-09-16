@@ -1,8 +1,8 @@
 .faqS{
-// max-width: 1170px;
 background-color: $backgroundColorLight;
-margin: 150px 135px 150px 135px;
-position:relative;
+max-width: 1200px;
+margin: 0 auto;
+padding: 5% 15px;
 }
 .faqS__title{
 color: $textColorTitle;
@@ -12,18 +12,15 @@ line-height: 87.3%;
 text-align: left;
 }
 .faqS__span{
-position:absolute;
-top: 8%;
-left: 47%;//при разрешении 1440px
+margin-left: 570px;
 color: $backgroundColorDark;
 font-size: $titleSizeTwo;
 line-height: 87.3%;
 text-align: left; 
 @include fontBadScript;
 }
-.faqS__accordion{
-margin-top:60px;
-}
+.faqS__accordion{margin-top:60px;}
+
 .faqS__accordion-trigger{
 color: $textColorTitle;
 font-size: $titleSizeThree;
@@ -60,4 +57,93 @@ color: $backgroundColorDark;
 }
 .faqS__accordion-item.active .faqS__accordion-trigger::after {
 transform: rotate(45deg);
+}
+
+@media screen and (min-width: 1500px) and (max-width: 5000px) {
+    .faqS {
+        max-width: 100%;
+        padding: 5%;
+    }
+    .faqS__title,
+    .faqS__span { 
+        font-size: 60px;
+    }
+    .faqS__span {
+        margin-left: 820px;
+    }
+    .faqS__accordion-trigger, .faqS__accordion-trigger::after {
+        font-size: 32px;
+        padding-bottom: 20px;
+    }
+    .faqS__accordion-item.open .faqS__accordion-content { 
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1024px){
+    .faqS__title,
+    .faqS__span { 
+        font-size: 32px;
+    }
+    .faqS__span {
+        margin-left: 440px;
+    }
+    .faqS__accordion-trigger, .faqS__accordion-trigger::after {
+        font-size: 28px;
+    }
+    .faqS__accordion-item.open .faqS__accordion-content { 
+        font-size: 26px;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 700px){
+    .faqS__title,
+    .faqS__span { 
+        font-size: 25px;
+    }
+    .faqS__span {
+        margin-left: 350px;
+    }
+    .faqS__accordion-trigger, .faqS__accordion-trigger::after {
+        font-size: 26px;
+    }
+    .faqS__accordion-item.open .faqS__accordion-content { 
+        font-size: 24px;
+    }
+}
+@media screen and (min-width: 375px) and (max-width: 500px){
+    .faqS__title,
+    .faqS__span { 
+        font-size: 25px;
+    }
+    .faqS__title{padding-bottom: 15px;}
+    .faqS__span {
+        margin-left: 295px;
+    }
+    .faqS__accordion-trigger, .faqS__accordion-trigger::after {
+        font-size: 24px;
+    }
+    .faqS__accordion-item.open .faqS__accordion-content { 
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 250px) and (max-width: 375px){
+    .faqS{
+        padding:10px;
+        }
+    .faqS__title,
+    .faqS__span { 
+        font-size: 22px;
+    }
+    .faqS__span {
+        margin-left: 260px;
+    }
+    .faqS__title{
+        margin-bottom: 12px;
+    }
+    .faqS__accordion-trigger, .faqS__accordion-trigger::after {
+        font-size: 18px;
+    }
+    .faqS__accordion-item.open .faqS__accordion-content { 
+        font-size: 16px;
+    }
 }

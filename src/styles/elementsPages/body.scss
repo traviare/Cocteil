@@ -1,4 +1,15 @@
 .body {
-    background-color: $backgroundColorLight;
-    @include fontText;
+  background-color: $backgroundColorLight;
+  @include fontText;
+}
+
+.body-flex {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &__main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
 }

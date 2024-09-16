@@ -9,6 +9,10 @@ export const deliveryInfo = document.querySelector(".delivery-message");
 export const productsContainer = document.querySelector(".shopping-cart");
 export const totalQuantity = document.querySelectorAll(".total-quantity");
 export const totalPrice = document.querySelector(".total-info__total-price");
+export const buyButton = document.querySelector(".shopping-cart__button");
+export const orderForm = document.forms.formOrder;
+export const confirmationButton = document.querySelector(".confirmation__button");
+export const confirmationBlock = document.querySelector(".confirmation");
 /*end*/
 
 /*Violetta*/
@@ -35,3 +39,8 @@ export const btnDiscount = document.querySelector(
 );
 export const btnUpdate = document.querySelector(".products-sort__btn-update");
 /*end*/
+
+/*Alice*/
+export const itemsToShow = 3; // Количество карточек для отображения
+export const carouselInner = document.querySelector('.buyNow__carousel-inner');
+/*end*/ 
