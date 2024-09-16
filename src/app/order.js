@@ -27,6 +27,12 @@ inputs.forEach((input) => {
 orderForm.addEventListener("submit", validationForm);
 confirmationButton.addEventListener("click", createOrder);
 
+document
+  .querySelector(".order-message__close-button")
+  .addEventListener("click", function () {
+    document.location = "../index.html";
+  });
+
 //processing input fields
 function changeInputData(evt) {
   const curField = evt.target;
@@ -95,7 +101,7 @@ function orderConfirmation() {
 //adding an order to the database
 function createOrder() {
   confirmationBlock.style.display = "none";
-  const messageOrder = document.querySelector(".order-message__container");
+  const messageOrder = document.querySelector(".order-message");
   messageOrder.style.display = "flex";
   const quantityProduct = CartProducts.getCartProducts().then((data) => {
     inputValues["order-description"] = Array.from(data);
