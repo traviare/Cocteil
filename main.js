@@ -8,3 +8,7 @@ burgerMenu.addEventListener("click", closeBurgerMenu);
 // обработчик событий на документ/ accordion; faqS
 import { handleDocumentClick } from "./src/common";
 document.addEventListener("click", handleDocumentClick);
+
+// каталог
+import { loadProducts } from "./src/common";
+loadProducts();

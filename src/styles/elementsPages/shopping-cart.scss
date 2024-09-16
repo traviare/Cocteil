@@ -171,10 +171,8 @@
     @include descriptionTextStyle;
     @include transparentButton;
     @include cursorPointer;
+    color: $backgroundColorDark;
 
-    & {
-      color: $backgroundColorDark;
-    }
 
     &::after {
       content: "";

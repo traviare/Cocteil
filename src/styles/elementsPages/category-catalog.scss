@@ -2,6 +2,10 @@
     @include fontTextLight;
 }
 
+.catalog-page-container {
+    margin-bottom: 100px;
+}
+
 .catalog-page-nav {
     margin-top: 60px;
 }
@@ -39,6 +43,20 @@
     display: flex;
 }
 
+.product-catalog {
+    max-width: 972px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-catalog .card-item {
+    width: 22%;
+    padding-bottom: 30px;
+}
+
+.product-catalog div:not(:nth-child(4n)) {
+    margin-right: 3%;
+}
 
 .product-filtr {
     margin-right: 41px;
@@ -67,13 +85,12 @@
 .product-filtr__size,
 .product-filtr__colors {
     margin-top: 30px;
-
 }
 
 .price-range {
-
     &__wrap {
         margin-top: 30px;
+        display: none;
     }
 
     &__inputs {
