@@ -154,7 +154,6 @@ export async function loadProductsCatalog() {
       throw new Error("Сеть не отвечает");
     }
     const data = await response.json();
-    console.log(data["products-catalog"]);
     globalFunction(data["products-catalog"]);
   } catch (error) {
     console.error("Ошибка загрузки данных:", error);
@@ -262,6 +261,11 @@ function globalFunction(products) {
 // export function sortPriceProducts() {}
 // export function sortDiscountProducts() {}
 // export function sortUpdateProducts() {}
+// console.log(Array.from(document.querySelectorAll(".card-item")));
+// console.log(document.querySelectorAll(".card-item"));
+// console.log(document.querySelector(".product-catalog"));
+// console.log(Array.from(document.querySelector(".product-catalog")));
+// console.log(document.querySelector(".product-catalog").children);
 
 // настройка ранжирования цены
 import { rangeInput, progress, priceInput } from "./vars";

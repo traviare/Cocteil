@@ -1,8 +1,10 @@
 .header {
     position: sticky;
+    z-index: 999;
     top: 0px;
     background-color: $backgroundColorLight;
     padding-top: 49px;
+    padding-bottom: 10px;
 
     &__container {
         position: relative;
