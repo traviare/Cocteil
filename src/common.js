@@ -146,6 +146,8 @@ function startCarousel() {
 
 // Страница с каталогом товаров
 import { catalogJeans, catalogDress, catalogShirts } from "./vars";
+import { btnRating, btnPrice, btnDiscount, btnUpdate } from "./vars";
+import { container } from "./vars";
 
 export async function loadProductsCatalog() {
   try {
@@ -254,9 +256,84 @@ function globalFunction(products) {
       );
     });
   }
+
+
+  //сортировка товаров
+
+    // Добавляем обработчики событий для кнопок сортировки
+    btnRating.addEventListener("click", () => handleSort('rating'));
+    btnPrice.addEventListener("click", () => handleSort('price'));
+    btnDiscount.addEventListener("click", () => handleSort('discount'));
+    btnUpdate.addEventListener("click", () => handleSort('date'));
+
+    
+    
+    // Функция обработки сортировки
+    function handleSort(criteria) {
+      const sortedJeans = sortProducts(filtrJeans, criteria);
+      if(catalogJeans != null) {
+        renderProducts(sortedJeans, catalogJeans);
+      }
+
+      const sortedDress = sortProducts(filtrDress, criteria);
+      if(catalogDress != null) {
+        renderProducts(sortedDress, catalogDress);
+      }
+
+      const sortedShirts = sortProducts(filtrShirts, criteria);
+      if(catalogShirts != null) {
+        renderProducts(sortedShirts, catalogShirts);
+      }
+    }
+
+  function sortProducts(products, criteria) {
+    if (criteria === 'rating') {
+      return products.sort((a, b) => b.rating - a.rating);
+    }
+    
+    if (criteria === 'price') {
+      return products.sort((a, b) => a.price - b.price); // Для возрастания цены
+    }
+    
+    if (criteria === 'discount') {
+      return products.sort((a, b) => b.discount - a.discount);
+    }
+    
+    if (criteria === 'date') {
+      return products.sort((a, b) => new Date(b.added) - new Date(a.added));
+    }
+  }
+
+  function renderProducts(products, container) {
+    container.innerHTML = ''; // Очищаем контейнер перед отрисовкой
+
+    products.forEach(product => {
+      const productHTML = `
+            <div class="card-item" data-id='${product.id}'>
+        <div class="card-item__image">
+          <img src='.${product.picture[0]}' alt='${product.name}'/>
+        </div>
+        <div class="card-item__price">${product.price} ₽</div>
+        <div class="card-item__info">
+          <h3 class="card-item__name">${product.name}</h3>
+          <div class="card-item__icons">
+            <img src="../src/assets/images/globalImages/header_shopping-bag-line.svg" alt="" class="card-item__icon" />
+          </div>
+        </div>
+        <div class="card-item__links">
+          <button class="card-item__btn">
+            <a href="#" class="card-item__link">Подробнее<img src="../src/assets/images/globalImages/card-item-arrow.svg"
+                alt="" class="card-item__link-arrow" /></a>
+          </button>
+          <div class="card-item__rating">${product.rating} ★</div>
+        </div>
+      </div>
+      `;
+      container.insertAdjacentHTML('beforeend', productHTML);
+    });
+  }
+
 }
-//сортировка товаров
-// import { btnRating, btnPrice, btnDiscount, btnUpdate } from "./vars";
 
 // export function sortRatingProducts() {}
 // export function sortPriceProducts() {}

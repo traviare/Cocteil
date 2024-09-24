@@ -32,6 +32,8 @@ export const catalogJeans = document.querySelector(".product-catalog-jeans");
 export const catalogDress = document.querySelector(".product-catalog-dress");
 export const catalogShirts = document.querySelector(".product-catalog-shirts");
 
+export const container = document.querySelector(".product-catalog");
+
 export const btnRating = document.querySelector(".products-sort__btn-rating");
 export const btnPrice = document.querySelector(".products-sort__btn-price");
 export const btnDiscount = document.querySelector(
