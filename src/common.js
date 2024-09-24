@@ -147,7 +147,7 @@ function startCarousel() {
 // Страница с каталогом товаров
 import { catalogJeans, catalogDress, catalogShirts } from "./vars";
 import { btnRating, btnPrice, btnDiscount, btnUpdate } from "./vars";
-// import { container } from "./vars";
+import { container } from "./vars";
 
 export async function loadProductsCatalog() {
   try {
@@ -270,22 +270,21 @@ function globalFunction(products) {
     
     // Функция обработки сортировки
     function handleSort(criteria) {
-      //const filteredJeans = filterByCategory(products, 'Джинсы'); // или другая текущая категория
       const sortedJeans = sortProducts(filtrJeans, criteria);
-      renderProducts(sortedJeans, catalogJeans);
+      if(catalogJeans != null) {
+        renderProducts(sortedJeans, catalogJeans);
+      }
 
-    //const filteredDress = filterByCategory(products, 'Платья и сарафаны');
-    const sortedDress = sortProducts(filtrDress, criteria);
-    renderProducts(sortedDress, catalogDress);
+      const sortedDress = sortProducts(filtrDress, criteria);
+      if(catalogDress != null) {
+        renderProducts(sortedDress, catalogDress);
+      }
 
-    //const filteredShirts = filterByCategory(products, 'Блузки и рубашки');
-    const sortedShirts = sortProducts(filtrShirts, criteria);
-    renderProducts(sortedShirts, catalogShirts);
-  }
-  // Фильтрация товаров по категории
-  // function filterByCategory(products, category) {
-  //   return products.filter(product => product.category === category);
-  // }
+      const sortedShirts = sortProducts(filtrShirts, criteria);
+      if(catalogShirts != null) {
+        renderProducts(sortedShirts, catalogShirts);
+      }
+    }
 
   function sortProducts(products, criteria) {
     if (criteria === 'rating') {
@@ -335,36 +334,6 @@ function globalFunction(products) {
   }
 
 }
-
-
-
-
-//сортировка товаров
-// import { btnRating, btnPrice, btnDiscount, btnUpdate } from "./vars";
-
-// export function sortProducts(products, criteria) {
-//   if (criteria === 'rating') {
-//     return products.sort((a, b) => b.rating - a.rating);
-//   }
-  
-//   if (criteria === 'price') {
-//     return products.sort((a, b) => a.price - b.price); 
-//   }
-  
-//   if (criteria === 'discount') {
-//     return products.sort((a, b) => b.discount - a.discount);
-//   }
-  
-//   if (criteria === 'date') {
-//     return products.sort((a, b) => new Date(b.added) - new Date(a.added));
-//   }
-// }
-
-// btnRating.addEventListener("click", () => {
-//   const sortedProducts = sortProducts(products, 'rating');
-//   console.log(sortedProducts);
-// })
-
 
 // export function sortRatingProducts() {}
 // export function sortPriceProducts() {}
