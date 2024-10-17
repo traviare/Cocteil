@@ -2,7 +2,7 @@
     &__wrap {
         display: flex;
         justify-content: space-between;
-        margin-top: 50px;
+        margin-top: 40px;
     }
 
     &__link-wrap {
@@ -48,29 +48,9 @@
     }
 }
 
-.link {
-    &__content-wrap {
-        width: 193px;
-        height: 193px;
-        border-radius: 50%;
-        border: 1px solid $backgroundColorDark;
-        display: flex;
-        align-items: center;
-    }
 
-    &__text {
-        color: $backgroundColorDark;
-        font-weight: 400;
-        font-size: $titleSizeThree;
-        margin-left: 38px;
-    }
-
-    &__icon {
-        margin-left: 77px;
-    }
-}
-
-.link__content-wrap:hover {
-    // background-color: $backgroundColorDark;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.header-form,
+.personal-account,
+.personal-account img {
+    display: none;
 }

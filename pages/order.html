@@ -1,492 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../src/styles/globalStyles/style.scss" />
-  </head>
-  <body class="body-flex">
-    <!-- Violetta -->
-    <header class="header">
-      <div class="header__container container">
-        <div class="header__menu">
-          <div class="left-group">
-            <button class="menu-btn">
-              <img
-                class="menu-btn__icon"
-                src="../src/assets/images/globalImages/header_menu-line.svg"
-                alt=""
-              />
-            </button>
-            <div class="burger-menu burger-menu-display">
-              <div class="burger-menu__wrap">
-                <img
-                  class="burger-menu__logo"
-                  src="../src/assets/images/globalImages/cocteil-logo.svg"
-                  alt=""
-                />
-                <nav class="burger-menu__nav">
-                  <ul class="burger-menu__ul">
-                    <li class="burger-menu__li">
-                      <a
-                        class="burger-menu__a"
-                        href="./pages/jeans-catalog.html"
-                        >Джинсы</a
-                      >
-                    </li>
-                    <li class="burger-menu__li">
-                      <a class="burger-menu__a" href="#">Блузки и рубашки</a>
-                    </li>
-                    <li class="burger-menu__li">
-                      <a class="burger-menu__a" href="#">Платья и сарафаны</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../src/styles/globalStyles/style.scss" />
+</head>
+
+<body class="body-flex">
+  <!-- Violetta -->
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__menu">
+        <div class="left-group">
+          <button class="menu-btn">
+            <img class="menu-btn__icon" src="../src/assets/images/globalImages/header_menu-line.svg" alt="" />
+          </button>
+          <div class="burger-menu burger-menu-display">
+            <div class="burger-menu__wrap">
+              <a href="/index.html">
+                <img class="burger-menu__logo" src="../src/assets/images/globalImages/cocteil-logo.svg" alt="" />
+              </a>
+              <nav class="burger-menu__nav">
+                <ul class="burger-menu__ul">
+                  <li class="burger-menu__li">
+                    <a class="burger-menu__a" href="./jeans-catalog.html">Джинсы</a>
+                  </li>
+                  <li class="burger-menu__li">
+                    <a class="burger-menu__a" href="./shirts-catalog.html">Блузки и рубашки</a>
+                  </li>
+                  <li class="burger-menu__li">
+                    <a class="burger-menu__a" href="./dress-catalog.html">Платья и сарафаны</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
-          </div>
-          <div class="right-group">
-            <form class="header-form">
-              <button class="header-form__btn">
-                <img
-                  src="../src/assets/images/globalImages/header_search-line.svg"
-                  alt=""
-                />
-              </button>
-              <input
-                class="header-form__input"
-                type="text"
-                placeholder="Поиск"
-              />
-            </form>
-            <a href="#"
-              ><img
-                src="../src/assets/images/globalImages/header_avatar-line.svg"
-                alt=""
-                class="header-authorization"
-            /></a>
-            <a href="./shopping-cart.html"
-              ><img
-                src="../src/assets/images/globalImages/header_shopping-bag-line.svg"
-                alt=""
-                class="header-basket"
-            /></a>
           </div>
         </div>
+        <div class="right-group">
+          <form class="header-form">
+            <button class="header-form__btn">
+              <img src="../src/assets/images/globalImages/header_search-line.svg" alt="" />
+            </button>
+            <input class="header-form__input" type="text" placeholder="Поиск" />
+          </form>
+          <a class="personal-account" href="#"><img src="../src/assets/images/globalImages/header_avatar-line.svg"
+              alt="" class="header-authorization" /></a>
+          <a href="./shopping-cart.html"><img src="../src/assets/images/globalImages/header_shopping-bag-line.svg"
+              alt="" class="header-basket" /></a>
+        </div>
       </div>
-    </header>
-    <!-- end -->
-    <main class="body-flex__main">
-      <article class="order">
-        <h1 class="order__title">Оформление заказа</h1>
-        <form name="formOrder" class="order-form">
-          <fieldset class="order-form__block">
-            <legend class="order-form__title">Ваши данные</legend>
-            <div class="order-form__data-container">
-              <div class="order-form__data-container-item">
-                <input
-                  class="order-form__input"
-                  type="text"
-                  name="surname"
-                  id="surname"
-                  placeholder="Фамилия"
-                />
-                <span class="helper helper--surname"> </span>
-                <input
-                  class="order-form__input"
-                  type="text"
-                  name="username"
-                  id="username"
-                  placeholder="Имя"
-                />
-                <span class="helper helper--username"> </span>
-                <input
-                  class="order-form__input"
-                  type="text"
-                  name="patronymic"
-                  id="patronymic"
-                  placeholder="Отчество"
-                />
-                <span class="helper helper--patronymic"> </span>
-                <input
-                  class="order-form__input"
-                  type="tel"
-                  name="telephone"
-                  id="telephone"
-                  placeholder="Контактный телефон"
-                  maxlength="13"
-                />
-                <span class="helper helper--telephone"> </span>
-                <label class="order-form__agreement order-form__radiobutton">
-                  <input
-                    class="order-form__input"
-                    type="radio"
-                    name="agreement"
-                    id="agreement"
-                  />
-                  Даю согласие на обработку персональных данных
-                </label>
-                <span class="helper helper--agreement"
-                  >Для продолжения Вы должны дать согласие на обработку
-                  персональных данных.</span
-                >
-              </div>
-              <div class="order-form__data-container-item">
-                <input
-                  class="order-form__input"
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Электронная почта"
-                />
-                <span class="helper helper--email"> </span>
-                <input
-                  class="order-form__input"
-                  type="text"
-                  name="address"
-                  id="address"
-                  placeholder="Ваш адрес (только РБ)"
-                  list="suggested-addresses"
-                />
-                <datalist class="order-form__datalist" id="suggested-addresses">
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                </datalist>
+    </div>
+  </header>
+  <!-- end -->
+  <main class="body-flex__main">
+    <article class="order">
+      <h1 class="order__title">Оформление заказа</h1>
+      <form name="formOrder" class="order-form">
+        <fieldset class="order-form__block">
+          <legend class="order-form__title">Ваши данные</legend>
+          <div class="order-form__data-container">
+            <div class="order-form__data-container-item">
+              <input class="order-form__input" type="text" name="surname" id="surname" placeholder="Фамилия" />
+              <span class="helper helper--surname"> </span>
+              <input class="order-form__input" type="text" name="username" id="username" placeholder="Имя" />
+              <span class="helper helper--username"> </span>
+              <input class="order-form__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество" />
+              <span class="helper helper--patronymic"> </span>
+              <input class="order-form__input" type="tel" name="telephone" id="telephone"
+                placeholder="Контактный телефон" maxlength="13" />
+              <span class="helper helper--telephone"> </span>
+              <label class="order-form__agreement order-form__radiobutton">
+                <input class="order-form__input" type="radio" name="agreement" id="agreement" />
+                Даю согласие на обработку персональных данных
+              </label>
+              <span class="helper helper--agreement">Для продолжения Вы должны дать согласие на обработку
+                персональных данных.</span>
+            </div>
+            <div class="order-form__data-container-item">
+              <input class="order-form__input" type="email" name="email" id="email" placeholder="Электронная почта" />
+              <span class="helper helper--email"> </span>
+              <input class="order-form__input" type="text" name="address" id="address"
+                placeholder="Ваш адрес (только РБ)" list="suggested-addresses" />
+              <datalist class="order-form__datalist" id="suggested-addresses">
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+              </datalist>
 
-                <span class="helper helper--address"> </span>
-                <textarea
-                  class="order-form__input order-form__input--comment"
-                  name="comment"
-                  id="comment"
-                  placeholder="Комментарий"
-                ></textarea>
-              </div>
+              <span class="helper helper--address"> </span>
+              <textarea class="order-form__input order-form__input--comment" name="comment" id="comment"
+                placeholder="Комментарий"></textarea>
             </div>
-          </fieldset>
-          <fieldset class="order-form__block">
-            <p class="order-form__title">Выберите способ доставки</p>
-            <div
-              class="order-form__data-container order-form__data-container--delivery-type"
-            >
-              <div>
-                <label
-                  class="order-form__label order-form__delivery order-form__radiobutton"
-                >
-                  <input
-                    type="radio"
-                    name="delivery-type"
-                    id="belposhta-type"
-                    value="belposhta"
-                  />
-                  Белпочта
-                </label>
-                <p class="order-form__explanation">Доставка 2-3 дня</p>
-              </div>
-              <div>
-                <label
-                  class="order-form__label order-form__delivery order-form__radiobutton"
-                >
-                  <input
-                    type="radio"
-                    name="delivery-type"
-                    id="euromail-type"
-                    value="euromail"
-                  />
-                  Европочта
-                </label>
-                <p class="order-form__explanation">
-                  Доставка на отделение 2-3 дня
-                </p>
-                <p class="order-form__explanation">Стоимость 4,5 р.</p>
-              </div>
-              <div>
-                <label
-                  class="order-form__label order-form__delivery order-form__radiobutton"
-                >
-                  <input
-                    type="radio"
-                    name="delivery-type"
-                    id="euromail-courier-type"
-                    value="euromail-courier"
-                  />
-                  Европочта + курьер
-                </label>
-                <p class="order-form__explanation">
-                  Доставка в течение 3-х дней
-                </p>
-                <p class="order-form__explanation">Стоимость 7 р.</p>
-              </div>
-              <div>
-                <label
-                  class="order-form__label order-form__delivery order-form__radiobutton"
-                >
-                  <input
-                    type="radio"
-                    name="delivery-type"
-                    id="courier-minsk-type"
-                    value="courier-minsk"
-                  />
-                  Курьер г. Минск
-                </label>
-                <p class="order-form__explanation">Доставка в течение дня</p>
-                <p class="order-form__explanation">Стоимость 6.5 р.</p>
-                <p class="order-form__explanation">За МКАД (3-5 км) 8 р.</p>
-              </div>
+          </div>
+        </fieldset>
+        <fieldset class="order-form__block">
+          <p class="order-form__title">Выберите способ доставки</p>
+          <div class="order-form__data-container order-form__data-container--delivery-type">
+            <div>
+              <label class="order-form__label order-form__delivery order-form__radiobutton">
+                <input type="radio" name="delivery-type" id="belposhta-type" value="belposhta" />
+                Белпочта
+              </label>
+              <p class="order-form__explanation">Доставка 2-3 дня</p>
             </div>
-            <span class="helper helper--delivery-type"
-              >Выберите способ доставки.
-            </span>
-          </fieldset>
-          <!--<p class="order-form__explanation order-form__explanation--important">
+            <div>
+              <label class="order-form__label order-form__delivery order-form__radiobutton">
+                <input type="radio" name="delivery-type" id="euromail-type" value="euromail" />
+                Европочта
+              </label>
+              <p class="order-form__explanation">
+                Доставка на отделение 2-3 дня
+              </p>
+              <p class="order-form__explanation">Стоимость 4,5 р.</p>
+            </div>
+            <div>
+              <label class="order-form__label order-form__delivery order-form__radiobutton">
+                <input type="radio" name="delivery-type" id="euromail-courier-type" value="euromail-courier" />
+                Европочта + курьер
+              </label>
+              <p class="order-form__explanation">
+                Доставка в течение 3-х дней
+              </p>
+              <p class="order-form__explanation">Стоимость 7 р.</p>
+            </div>
+            <div>
+              <label class="order-form__label order-form__delivery order-form__radiobutton">
+                <input type="radio" name="delivery-type" id="courier-minsk-type" value="courier-minsk" />
+                Курьер г. Минск
+              </label>
+              <p class="order-form__explanation">Доставка в течение дня</p>
+              <p class="order-form__explanation">Стоимость 6.5 р.</p>
+              <p class="order-form__explanation">За МКАД (3-5 км) 8 р.</p>
+            </div>
+          </div>
+          <span class="helper helper--delivery-type">Выберите способ доставки.
+          </span>
+        </fieldset>
+        <!--<p class="order-form__explanation order-form__explanation--important">
             Сроки доставки указаны при условии наличия товара. Заказ, сделанный
             со вт по чт отправляется в пн. Заказ, сделанный с пт по вс
             отправляется в пт.
           </p>
         -->
-          <fieldset class="order-form__block">
-            <p class="order-form__title">Выберите способ оплаты</p>
-            <div
-              class="order-form__data-container order-form__data-container--pay-type"
-            >
-              <label class="order-form__label order-form__radiobutton">
-                <input
-                  type="radio"
-                  name="pay-type"
-                  id="bank-card"
-                  value="bank-card"
-                />
-                Банковская карта
-              </label>
-              <label class="order-form__label order-form__radiobutton">
-                <input
-                  type="radio"
-                  name="pay-type"
-                  id="cash-on-delivery"
-                  value="cash-on-delivery"
-                />
-                Наложенный платёж. Оплата при получении
-              </label>
-              <label class="order-form__label order-form__radiobutton">
-                <input
-                  type="radio"
-                  name="pay-type"
-                  id="erip-pay"
-                  value="erip-pay"
-                />
-                Оплата ЕРИП
-              </label>
-            </div>
-            <span class="helper helper--pay-type">Выберите способ оплаты.</span>
-          </fieldset>
-          <button class="order-form__button button-confirm" type="submit">
-            Подтвердить
-            <img 
-              class="button-confirm__arrow button-confirm__arrow--dark"
-              src="../src/assets/images/globalImages/home-page-btn-arrow.svg"
-              alt="long right dark arrow link"
-            />
-            <img
-              class="button-confirm__arrow button-confirm__arrow--light"
-              src="../src/assets/images/globalImages/home-page-btn-arrow-hover.svg"
-              alt="long right light arrow link"
-            />
-          </button>
-        </form>
-      </article>
-      <div class="circle-icon">
-        <img
-          src="../src/assets/images/globalImages/circle.svg"
-          alt="half a circle image"
-        />
-      </div>
-      <article class="confirmation">
-        <h2 class="confirmation__title">Подтверждение заказа</h2>
+        <fieldset class="order-form__block">
+          <p class="order-form__title">Выберите способ оплаты</p>
+          <div class="order-form__data-container order-form__data-container--pay-type">
+            <label class="order-form__label order-form__radiobutton">
+              <input type="radio" name="pay-type" id="bank-card" value="bank-card" />
+              Банковская карта
+            </label>
+            <label class="order-form__label order-form__radiobutton">
+              <input type="radio" name="pay-type" id="cash-on-delivery" value="cash-on-delivery" />
+              Наложенный платёж. Оплата при получении
+            </label>
+            <label class="order-form__label order-form__radiobutton">
+              <input type="radio" name="pay-type" id="erip-pay" value="erip-pay" />
+              Оплата ЕРИП
+            </label>
+          </div>
+          <span class="helper helper--pay-type">Выберите способ оплаты.</span>
+        </fieldset>
+        <button class="order-form__button button-confirm" type="submit">
+          Подтвердить
+          <img class="button-confirm__arrow button-confirm__arrow--dark"
+            src="../src/assets/images/globalImages/home-page-btn-arrow.svg" alt="long right dark arrow link" />
+          <img class="button-confirm__arrow button-confirm__arrow--light"
+            src="../src/assets/images/globalImages/home-page-btn-arrow-hover.svg" alt="long right light arrow link" />
+        </button>
+      </form>
+    </article>
+    <div class="circle-icon">
+      <img src="../src/assets/images/globalImages/circle.svg" alt="half a circle image" />
+    </div>
+    <article class="confirmation">
+      <h2 class="confirmation__title">Подтверждение заказа</h2>
 
-        <p class="confirmation__information">
-          Фамилия:
-          <span class="confirmation__value confirmation__value--surname"></span>
+      <p class="confirmation__information">
+        Фамилия:
+        <span class="confirmation__value confirmation__value--surname"></span>
+      </p>
+      <p class="confirmation__information">
+        Имя:
+        <span class="confirmation__value confirmation__value--username"></span>
+      </p>
+      <p class="confirmation__information">
+        Отчество:
+        <span class="confirmation__value confirmation__value--patronymic"></span>
+      </p>
+      <p class="confirmation__information">
+        Номер телефона:
+        <span class="confirmation__value confirmation__value--telephone"></span>
+      </p>
+      <p class="confirmation__information">
+        Электронная почта:
+        <span class="confirmation__value confirmation__value--email"></span>
+      </p>
+      <p class="confirmation__information">
+        Оплата:
+        <span class="confirmation__value confirmation__value--pay-type"></span>
+      </p>
+      <p class="confirmation__information">
+        Способ доставки:
+        <span class="confirmation__value confirmation__value--delivery-type"></span>
+      </p>
+      <p class="confirmation__information">
+        Время доставки:
+        <span class="confirmation__value confirmation__value--delivery-time"></span>
+      </p>
+      <p class="confirmation__information">
+        Адрес:
+        <span class="confirmation__value confirmation__value--address"></span>
+      </p>
+      <button class="confirmation__button" type="submit">
+        Подтвердить<img src="../src/assets/images/globalImages/short-light-arrow.svg" alt="short light right arrow" />
+      </button>
+    </article>
+    <article class="order-message">
+      <button class="order-message__close-button">
+        <img src="../src/assets/images/globalImages/cart-page-cross-icon.svg" alt="cross icon" />
+      </button>
+      <div class="order-message__container">
+        <h2 class="order-message__title">Ваша заявка обрабатывается.</h2>
+        <p class="order-message__text">
+          Наш специалист с Вами свяжется в ближайшее время
         </p>
-        <p class="confirmation__information">
-          Имя:
-          <span
-            class="confirmation__value confirmation__value--username"
-          ></span>
-        </p>
-        <p class="confirmation__information">
-          Отчество:
-          <span
-            class="confirmation__value confirmation__value--patronymic"
-          ></span>
-        </p>
-        <p class="confirmation__information">
-          Номер телефона:
-          <span
-            class="confirmation__value confirmation__value--telephone"
-          ></span>
-        </p>
-        <p class="confirmation__information">
-          Электронная почта:
-          <span class="confirmation__value confirmation__value--email"></span>
-        </p>
-        <p class="confirmation__information">
-          Оплата:
-          <span
-            class="confirmation__value confirmation__value--pay-type"
-          ></span>
-        </p>
-        <p class="confirmation__information">
-          Способ доставки:
-          <span
-            class="confirmation__value confirmation__value--delivery-type"
-          ></span>
-        </p>
-        <p class="confirmation__information">
-          Время доставки:
-          <span
-            class="confirmation__value confirmation__value--delivery-time"
-          ></span>
-        </p>
-        <p class="confirmation__information">
-          Адрес:
-          <span class="confirmation__value confirmation__value--address"></span>
-        </p>
-        <button class="confirmation__button" type="submit">
-          Подтвердить<img
-            src="../src/assets/images/globalImages/short-light-arrow.svg"
-            alt="short light right arrow"
-          />
-        </button>
-      </article>
-      <article class="order-message">
-        <button class="order-message__close-button">
-          <img
-            src="../src/assets/images/globalImages/cart-page-cross-icon.svg"
-            alt="cross icon"
-          />
-        </button>
-        <div class="order-message__container">
-          <h2 class="order-message__title">Ваша заявка обрабатывается.</h2>
-          <p class="order-message__text">
-            Наш специалист с Вами свяжется в ближайшее время
+        <span class="order-message__accent">Спасибо!</span>
+      </div>
+    </article>
+  </main>
+  <!-- Ekaterina -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrap">
+        <nav class="footer-nav footer-nav__info">
+          <h4 class="footer__title">Информация</h4>
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Главная</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Акции</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Каталог</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Возврат</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Доставка</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Партнёрам</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Способы оплаты</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Как сделать заказ?</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="footer-nav footer-nav__cabinet">
+          <h4 class="footer__title">Мой кабинет</h4>
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Мои заказы</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Мои адреса</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Мои скидки</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Моя информация</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer-nav footer-nav__contacts">
+          <h4 class="footer__title">Контактная информация</h4>
+          <p class="footer__description-contacts">
+            ИП Вишневский Иван Сергеевич<br />государственная регистрация
+            №690867884<br />
+            от 31.07.2020. Логойским горисполкомом<br />
+            Защита прав потребителей +375259990755
           </p>
-          <span class="order-message__accent">Спасибо!</span>
         </div>
-      </article>
-    </main>
-    <!-- Ekaterina -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__wrap">
-          <nav class="footer-nav footer-nav__info">
-            <h4 class="footer__title">Информация</h4>
-            <ul class="footer-nav__list">
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Главная</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Акции</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Каталог</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Возврат</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Доставка</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Партнёрам</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Способы оплаты</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Как сделать заказ?</a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="footer-nav footer-nav__cabinet">
-            <h4 class="footer__title">Мой кабинет</h4>
-            <ul class="footer-nav__list">
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Мои заказы</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Мои адреса</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Мои скидки</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Моя информация</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="footer-nav footer-nav__contacts">
-            <h4 class="footer__title">Контактная информация</h4>
-            <p class="footer__description-contacts">
-              ИП Вишневский Иван Сергеевич<br />государственная регистрация
-              №690867884<br />
-              от 31.07.2020. Логойским горисполкомом<br />
-              Защита прав потребителей +375259990755
-            </p>
+        <div class="footer-nav footer-socials">
+          <h4 class="footer__title">Соц. сети</h4>
+          <div class="footer-nav__item footer-socials__list">
+            <a href="#"><img src="../src/assets/images/globalImages/footer-social-tg.svg" alt="Telegram-icon" /></a>
+            <a href="#"><img src="../src/assets/images/globalImages/footer-social-insta.svg" alt="Instagram-icon" /></a>
+            <a href="#"><img src="../src/assets/images/globalImages/footer-social-mail.svg" alt="Email-icon" /></a>
+            <a href="#"><img src="../src/assets/images/globalImages/footer-social-whatsapp.svg"
+                alt="WhatsApp-icon" /></a>
           </div>
-          <div class="footer-nav footer-socials">
-            <h4 class="footer__title">Соц. сети</h4>
-            <div class="footer-nav__item footer-socials__list">
-              <a href="#"
-                ><img
-                  src="../src/assets/images/globalImages/footer-social-tg.svg"
-                  alt="Telegram-icon"
-              /></a>
-              <a href="#"
-                ><img
-                  src="../src/assets/images/globalImages/footer-social-insta.svg"
-                  alt="Instagram-icon"
-              /></a>
-              <a href="#"
-                ><img
-                  src="../src/assets/images/globalImages/footer-social-mail.svg"
-                  alt="Email-icon"
-              /></a>
-              <a href="#"
-                ><img
-                  src="../src/assets/images/globalImages/footer-social-whatsapp.svg"
-                  alt="WhatsApp-icon"
-              /></a>
-            </div>
-            <div class="footer-nav__item footer-socials__phone">
-              <a href="tel:+375255990755"
-                ><img
-                  src="../src/assets/images/globalImages/footer-phone-number-icon.svg"
-                  alt="Phone-icon"
-                />+375255990755</a
-              >
-            </div>
-            <div class="footer-nav__item footer-socials__hours">
-              <img
-                src="../src/assets/images/globalImages/footer-hour-icon.svg"
-                alt="Hour-icon"
-              />
-              <span>круглосуточно, без выходных</span>
-            </div>
+          <div class="footer-nav__item footer-socials__phone">
+            <a href="tel:+375255990755"><img src="../src/assets/images/globalImages/footer-phone-number-icon.svg"
+                alt="Phone-icon" />+375255990755</a>
           </div>
-          <div class="footer-logo">
-            <img
-              src="../src/assets/images/globalImages/footer-logo.png"
-              alt="footer-logo"
-            />
+          <div class="footer-nav__item footer-socials__hours">
+            <img src="../src/assets/images/globalImages/footer-hour-icon.svg" alt="Hour-icon" />
+            <span>круглосуточно, без выходных</span>
           </div>
+        </div>
+        <div class="footer-logo">
+          <img src="../src/assets/images/globalImages/footer-logo.png" alt="footer-logo" />
         </div>
       </div>
-    </footer>
-    <!-- end -->
-    <script type="module" src="../src/app/order.js"></script>
-    <script type="module" src="../main.js"></script>
-  </body>
+    </div>
+  </footer>
+  <!-- end -->
+  <script type="module" src="../src/app/order.js"></script>
+  <script type="module" src="../main.js"></script>
+</body>
+
 </html>
