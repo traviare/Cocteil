@@ -1,18 +1,18 @@
 // Бургер меню
 import { burgerMenuBtn, burgerMenu } from "./src/vars";
-import { handlBurgerMenu } from "./src/common";
+import { openBurgerMenu, closeBurgerMenu } from "./src/common";
 
-burgerMenuBtn.addEventListener("click", handlBurgerMenu);
-burgerMenu.addEventListener("click", handlBurgerMenu);
+burgerMenuBtn.addEventListener("click", openBurgerMenu);
+burgerMenu.addEventListener("click", closeBurgerMenu);
 
 // обработчик событий на документ/ accordion; faqS
-import { handleDocumentClick } from "./src/app/home-page";
+import { handleDocumentClick } from "./src/common";
 document.addEventListener("click", handleDocumentClick);
 
-//Автоматическая прокрутка карусели
-// import { loadProducts } from "./src/app/home-page";
-// document.addEventListener("DOMContentLoaded", loadProducts);
+// Автоматическая прокрутка карусели
+import { loadProducts } from "./src/common";
+document.addEventListener("DOMContentLoaded", loadProducts);
 
-// отображение товаров в каталоге
-// import { loadProductsCatalog } from "./src/app/catalog-page";
-// loadProductsCatalog();
+//отображение товаров в каталоге
+import { loadProductsCatalog } from "./src/common";
+loadProductsCatalog();

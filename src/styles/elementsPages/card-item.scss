@@ -7,17 +7,9 @@
   }
 
   &__price {
-    font-size: $textSizeOne;
+    font-size: 14px;
     @include fontTextRegular;
     color: $textColorTitle;
-    text-align: left;
-  }
-
-  &__start-price {
-    color: $textColor;
-    font-size: $textSizeTwo;
-    margin-left: 13px;
-    text-decoration: line-through;
   }
 
   &__info {
@@ -34,10 +26,8 @@
     align-items: center;
   }
 
-  &__shop-btn {
-    border: none;
-    background-color: inherit;
-    cursor: pointer;
+  &__icon {
+    margin-right: 4px;
   }
 
   &__links {
@@ -55,20 +45,7 @@
     background: transparent;
   }
 
-  &__btn:hover {
-    background-color: $backgroundColorDark;
-    color: white;
-
-    path {
-      fill: white;
-    }
-  }
-
   &__link-arrow {
     margin-left: 15px;
-  }
-
-  &__rating {
-    color: $backgroundColorDark;
   }
 }
