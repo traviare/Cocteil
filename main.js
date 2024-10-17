@@ -13,6 +13,6 @@ document.addEventListener("click", handleDocumentClick);
 import { loadProducts } from "./src/common";
 document.addEventListener("DOMContentLoaded", loadProducts);
 
-//отображение товаров в каталоге
-import { loadProductsCatalog } from "./src/common";
-loadProductsCatalog();
+// //отображение товаров в каталоге
+// import { loadProductsCatalog } from "./src/common";
+// loadProductsCatalog();

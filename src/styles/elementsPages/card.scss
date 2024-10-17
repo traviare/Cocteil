@@ -42,8 +42,7 @@ body {
     position: relative;
   }
 
-  &__main-image {
-  }
+  &__main-image {}
 
   &__main-arrow {
     padding: 16px 20px;
@@ -64,6 +63,7 @@ body {
     &:not(:last-child) {
       margin-right: 14px;
     }
+
     &:last-child {
       position: relative;
     }
@@ -104,6 +104,7 @@ body {
     &:first-child {
       margin-left: 4px;
     }
+
     &:not(:last-child) {
       margin-right: 10px;
     }
@@ -205,6 +206,7 @@ body {
     justify-content: center;
     align-items: center;
   }
+
   &__text {
     font-family: $fontFamilyText;
     font-size: 14px;
@@ -227,6 +229,7 @@ body {
     font-weight: 400;
     text-decoration: underline;
   }
+
   &__links-view {
     margin-right: 52px;
   }
