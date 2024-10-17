@@ -24,7 +24,7 @@ export const handleDocumentClick = (event) => {
 /*carousel*/
 import { itemsToShow, carouselInner } from "../vars";
 
-async function loadProducts() {
+export async function loadProducts() {
   try {
     const response = await fetch("./db.json");
     if (!response.ok) {
@@ -37,7 +37,6 @@ async function loadProducts() {
     console.error("Ошибка загрузки данных:", error);
   }
 }
-document.addEventListener("DOMContentLoaded", loadProducts);
 
 function displayProducts(products) {
   const filteredProducts = products.filter(

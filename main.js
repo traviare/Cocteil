@@ -10,8 +10,8 @@ import { handleDocumentClick } from "./src/app/home-page";
 document.addEventListener("click", handleDocumentClick);
 
 //Автоматическая прокрутка карусели
-// import { loadProducts } from "./src/app/home-page";
-// document.addEventListener("DOMContentLoaded", loadProducts);
+import { loadProducts } from "./src/app/home-page";
+document.addEventListener("DOMContentLoaded", loadProducts);
 
 // отображение товаров в каталоге
 // import { loadProductsCatalog } from "./src/app/catalog-page";
