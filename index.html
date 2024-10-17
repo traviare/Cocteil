@@ -13,7 +13,6 @@
 </head>
 
 <body class="body">
-  <!-- Violetta -->
   <header class="header">
     <div class="header__container container">
       <div class="header__menu">
@@ -44,7 +43,7 @@
             </button>
             <input class="header-form__input" type="text" placeholder="Поиск">
           </form>
-          <a href="#"><img src="./src/assets/images/globalImages/header_avatar-line.svg" alt=""
+          <a class="personal-account" href="#"><img src="./src/assets/images/globalImages/header_avatar-line.svg" alt=""
               class="header-authorization"></a>
           <a href="./pages/shopping-cart.html"><img src="./src/assets/images/globalImages/header_shopping-bag-line.svg"
               alt="" class="header-basket"></a>
@@ -52,101 +51,103 @@
       </div>
     </div>
   </header>
-  <div class="home-page-container container">
-    <div class="home-page">
-      <div class="home-page__wrap">
-        <div class="wrap__left-content">
-          <img src="./src/assets/images/globalImages/home-page-img1.jpeg" alt="" class="left-content__img">
-          <h1 class="left-content__title">Добро пожаловать в <span class="left-content__title-accent">Cocteil</span>
-          </h1>
-          <p class="left-content__text">Экономим Ваше время!
-            Предлагаем лучшие цены!
-            Доставляем в кратчайшие сроки!</p>
-        </div>
-        <div class="wrap__right-content">
-          <img src="./src/assets/images/globalImages/home-page-img2.jpeg" alt="" class="right-content__img">
-        </div>
-      </div>
-      <div class="home-page__link-wrap">
-        <a href="#" class="home-page__link">
-          <div class="link__content-wrap">
-            <div class="link__content">
-              <div class="link__text">Каталог</div>
-              <img src="./src/assets/images/globalImages/home-page-btn-arrow.svg" alt="" class="link__icon">
-            </div>
+  <main>
+    <div class="home-page-container container">
+      <div class="home-page">
+        <div class="home-page__wrap">
+          <div class="wrap__left-content">
+            <img src="./src/assets/images/globalImages/home-page-img1.jpeg" alt="" class="left-content__img">
+            <h1 class="left-content__title">Добро пожаловать в <span class="left-content__title-accent">Cocteil</span>
+            </h1>
+            <p class="left-content__text">Экономим Ваше время!
+              Предлагаем лучшие цены!
+              Доставляем в кратчайшие сроки!</p>
           </div>
-        </a>
+          <div class="wrap__right-content">
+            <img src="./src/assets/images/globalImages/home-page-img2.jpeg" alt="" class="right-content__img">
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- end -->
-  <!-- Alica -->
-  <section class="buyNow">
+    <section class="buyNow">
       <h2 class='buyNow__title'>Успей купить!</h2>
       <span class='buyNow__span'>Акции</span>
       <div class='buyNow__carousel'>
-          <div class='buyNow__carousel-inner'></div>
+        <div class='buyNow__carousel-inner'></div>
       </div>
-  </section>
-  <section class="faqS">
-    <h2 class="faqS__title">Часто задаваемые вопросы</h2>
-    <span class="faqS__span">FAQ</span>
-    <div class="faqS__accordion">
-      <!-- Первый блок -->
-      <div class="faqS__accordion-item">
-        <button class="faqS__accordion-trigger">Как сделать заказ?</button>
-        <p class="faqS__accordion-content">
-          Ответ на вопрос 1. Вы можете добавить любой контент сюда.
-        </p>
+    </section>
+    <section class="faqS">
+      <h2 class="faqS__title">Часто задаваемые вопросы</h2>
+      <span class="faqS__span">FAQ</span>
+      <div class="faqS__accordion">
+        <div class="faqS__accordion-item">
+          <button class="faqS__accordion-trigger">Как сделать заказ?</button>
+          <p class="faqS__accordion-content">
+            Чтобы сделать заказ, выберите нужные товары и добавьте их в корзину. Затем перейдите в корзину,
+            проверьте содержимое и нажмите кнопку "Оформить заказ". Далее вам нужно будет указать данные для доставки
+            и выбрать способ оплаты. После подтверждения заказа вы получите уведомление на электронную почту с деталями.
+          </p>
+        </div>
+        <div class="faqS__accordion-item">
+          <button class="faqS__accordion-trigger">Способы оплаты</button>
+          <p class="faqS__accordion-content">
+            Мы принимаем следующие способы оплаты: банковские карты (Visa, MasterCard) и наложенный платёж при получении
+            (для некоторых регионов). Выбирайте удобный способ при оформлении заказа.
+          </p>
+        </div>
+        <div class="faqS__accordion-item">
+          <button class="faqS__accordion-trigger">Доставка</button>
+          <p class="faqS__accordion-content">
+            Мы доставляем заказы по всей России, а также в некоторые страны СНГ. Доступные способы доставки: курьерская
+            служба,
+            пункты выдачи заказов, доставка Почтой России и экспресс-доставка. Вы можете выбрать подходящий способ
+            доставки на этапе оформления заказа.
+          </p>
+        </div>
+        <div class="faqS__accordion-item">
+          <button class="faqS__accordion-trigger">Сроки доставки</button>
+          <p class="faqS__accordion-content">
+            Сроки доставки зависят от вашего региона и выбранного способа доставки. В среднем, доставка по России
+            занимает от 3 до 10 рабочих дней.
+            Экспресс-доставка может занять от 1 до 3 дней. После отправки заказа вам будет предоставлен трек-номер для
+            отслеживания посылки.
+          </p>
+        </div>
+        <div class="faqS__accordion-item">
+          <button class="faqS__accordion-trigger">Как сделать обмен?</button>
+          <p class="faqS__accordion-content">
+            Для обмена товара свяжитесь с нашей службой поддержки через форму обратной связи или по телефону. Укажите
+            номер заказа и причину обмена.
+            Мы предложим варианты замены товара и поможем организовать доставку. Обмен возможен в течение 14 дней с
+            момента получения заказа, при условии,
+            что товар не использовался и сохранены все его оригинальные ярлыки и упаковка.
+          </p>
+        </div>
+        <div class="faqS__accordion-item">
+          <button class="faqS__accordion-trigger">Как сделать возврат?</button>
+          <p class="faqS__accordion-content">
+            Если вы хотите вернуть товар, свяжитесь с нашей службой поддержки для получения инструкции по возврату.
+            Возврат возможен в течение 14 дней
+            с момента получения товара, при условии, что он не был в употреблении, и сохранены все ярлыки и упаковка. Мы
+            организуем возврат через удобный
+            для вас способ доставки.
+          </p>
+        </div>
+        <div class="faqS__accordion-item">
+          <button class="faqS__accordion-trigger">
+            Куда и когда вернутся деньги за возвращённый товар?
+          </button>
+          <p class="faqS__accordion-content">
+            После получения и проверки возвращённого товара мы обработаем возврат средств. Обычно это занимает до 7
+            рабочих дней.
+            Деньги будут возвращены тем же способом, которым была произведена оплата. В зависимости от вашего банка или
+            платёжной системы,
+            перевод может занять до 14 рабочих дней.
+          </p>
+        </div>
       </div>
-      <!-- Второй блок -->
-      <div class="faqS__accordion-item">
-        <button class="faqS__accordion-trigger">Способы оплаты</button>
-        <p class="faqS__accordion-content">
-          Ответ на вопрос 2. Вы можете добавить любой контент сюда.
-        </p>
-      </div>
-      <!-- Третий блок -->
-      <div class="faqS__accordion-item">
-        <button class="faqS__accordion-trigger">Доставка</button>
-        <p class="faqS__accordion-content">
-          Ответ на вопрос 3. Вы можете добавить любой контент сюда.
-        </p>
-      </div>
-      <!-- 4 блок -->
-      <div class="faqS__accordion-item">
-        <button class="faqS__accordion-trigger">Сроки доставки</button>
-        <p class="faqS__accordion-content">
-          Ответ на вопрос 1. Вы можете добавить любой контент сюда.
-        </p>
-      </div>
-      <!-- 5 блок -->
-      <div class="faqS__accordion-item">
-        <button class="faqS__accordion-trigger">Как сделать обмен?</button>
-        <p class="faqS__accordion-content">
-          Ответ на вопрос 2. Вы можете добавить любой контент сюда.
-        </p>
-      </div>
-      <!-- 6 блок -->
-      <div class="faqS__accordion-item">
-        <button class="faqS__accordion-trigger">Как сделать возврат?</button>
-        <p class="faqS__accordion-content">
-          Ответ на вопрос 3. Вы можете добавить любой контент сюда.
-        </p>
-      </div>
-      <!-- 7 блок -->
-      <div class="faqS__accordion-item">
-        <button class="faqS__accordion-trigger">
-          Куда и когда вернутся деньги за возвращённый товар?
-        </button>
-        <p class="faqS__accordion-content">
-          Ответ на вопрос 3. Вы можете добавить любой контент сюда.
-        </p>
-      </div>
-    </div>
-  </section>
-  <!-- end -->
-  <!-- Ekaterina -->
+    </section>
+  </main>
   <footer class="footer">
     <div class="container">
       <div class="footer__wrap">
@@ -228,7 +229,7 @@
       </div>
     </div>
   </footer>
-  <!-- end -->
+  <script type="module" src="./src/app/home-page.js"></script>
   <script type="module" src="/main.js"></script>
 </body>
 

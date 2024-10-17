@@ -22,7 +22,9 @@
           </button>
           <div class="burger-menu burger-menu-display">
             <div class="burger-menu__wrap">
-              <img class="burger-menu__logo" src="../src/assets/images/globalImages/cocteil-logo.svg" alt="" />
+              <a href="/index.html">
+                <img class="burger-menu__logo" src="../src/assets/images/globalImages/cocteil-logo.svg" alt="" />
+              </a>
               <nav class="burger-menu__nav">
                 <ul class="burger-menu__ul">
                   <li class="burger-menu__li">
@@ -46,8 +48,8 @@
             </button>
             <input class="header-form__input" type="text" placeholder="Поиск" />
           </form>
-          <a href="#"><img src="../src/assets/images/globalImages/header_avatar-line.svg" alt=""
-              class="header-authorization" /></a>
+          <a class="personal-account" href="#"><img src="../src/assets/images/globalImages/header_avatar-line.svg"
+              alt="" class="header-authorization" /></a>
           <a href="./shopping-cart.html"><img src="../src/assets/images/globalImages/header_shopping-bag-line.svg"
               alt="" class="header-basket" /></a>
         </div>
@@ -70,16 +72,16 @@
       <div class="products-sort">
         <p class="products-sort__text">Сортировать по:</p>
         <div class="products-sort__btns">
-          <button class="products-sort__btn products-sort__btn-rating">
+          <button class="products-sort__btn products-sort__btn-rating" name="rating">
             Рейтингу
           </button>
-          <button class="products-sort__btn products-sort__btn-price">
+          <button class="products-sort__btn products-sort__btn-price" name="price">
             Цене
           </button>
-          <button class="products-sort__btn products-sort__btn-discount">
+          <button class="products-sort__btn products-sort__btn-discount" name="discount">
             Скидке
           </button>
-          <button class="products-sort__btn products-sort__btn-update">
+          <button class="products-sort__btn products-sort__btn-update" name="date">
             Обновлению
           </button>
         </div>
@@ -89,15 +91,15 @@
           <div class="product-filtr__price">
             <div class="product-filtr__btn-wrap">
               <div class="product-filtr__btn-name">Цена</div>
-              <button class="product-filtr__btn">
+              <button class="product-filtr__btn btn-price">
                 <img src="../src/assets/images/globalImages/catalog-page-dashicons_arrow.svg" alt="" />
               </button>
             </div>
-            <div class="price-range__wrap">
+            <div class="price-range__wrap display">
               <div class="price-range__inputs">
                 <div class="price-range__field">
                   <span>Мин.цена</span>
-                  <input type="number" class="price-range__min" name="" id="" value="0" />
+                  <input type="number" class="price-range__min" name="" id="" value="0" placeholder="" />
                 </div>
                 <div class="price-range__separator">-</div>
                 <div class="price-range__field">
@@ -117,18 +119,24 @@
           <div class="product-filtr__size">
             <div class="product-filtr__btn-wrap">
               <div class="product-filtr__btn-name">Размер</div>
-              <button class="product-filtr__btn">
+              <button class="product-filtr__btn btn-size">
                 <img src="../src/assets/images/globalImages/catalog-page-dashicons_arrow.svg" alt="" />
               </button>
             </div>
-            <div class="size-filtr__wrap"></div>
+            <div class="size-filtr display">
+              <div class="size-filtr__wrap"></div>
+            </div>
           </div>
           <div class="product-filtr__colors">
             <div class="product-filtr__btn-wrap">
               <div class="product-filtr__btn-name">Цвета</div>
-              <button class="product-filtr__btn">
+              <button class="product-filtr__btn btn-color">
                 <img src="../src/assets/images/globalImages/catalog-page-dashicons_arrow.svg" alt="" />
               </button>
+            </div>
+            <div class="color-filtr display">
+              <div class="color-filtr__wrap">
+              </div>
             </div>
           </div>
         </div>
@@ -217,6 +225,7 @@
       </div>
     </div>
   </footer>
+  <script type="module" src="/src/app/catalog-page.js"></script>
   <script type="module" src="../main.js"></script>
 </body>
 
