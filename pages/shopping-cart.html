@@ -1,385 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../src/styles/globalStyles/style.scss" />
-    <title>Document</title>
-  </head>
 
-  <body class="body body-flex">
-    <!-- Violetta -->
-    <header class="header">
-      <div class="header__container container">
-        <div class="header__menu">
-          <div class="left-group">
-            <button class="menu-btn">
-              <img
-                class="menu-btn__icon"
-                src="../src/assets/images/globalImages/header_menu-line.svg"
-                alt=""
-              />
-            </button>
-            <div class="burger-menu burger-menu-display">
-              <div class="burger-menu__wrap">
-                <img
-                  class="burger-menu__logo"
-                  src="../src/assets/images/globalImages/cocteil-logo.svg"
-                  alt=""
-                />
-                <nav class="burger-menu__nav">
-                  <ul class="burger-menu__ul">
-                    <li class="burger-menu__li">
-                      <a
-                        class="burger-menu__a"
-                        href="./pages/jeans-catalog.html"
-                        >Джинсы</a
-                      >
-                    </li>
-                    <li class="burger-menu__li">
-                      <a class="burger-menu__a" href="#">Блузки и рубашки</a>
-                    </li>
-                    <li class="burger-menu__li">
-                      <a class="burger-menu__a" href="#">Платья и сарафаны</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../src/styles/globalStyles/style.scss" />
+  <title>Document</title>
+</head>
+
+<body class="body body-flex">
+  <!-- Violetta -->
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__menu">
+        <div class="left-group">
+          <button class="menu-btn">
+            <img class="menu-btn__icon" src="../src/assets/images/globalImages/header_menu-line.svg" alt="" />
+          </button>
+          <div class="burger-menu burger-menu-display">
+            <div class="burger-menu__wrap">
+              <a href="/index.html">
+                <img class="burger-menu__logo" src="../src/assets/images/globalImages/cocteil-logo.svg" alt="" />
+              </a>
+              <nav class="burger-menu__nav">
+                <ul class="burger-menu__ul">
+                  <li class="burger-menu__li">
+                    <a class="burger-menu__a" href="./pages/jeans-catalog.html">Джинсы</a>
+                  </li>
+                  <li class="burger-menu__li">
+                    <a class="burger-menu__a" href="./shirts-catalog.html">Блузки и рубашки</a>
+                  </li>
+                  <li class="burger-menu__li">
+                    <a class="burger-menu__a" href="./dress-catalog.html">Платья и сарафаны</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
-          <div class="right-group">
-            <form class="header-form" action="">
-              <button class="header-form__btn">
-                <img
-                  src="../src/assets/images/globalImages/header_search-line.svg"
-                  alt=""
-                />
-              </button>
-              <input
-                class="header-form__input"
-                type="text"
-                placeholder="Поиск"
-              />
-            </form>
-            <a href="#"
-              ><img
-                src="../src/assets/images/globalImages/header_avatar-line.svg"
-                alt=""
-                class="header-authorization"
-            /></a>
-            <a href="#"
-              ><img
-                src="../src/assets/images/globalImages/header_shopping-bag-line.svg"
-                alt=""
-                class="header-basket"
-            /></a>
-          </div>
+        </div>
+        <div class="right-group">
+          <form class="header-form" action="">
+            <button class="header-form__btn">
+              <img src="../src/assets/images/globalImages/header_search-line.svg" alt="" />
+            </button>
+            <input class="header-form__input" type="text" placeholder="Поиск" />
+          </form>
+          <a href="#"><img src="../src/assets/images/globalImages/header_avatar-line.svg" alt=""
+              class="header-authorization" /></a>
+          <a href="#"><img src="../src/assets/images/globalImages/header_shopping-bag-line.svg" alt=""
+              class="header-basket" /></a>
         </div>
       </div>
-    </header>
-    <!--end-->
-    <main class="main body-flex__main">
-      <div class="main__top-block">
-        <!--
+    </div>
+  </header>
+  <!--end-->
+  <main class="main body-flex__main">
+    <div class="main__top-block">
+      <!--
       <button class="main__back-button">
         <a href="../index.html">
           <img src="../src/assets/images/globalImages/short-light-arrow.svg" alt="short light left arrow" />
         </a>
       </button>
       -->
-        <h1 class="main__title">Корзина</h1>
-        <div class="main__icon-container">
-          <img
-            class="main__icon"
-            src="../src/assets/images/globalImages/header_shopping-bag-line.svg"
-            alt="cart icon"
-          />
-        </div>
-        <span class="main__quantity total-quantity"></span>
+      <h1 class="main__title">Корзина</h1>
+      <div class="main__icon-container">
+        <img class="main__icon" src="../src/assets/images/globalImages/header_shopping-bag-line.svg" alt="cart icon" />
       </div>
-      <section class="shopping-cart">
-        <div class="total-info">
-          <h2 class="total-info__title">
-            Итого: <span class="total-info__total-price">0.00</span>
-          </h2>
-          <p class="total-info__description">
-            Товары,
-            <span class="total-info__quantity total-quantity">0</span> шт.
-          </p>
-        </div>
-        <button class="shopping-cart__button disabled" disabled>
-          Заказать
-        </button>
-      </section>
-      <div class="main__circle-icon">
-        <img
-          src="../src/assets/images/globalImages/circle.svg"
-          alt="half a circle image"
-        />
-      </div>
-      <article class="delivery-message">
-        <h1 class="delivery-message__title">Условия доставки и оплаты</h1>
-        <button class="delivery-message__close-button">
-          <img
-            src="../src/assets/images/globalImages/cart-page-cross-icon.svg"
-            alt="cross icon"
-          />
-        </button>
-        <p class="delivery-message__description">
-          Доставка товаров осуществляется почтой, во все населенные пункты
-          Республики Беларусь. Доставка за пределы Республики Беларусь не
-          осуществляется. Сроки доставки заказа составляют от 1 до 5 рабочих
-          дней. Заботясь о наших клиентах, стараемся отправлять заказы
-          ежедневно, с понедельника по пятницу.
+      <span class="main__quantity total-quantity"></span>
+    </div>
+    <section class="shopping-cart">
+      <div class="total-info">
+        <h2 class="total-info__title">
+          Итого: <span class="total-info__total-price">0.00</span>
+        </h2>
+        <p class="total-info__description">
+          Товары,
+          <span class="total-info__quantity total-quantity">0</span> шт.
         </p>
-        <div class="delivery-option">
-          <h2 class="delivery-option__title">
-            Доставка и оплата через РУП Белпочта
-          </h2>
-          <p class="delivery-option__description">
-            РУП "Белпочта" осуществляет доставку двумя способами:
-          </p>
-          <ol class="delivery-option__list">
-            <li class="delivery-option__list-item">
-              Обычная доставка. При данном виде доставки вы получаете посылку в
-              своем почтовом отделении. Время доставки — от 3 до 7 дней. Обычная
-              стоимость составляет 6 рублей, для предметов стоимостью от 60
-              рублей и выше стоимость доставки составляет 8 рублей.
+      </div>
+      <button class="shopping-cart__button disabled" disabled>
+        Заказать
+      </button>
+    </section>
+    <div class="main__circle-icon">
+      <img src="../src/assets/images/globalImages/circle.svg" alt="half a circle image" />
+    </div>
+    <article class="delivery-message">
+      <h1 class="delivery-message__title">Условия доставки и оплаты</h1>
+      <button class="delivery-message__close-button">
+        <img src="../src/assets/images/globalImages/cart-page-cross-icon.svg" alt="cross icon" />
+      </button>
+      <p class="delivery-message__description">
+        Доставка товаров осуществляется почтой, во все населенные пункты
+        Республики Беларусь. Доставка за пределы Республики Беларусь не
+        осуществляется. Сроки доставки заказа составляют от 1 до 5 рабочих
+        дней. Заботясь о наших клиентах, стараемся отправлять заказы
+        ежедневно, с понедельника по пятницу.
+      </p>
+      <div class="delivery-option">
+        <h2 class="delivery-option__title">
+          Доставка и оплата через РУП Белпочта
+        </h2>
+        <p class="delivery-option__description">
+          РУП "Белпочта" осуществляет доставку двумя способами:
+        </p>
+        <ol class="delivery-option__list">
+          <li class="delivery-option__list-item">
+            Обычная доставка. При данном виде доставки вы получаете посылку в
+            своем почтовом отделении. Время доставки — от 3 до 7 дней. Обычная
+            стоимость составляет 6 рублей, для предметов стоимостью от 60
+            рублей и выше стоимость доставки составляет 8 рублей.
+          </li>
+          <li class="delivery-option__list-item">
+            Экспресс-доставка. Этот вид ускоренной почты обеспечивает доставку
+            заказа адресату на дом, на следующий рабочий день после
+            отправления заказа. Стоимость доставки — всегда 12 рублей
+          </li>
+        </ol>
+        <p class="delivery-option__description">
+          За отправку денежного перевода РУП "Белпочта" ничего не взимает. В
+          течение 10 дней посылка на вашем почтовом отделении хранится
+          бесплатно. Затем за каждый день хранения вы платите пеню в размере
+          20 копеек. Если вы в течении 30 дней не заберете посылку, она
+          отправится обратно к нам. Однако, если у вас нет возможности забрать
+          посылку в 30-дневный срок, вы можете уведомить почтовое отделение и
+          продлить срока хранения.
+        </p>
+        <p class="delivery-option__description">
+          Оплата производится в белорусских рублях при получении посылки на
+          почте. При получении заказа необходимо иметь при себе паспорт (или
+          другой документ, удостоверяющий личность, на имя которого приходит
+          посылка). В стоимость заказа входит стоимость вещей, стоимость
+          доставки и упаковки. Чек об оплате, выданный почтой, является
+          подтверждающим документом о покупке.
+        </p>
+      </div>
+      <div class="delivery-option">
+        <h2 class="delivery-option__title">
+          Доставка через отделение “Европочта” . Возмозжность доставки
+          курьером
+        </h2>
+        <p class="delivery-option__description">
+          После нажатия кнопки Оплатить вы перейдете на специальную защищенную
+          платежную страницу процессинговой системы bePaid.
+        </p>
+        <p class="delivery-option__description">
+          На платежной странице будет указан номер заказа и сумма платежа. Для
+          оплаты вам необходимо ввести свои карточные данные и подтвердить
+          платеж, нажав кнопку «оплатить».
+        </p>
+        <p class="delivery-option__description">
+          Если ваша карта поддерживает технологию 3-D Secure, вам будет
+          предложено пройти стандартную одноминутную процедуру проверки
+          владельца карты на сайте вашего банка (банк, выдавший вашу карту).
+        </p>
+      </div>
+      <div class="delivery-option">
+        <h2 class="delivery-option__title">Оплата заказов через BEPAID</h2>
+        <p class="delivery-option__description">
+          После нажатия кнопки Оплатить вы перейдете на специальную защищенную
+          платежную страницу процессинговой системы bePaid.
+        </p>
+        <p class="delivery-option__description">
+          На платежной странице будет указан номер заказа и сумма платежа. Для
+          оплаты вам необходимо ввести свои карточные данные и подтвердить
+          платеж, нажав кнопку «оплатить».
+        </p>
+        <p class="delivery-option__description">
+          Если ваша карта поддерживает технологию 3-D Secure, вам будет
+          предложено пройти стандартную одноминутную процедуру проверки
+          владельца карты на сайте вашего банка (банк, выдавший вашу карту).
+        </p>
+        <p class="delivery-option__description">
+          Обращаем ваше внимание, что после проведения платежа на ваш
+          электронный адрес придет подтверждение оплаты. Просим вас сохранять
+          данные оплат.
+        </p>
+        <p class="delivery-option__description">
+          Мы принимаем платежи по следующим банковским картам: Visa, Visa
+          Electron, MasterCard, Maestro, Белкарт.
+        </p>
+      </div>
+      <div class="delivery-option">
+        <h2 class="delivery-option__title">Оплата заказов через ЕРИП</h2>
+        <p class="delivery-option__description">
+          ЕРИПСистема ”Расчет“ позволяет произвести оплату в любом удобном для
+          Вас месте, в удобное для Вас время, в удобном для Вас пункте
+          банковского обслуживания –банкомате, инфокиоске, интернет-банке,
+          кассе банков, с помощью мобильного банкинга и т.д. .
+        </p>
+        <p class="delivery-option__description">
+          Вы можете оплатить наши товары/услуги с использованием наличных
+          денежных средств, электронных денег и банковских платежных карточек
+          в пунктах банковского обслуживания банков, которые оказывают услуги
+          по приему платежей, а также посредством инструментов дистанционного
+          банковского обслуживания.
+        </p>
+        <p class="delivery-option__description">
+          Если Вы осуществляете платеж в кассе банка, пожалуйста, сообщите
+          кассиру о необходимости проведения платежа через систему ”Расчет“
+          (ЕРИП).
+        </p>
+        <p class="delivery-option__description">
+          В каталоге сиcтемы ”Расчет“ магазин veore.by находится в меню
+          интернет-магазины/сервисы: "Расчет"
+          (ЕРИП)->Интернет-магазины/сервисы/A-Z латинские домены ->C->
+          Cocteil.by
+        </p>
+        <p class="delivery-option__description">
+          Для проведения платежа необходимо:
+        </p>
+        <ol class="delivery-option__list">
+          <li class="delivery-option__list-item">
+            Выбрать пункт “Система “Расчет” (ЕРИП)
+          </li>
+          <li class="delivery-option__list-item">
+            Выбрать последовательно вкладки: Интернет-магазины/сервисы/->A-Z
+            латинские домены -> C -> Cocteil.by
+          </li>
+          <li class="delivery-option__list-item">
+            Ввести Номер заказа (получите его у консультанта)
+          </li>
+          <li class="delivery-option__list-item">
+            Ввести сумму платежа (если не указана)
+          </li>
+          <li class="delivery-option__list-item">
+            Проверить корректность информации
+          </li>
+          <li class="delivery-option__list-item">Совершить платеж.</li>
+          <li class="delivery-option__list-item">
+            Сбросить чек об оплате для менеджера
+          </li>
+        </ol>
+      </div>
+    </article>
+  </main>
+  <!-- Ekaterina -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrap">
+        <nav class="footer-nav footer-nav__info">
+          <h4 class="footer__title">Информация</h4>
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Главная</a>
             </li>
-            <li class="delivery-option__list-item">
-              Экспресс-доставка. Этот вид ускоренной почты обеспечивает доставку
-              заказа адресату на дом, на следующий рабочий день после
-              отправления заказа. Стоимость доставки — всегда 12 рублей
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Акции</a>
             </li>
-          </ol>
-          <p class="delivery-option__description">
-            За отправку денежного перевода РУП "Белпочта" ничего не взимает. В
-            течение 10 дней посылка на вашем почтовом отделении хранится
-            бесплатно. Затем за каждый день хранения вы платите пеню в размере
-            20 копеек. Если вы в течении 30 дней не заберете посылку, она
-            отправится обратно к нам. Однако, если у вас нет возможности забрать
-            посылку в 30-дневный срок, вы можете уведомить почтовое отделение и
-            продлить срока хранения.
-          </p>
-          <p class="delivery-option__description">
-            Оплата производится в белорусских рублях при получении посылки на
-            почте. При получении заказа необходимо иметь при себе паспорт (или
-            другой документ, удостоверяющий личность, на имя которого приходит
-            посылка). В стоимость заказа входит стоимость вещей, стоимость
-            доставки и упаковки. Чек об оплате, выданный почтой, является
-            подтверждающим документом о покупке.
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Каталог</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Возврат</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Доставка</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Партнёрам</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Способы оплаты</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Как сделать заказ?</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="footer-nav footer-nav__cabinet">
+          <h4 class="footer__title">Мой кабинет</h4>
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Мои заказы</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Мои адреса</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Мои скидки</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="" class="footer-nav__link">Моя информация</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer-nav footer-nav__contacts">
+          <h4 class="footer__title">Контактная информация</h4>
+          <p class="footer__description-contacts">
+            ИП Вишневский Иван Сергеевич<br />государственная регистрация
+            №690867884<br />
+            от 31.07.2020. Логойским горисполкомом<br />
+            Защита прав потребителей +375259990755
           </p>
         </div>
-        <div class="delivery-option">
-          <h2 class="delivery-option__title">
-            Доставка через отделение “Европочта” . Возмозжность доставки
-            курьером
-          </h2>
-          <p class="delivery-option__description">
-            После нажатия кнопки Оплатить вы перейдете на специальную защищенную
-            платежную страницу процессинговой системы bePaid.
-          </p>
-          <p class="delivery-option__description">
-            На платежной странице будет указан номер заказа и сумма платежа. Для
-            оплаты вам необходимо ввести свои карточные данные и подтвердить
-            платеж, нажав кнопку «оплатить».
-          </p>
-          <p class="delivery-option__description">
-            Если ваша карта поддерживает технологию 3-D Secure, вам будет
-            предложено пройти стандартную одноминутную процедуру проверки
-            владельца карты на сайте вашего банка (банк, выдавший вашу карту).
-          </p>
-        </div>
-        <div class="delivery-option">
-          <h2 class="delivery-option__title">Оплата заказов через BEPAID</h2>
-          <p class="delivery-option__description">
-            После нажатия кнопки Оплатить вы перейдете на специальную защищенную
-            платежную страницу процессинговой системы bePaid.
-          </p>
-          <p class="delivery-option__description">
-            На платежной странице будет указан номер заказа и сумма платежа. Для
-            оплаты вам необходимо ввести свои карточные данные и подтвердить
-            платеж, нажав кнопку «оплатить».
-          </p>
-          <p class="delivery-option__description">
-            Если ваша карта поддерживает технологию 3-D Secure, вам будет
-            предложено пройти стандартную одноминутную процедуру проверки
-            владельца карты на сайте вашего банка (банк, выдавший вашу карту).
-          </p>
-          <p class="delivery-option__description">
-            Обращаем ваше внимание, что после проведения платежа на ваш
-            электронный адрес придет подтверждение оплаты. Просим вас сохранять
-            данные оплат.
-          </p>
-          <p class="delivery-option__description">
-            Мы принимаем платежи по следующим банковским картам: Visa, Visa
-            Electron, MasterCard, Maestro, Белкарт.
-          </p>
-        </div>
-        <div class="delivery-option">
-          <h2 class="delivery-option__title">Оплата заказов через ЕРИП</h2>
-          <p class="delivery-option__description">
-            ЕРИПСистема ”Расчет“ позволяет произвести оплату в любом удобном для
-            Вас месте, в удобное для Вас время, в удобном для Вас пункте
-            банковского обслуживания –банкомате, инфокиоске, интернет-банке,
-            кассе банков, с помощью мобильного банкинга и т.д. .
-          </p>
-          <p class="delivery-option__description">
-            Вы можете оплатить наши товары/услуги с использованием наличных
-            денежных средств, электронных денег и банковских платежных карточек
-            в пунктах банковского обслуживания банков, которые оказывают услуги
-            по приему платежей, а также посредством инструментов дистанционного
-            банковского обслуживания.
-          </p>
-          <p class="delivery-option__description">
-            Если Вы осуществляете платеж в кассе банка, пожалуйста, сообщите
-            кассиру о необходимости проведения платежа через систему ”Расчет“
-            (ЕРИП).
-          </p>
-          <p class="delivery-option__description">
-            В каталоге сиcтемы ”Расчет“ магазин veore.by находится в меню
-            интернет-магазины/сервисы: "Расчет"
-            (ЕРИП)->Интернет-магазины/сервисы/A-Z латинские домены ->C->
-            Cocteil.by
-          </p>
-          <p class="delivery-option__description">
-            Для проведения платежа необходимо:
-          </p>
-          <ol class="delivery-option__list">
-            <li class="delivery-option__list-item">
-              Выбрать пункт “Система “Расчет” (ЕРИП)
-            </li>
-            <li class="delivery-option__list-item">
-              Выбрать последовательно вкладки: Интернет-магазины/сервисы/->A-Z
-              латинские домены -> C -> Cocteil.by
-            </li>
-            <li class="delivery-option__list-item">
-              Ввести Номер заказа (получите его у консультанта)
-            </li>
-            <li class="delivery-option__list-item">
-              Ввести сумму платежа (если не указана)
-            </li>
-            <li class="delivery-option__list-item">
-              Проверить корректность информации
-            </li>
-            <li class="delivery-option__list-item">Совершить платеж.</li>
-            <li class="delivery-option__list-item">
-              Сбросить чек об оплате для менеджера
-            </li>
-          </ol>
-        </div>
-      </article>
-    </main>
-    <!-- Ekaterina -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__wrap">
-          <nav class="footer-nav footer-nav__info">
-            <h4 class="footer__title">Информация</h4>
-            <ul class="footer-nav__list">
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Главная</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Акции</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Каталог</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Возврат</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Доставка</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Партнёрам</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Способы оплаты</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Как сделать заказ?</a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="footer-nav footer-nav__cabinet">
-            <h4 class="footer__title">Мой кабинет</h4>
-            <ul class="footer-nav__list">
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Мои заказы</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Мои адреса</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Мои скидки</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="" class="footer-nav__link">Моя информация</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="footer-nav footer-nav__contacts">
-            <h4 class="footer__title">Контактная информация</h4>
-            <p class="footer__description-contacts">
-              ИП Вишневский Иван Сергеевич<br />государственная регистрация
-              №690867884<br />
-              от 31.07.2020. Логойским горисполкомом<br />
-              Защита прав потребителей +375259990755
-            </p>
+        <div class="footer-nav footer-socials">
+          <h4 class="footer__title">Соц. сети</h4>
+          <div class="footer-nav__item footer-socials__list">
+            <a href="#"><img src="../src/assets/images/globalImages/footer-social-tg.svg" alt="Telegram-icon" /></a>
+            <a href="#"><img src="../src/assets/images/globalImages/footer-social-insta.svg" alt="Instagram-icon" /></a>
+            <a href="#"><img src="../src/assets/images/globalImages/footer-social-mail.svg" alt="Email-icon" /></a>
+            <a href="#"><img src="../src/assets/images/globalImages/footer-social-whatsapp.svg"
+                alt="WhatsApp-icon" /></a>
           </div>
-          <div class="footer-nav footer-socials">
-            <h4 class="footer__title">Соц. сети</h4>
-            <div class="footer-nav__item footer-socials__list">
-              <a href="#"
-                ><img
-                  src="../src/assets/images/globalImages/footer-social-tg.svg"
-                  alt="Telegram-icon"
-              /></a>
-              <a href="#"
-                ><img
-                  src="../src/assets/images/globalImages/footer-social-insta.svg"
-                  alt="Instagram-icon"
-              /></a>
-              <a href="#"
-                ><img
-                  src="../src/assets/images/globalImages/footer-social-mail.svg"
-                  alt="Email-icon"
-              /></a>
-              <a href="#"
-                ><img
-                  src="../src/assets/images/globalImages/footer-social-whatsapp.svg"
-                  alt="WhatsApp-icon"
-              /></a>
-            </div>
-            <div class="footer-nav__item footer-socials__phone">
-              <a href="tel:+375255990755"
-                ><img
-                  src="../src/assets/images/globalImages/footer-phone-number-icon.svg"
-                  alt="Phone-icon"
-                />+375255990755</a
-              >
-            </div>
-            <div class="footer-nav__item footer-socials__hours">
-              <img
-                src="../src/assets/images/globalImages/footer-hour-icon.svg"
-                alt="Hour-icon"
-              />
-              <span>круглосуточно, без выходных</span>
-            </div>
+          <div class="footer-nav__item footer-socials__phone">
+            <a href="tel:+375255990755"><img src="../src/assets/images/globalImages/footer-phone-number-icon.svg"
+                alt="Phone-icon" />+375255990755</a>
           </div>
-          <div class="footer-logo">
-            <img
-              src="../src/assets/images/globalImages/footer-logo.png"
-              alt="footer-logo"
-            />
+          <div class="footer-nav__item footer-socials__hours">
+            <img src="../src/assets/images/globalImages/footer-hour-icon.svg" alt="Hour-icon" />
+            <span>круглосуточно, без выходных</span>
           </div>
+        </div>
+        <div class="footer-logo">
+          <img src="../src/assets/images/globalImages/footer-logo.png" alt="footer-logo" />
         </div>
       </div>
-    </footer>
-    <!-- end -->
-    <script type="module" src="../src/app/shopping-cart.js"></script>
-    <script type="module" src="../main.js"></script>
-  </body>
+    </div>
+  </footer>
+  <!-- end -->
+  <script type="module" src="../src/app/shopping-cart.js"></script>
+  <script type="module" src="../main.js"></script>
+</body>
+
 </html>
