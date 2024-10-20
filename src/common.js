@@ -85,7 +85,7 @@ function displayProducts(products) {
                   <button class='buyNow__carousel-basket'><img class='buyNow__carousel-svgBasket' src="./src/assets/images/globalImages/header_shopping-bag-line.svg" alt='basketSvg'/></button>
               </div>
               <div class='buyNow__carousel-info'>
-                  <button class='buyNow__carousel-thoroughBtn'>Подробнее ⟶</button>
+                  <a href='./pages/card.html' class='buyNow__carousel-thoroughBtn'>Подробнее ⟶</a>
                   <span class='buyNow__carousel-stars'>${product.rating} ★</span>
               </div>  
           </div>
