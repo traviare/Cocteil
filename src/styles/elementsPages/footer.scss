@@ -3,13 +3,13 @@
     background-color: $backgroundColorDark;
     color: $backgroundColorLight;
     padding: 81px 120px 85px;
-    
+
     &__wrap {
         display: flex;
         justify-content: space-between;
     }
 
-    &__title{
+    &__title {
         font-size: $titleSizeThree;
         margin-bottom: 20px;
     }
@@ -27,7 +27,7 @@
 }
 
 
-.footer-socials{
+.footer-socials {
     &__list {
         display: flex;
         justify-content: flex-start;

@@ -9,13 +9,15 @@
 </head>
 
 <body class="body-flex">
-  <!-- Violetta -->
   <header class="header">
     <div class="header__container container">
       <div class="header__menu">
         <div class="left-group">
           <button class="menu-btn">
-            <img class="menu-btn__icon" src="../src/assets/images/globalImages/header_menu-line.svg" alt="" />
+            <img class="menu-btn__icon menu-btn__icon--dark"
+              src="../src/assets/images/globalImages/header_menu-line.svg" alt="Меню">
+            <img class="menu-btn__icon menu-btn__icon--light"
+              src="../src/assets/images/globalImages/header_menu-line-light.svg" alt="Меню">
           </button>
           <div class="burger-menu burger-menu-display">
             <div class="burger-menu__wrap">
@@ -41,19 +43,22 @@
         <div class="right-group">
           <form class="header-form">
             <button class="header-form__btn">
-              <img src="../src/assets/images/globalImages/header_search-line.svg" alt="" />
+              <img src="../src/assets/images/globalImages/header_search-line.svg" alt="Поиск" />
             </button>
             <input class="header-form__input" type="text" placeholder="Поиск" />
           </form>
-          <a href="#"><img src="../src/assets/images/globalImages/header_avatar-line.svg" alt=""
-              class="header-authorization" /></a>
-          <a href="./shopping-cart.html"><img src="../src/assets/images/globalImages/header_shopping-bag-line.svg"
-              alt="" class="header-basket" /></a>
+          <a href="#"><img src="../src/assets/images/globalImages/header_avatar-line.svg" alt="Личный кабинет"
+              class="personal-account" /></a>
+          <a class="header-basket" href="./pages/shopping-cart.html">
+            <img class="header-basket__icon header-basket__icon--dark"
+              src="../src/assets/images/globalImages/header_shopping-bag-line.svg" alt="Корзина товаров">
+            <img class="header-basket__icon header-basket__icon--light"
+              src="../src/assets/images/globalImages/header_shopping-bag-line-light.svg" alt="Корзина товаров">
+          </a>
         </div>
       </div>
     </div>
   </header>
-  <!-- end -->
   <main class="body-flex__main">
     <article class="order">
       <h1 class="order__title">Оформление заказа</h1>

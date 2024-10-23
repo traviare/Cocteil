@@ -11,14 +11,17 @@ $shadowColorTwo: rgba(51, 51, 51, 0.05);
 $errorColor:#ff0000;
 
 //шрифты и текст
-$homePageTitleSize: 60px;
+$mainTitleSize: 60px;
+$mainTitleSizeTablet: 50px;
 $titleSizeTwo: 40px;
 $titleSizeThree: 20px;
 $titleSizeFour: 32px;
+$mainTitleSizeMobile: 37px;
 $homePagetextSize: 16px;
 $textSizeOne: 14px;
 $textSizeTwo: 12px;
-$fontFamilyText: "Roboto", sans-serif;
+$fontFamilyText: "Roboto",
+sans-serif;
 
 $desktop-md: 1200px;
 $tablet: 1024px;
@@ -87,4 +90,5 @@ $mobile-sm: 425px;
   @include roundButton;
   @include cursorPointer;
 }
+
 /*end*/
