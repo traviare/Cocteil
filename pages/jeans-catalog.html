@@ -18,7 +18,10 @@
       <div class="header__menu">
         <div class="left-group">
           <button class="menu-btn">
-            <img class="menu-btn__icon" src="../src/assets/images/globalImages/header_menu-line.svg" alt="" />
+            <img class="menu-btn__icon menu-btn__icon--dark"
+              src="../src/assets/images/globalImages/header_menu-line.svg" alt="Меню">
+            <img class="menu-btn__icon menu-btn__icon--light"
+              src="../src/assets/images/globalImages/header_menu-line-light.svg" alt="Меню">
           </button>
           <div class="burger-menu burger-menu-display">
             <div class="burger-menu__wrap">
@@ -44,30 +47,44 @@
         <div class="right-group">
           <form class="header-form" action="">
             <button class="header-form__btn">
-              <img src="../src/assets/images/globalImages/header_search-line.svg" alt="" />
+              <img src="../src/assets/images/globalImages/header_search-line.svg" alt="Поиск" />
             </button>
             <input class="header-form__input" type="text" placeholder="Поиск" />
           </form>
-          <a class="personal-account" href="#"><img src="../src/assets/images/globalImages/header_avatar-line.svg"
-              alt="" /></a>
-          <a href="./shopping-cart.html"><img src="../src/assets/images/globalImages/header_shopping-bag-line.svg"
-              alt="" class="header-basket" /></a>
+          <a class="header-basket" href="../pages/shopping-cart.html">
+            <img class="header-basket__icon header-basket__icon--dark"
+              src="../src/assets/images/globalImages/header_shopping-bag-line.svg" alt="Корзина товаров">
+            <img class="header-basket__icon header-basket__icon--light"
+              src="../src/assets/images/globalImages/header_shopping-bag-line-light.svg" alt="Корзина товаров">
+          </a>
         </div>
       </div>
     </div>
   </header>
   <main class="catalog-page-main">
-    <div class="catalog-page-container container">
-      <nav class="catalog-page-nav page-nav">
-        <ul class="catalog-page-nav__ul">
-          <li class="catalog-page-nav__li">
-            <a class="pcatalog-age-nav__a" href="../index.html">Главная</a>
+    <div class="page-nav catalog-page-nav container">
+      <nav class="page-nav__list">
+        <ul class="page-nav__ul">
+          <li class="page-nav__li">
+            <a class="page-nav__a" href="../index.html">Главная</a>
           </li>
-          <li class="catalog-page-nav__li">
-            <a class="catalog-page-nav__a" href="#"></a>Джинсы
+          <li class="page-nav__li">
+            <a class="page-nav__a" href="#"></a>Джинсы
           </li>
         </ul>
       </nav>
+      <nav class="catalog-page-nav__btns">
+        <ul class="catalog-page-nav__ul">
+          <li class="catalog-page-nav__li"><button class="catalog-page-nav__btn catalog-page-nav__btn-sort"><img
+                class="btn-sort__icon" src="/src/assets/images/globalImages/catalog-btn-nav_arrow-down-up.svg"
+                alt="Сортировка"></button></li>
+          <li class="catalog-page-nav__li"><button class="catalog-page-nav__btn catalog-page-nav__btn-filter"><img
+                class="btn-filter__icon" src="/src/assets/images/globalImages/catalog-btn-nav-filters.svg"
+                alt="Фильтры"></button></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="catalog-page-container container">
       <h2 class="catalog-page-title">Джинсы</h2>
       <div class="products-sort">
         <p class="products-sort__text">Сортировать по:</p>
@@ -135,7 +152,7 @@
                 <img src="../src/assets/images/globalImages/catalog-page-dashicons_arrow.svg" alt="" />
               </button>
             </div>
-            <div class="color-filtr display">
+            <div class="catalog-color-filtr  color-filtr display">
               <div class="color-filtr__wrap">
               </div>
             </div>
@@ -174,23 +191,6 @@
             </li>
             <li class="footer-nav__item">
               <a href="" class="footer-nav__link">Как сделать заказ?</a>
-            </li>
-          </ul>
-        </nav>
-        <nav class="footer-nav footer-nav__cabinet">
-          <h4 class="footer__title">Мой кабинет</h4>
-          <ul class="footer-nav__list">
-            <li class="footer-nav__item">
-              <a href="" class="footer-nav__link">Мои заказы</a>
-            </li>
-            <li class="footer-nav__item">
-              <a href="" class="footer-nav__link">Мои адреса</a>
-            </li>
-            <li class="footer-nav__item">
-              <a href="" class="footer-nav__link">Мои скидки</a>
-            </li>
-            <li class="footer-nav__item">
-              <a href="" class="footer-nav__link">Моя информация</a>
             </li>
           </ul>
         </nav>

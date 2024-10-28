@@ -8,23 +8,84 @@
 
 .catalog-page-nav {
     margin-top: 60px;
+
+    @media (max-width: $mobile) {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btns {
+        display: none;
+
+        @media (max-width: $mobile) {
+            display: block;
+        }
+    }
+
+    &__ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 2vw;
+    }
+
+    &__btn {
+        border: none;
+        background-color: inherit;
+    }
+
+}
+
+.btn-sort {
+    &__icon {
+        padding-top: 2px;
+    }
 }
 
 .catalog-page-title {
     margin-top: 60px;
     font-size: $titleSizeTwo;
     color: $textColorTitle;
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
 }
 
 .products-sort {
     display: flex;
     align-items: end;
 
+    @media (max-width: $mobile) {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: $backgroundColorLight;
+        padding: 0 3%;
+    }
+
     &__text {
         margin-top: 60px;
         font-size: $titleSizeThree;
         color: $textColor;
         padding-right: 48px;
+
+        @media (max-width: $mobile) {
+            margin-top: 20vh;
+        }
+    }
+
+    &__btns {
+        @media (max-width: $mobile) {
+            display: flex;
+            flex-direction: column;
+            gap: 3vh;
+            align-items: start;
+            padding-top: 3vh;
+        }
     }
 
     &__btn {
@@ -35,8 +96,15 @@
         @include fontTextLight;
         font-size: $titleSizeThree;
         cursor: pointer;
+
+        @media (max-width: $mobile) {
+            margin-right: 0;
+            width: 20%;
+            text-align: start;
+        }
     }
 }
+
 
 .content-wrap {
     margin-top: 60px;
@@ -44,23 +112,62 @@
 }
 
 .product-catalog {
-    max-width: 972px;
+    width: 80vw;
     display: flex;
     flex-wrap: wrap;
-}
 
-.product-catalog .card-item {
-    width: 22%;
-    padding-bottom: 30px;
-}
+    @media (max-width: $mobile) {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 5vw;
+    }
 
-.product-catalog div:not(:nth-child(4n)) {
-    margin-right: 3%;
+    .card-item {
+        width: 22%;
+        padding-bottom: 30px;
+
+        @media (max-width: $tablet) {
+            width: 30%;
+        }
+
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+
+        &:not(:nth-child(4n)) {
+            margin-right: 3%;
+
+            @media (max-width: $tablet) {
+                margin-right: 0;
+            }
+
+        }
+
+        @media (max-width: $tablet) {
+            &:not(:nth-child(3n)) {
+                margin-right: 3%;
+            }
+        }
+    }
+
 }
 
 .product-filtr {
     margin-right: 41px;
     width: 158px;
+
+    @media (max-width: $mobile) {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: $backgroundColorLight;
+        padding: 20vh 3%;
+    }
 
     &__btn-wrap {
         display: flex;
@@ -82,6 +189,12 @@
     }
 }
 
+.display-block {
+    @media (max-width: $mobile) {
+        display: block;
+    }
+}
+
 .product-filtr__size,
 .product-filtr__colors {
     margin-top: 30px;
@@ -90,6 +203,10 @@
 .price-range {
     &__wrap {
         margin-top: 30px;
+
+        @media (max-width: $mobile) {
+            width: 155px;
+        }
     }
 
     &__inputs {
@@ -227,45 +344,8 @@
 
 }
 
-.color-filtr {
+.catalog-color-filtr {
     margin-top: 11px;
-
-    &__wrap {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    &__color {
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-    }
-
-    &__color input {
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        appearance: none;
-        cursor: pointer;
-    }
-
-    &__color input:hover {
-        height: 22px;
-        width: 22px;
-        transition: 0.3s;
-        -webkit-box-shadow: -8px 11px 36px 10px rgba(34, 60, 80, 0.2);
-        -moz-box-shadow: -8px 11px 36px 10px rgba(34, 60, 80, 0.2);
-        box-shadow: -8px 11px 36px 10px rgba(34, 60, 80, 0.2);
-    }
-
-    &__color input:checked {
-        height: 22px;
-        width: 22px;
-        -webkit-box-shadow: -8px 11px 36px 10px rgba(34, 60, 80, 0.2);
-        -moz-box-shadow: -8px 11px 36px 10px rgba(34, 60, 80, 0.2);
-        box-shadow: -8px 11px 36px 10px rgba(34, 60, 80, 0.2);
-    }
 }
 
 .display {
@@ -277,38 +357,9 @@
     transition: 0.1s;
 }
 
-.grey {
-    background-color: grey;
-}
-
-.white {
-    background-color: white;
-}
-
-.blue {
-    background-color: blue;
-}
-
-.black {
-    background-color: black;
-}
-
-.red {
-    background-color: red;
-}
-
-.pink {
-    background-color: pink;
-}
-
-.yellow {
-    background-color: yellow;
-}
-
-.brown {
-    background-color: brown;
-}
-
-.violet {
-    background-color: violet;
+.not-found-message {
+    font-size: 30px;
+    font-weight: bold;
+    color: $textColor;
+    margin: auto;
 }

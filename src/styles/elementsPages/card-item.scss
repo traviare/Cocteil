@@ -20,10 +20,20 @@
     text-decoration: line-through;
   }
 
-  &__info {
+  &__info-wrap {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    padding-top: 5px;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   &__name {
@@ -40,10 +50,19 @@
     cursor: pointer;
   }
 
-  &__links {
+  &__info-right {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 5px;
     align-items: flex-end;
+    justify-content: end;
+
+    @media (max-width: $mobile) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding-top: 6px;
+      gap: 0;
+    }
   }
 
   &__btn {
@@ -53,6 +72,19 @@
     color: $textColorTitle;
     border: 0.5px solid #514a7e;
     background: transparent;
+
+    @media (max-width: $desktop-md) {
+      padding: 10px 9px 10px 15px;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 12px;
+      padding: 9px;
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
   &__btn:hover {
