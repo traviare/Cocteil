@@ -37,6 +37,7 @@ export const catalogShirts = document.querySelector(".product-catalog-shirts");
 
 export const container = document.querySelector(".product-catalog");
 
+export const productsSort = document.querySelector(".products-sort");
 export const btnRating = document.querySelector(".products-sort__btn-rating");
 export const btnPrice = document.querySelector(".products-sort__btn-price");
 export const btnDiscount = document.querySelector(
@@ -63,6 +64,13 @@ export const selectedBtnDate = document.querySelector(`button[name="date"]`);
 
 export const btnFilter = document.querySelector(".product-filtr__btn");
 export const productFilters = document.querySelector(".product-filtr");
+
+export const pageNavBtnSort = document.querySelector(
+  ".catalog-page-nav__btn-sort"
+);
+export const pageNavBtnFilter = document.querySelector(
+  ".catalog-page-nav__btn-filter"
+);
 
 /*end*/
 

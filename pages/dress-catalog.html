@@ -64,17 +64,29 @@
     </div>
   </header>
   <main class="catalog-page-main">
-    <div class="catalog-page-container container">
-      <nav class="catalog-page-nav page-nav">
-        <ul class="catalog-page-nav__ul">
-          <li class="catalog-page-nav__li">
-            <a class="pcatalog-age-nav__a" href="../index.html">Главная</a>
+    <div class="page-nav catalog-page-nav container">
+      <nav class="page-nav__list">
+        <ul class="page-nav__ul">
+          <li class="page-nav__li">
+            <a class="page-nav__a" href="../index.html">Главная</a>
           </li>
-          <li class="catalog-page-nav__li">
-            <a class="catalog-page-nav__a" href="#"></a>Платья и сарафаны
+          <li class="page-nav__li">
+            <a class="page-nav__a" href="#"></a>Платья и сарафаны
           </li>
         </ul>
       </nav>
+      <nav class="catalog-page-nav__btns">
+        <ul class="catalog-page-nav__ul">
+          <li class="catalog-page-nav__li"><button class="catalog-page-nav__btn catalog-page-nav__btn-sort"><img
+                class="btn-sort__icon" src="/src/assets/images/globalImages/catalog-btn-nav_arrow-down-up.svg"
+                alt="Сортировка"></button></li>
+          <li class="catalog-page-nav__li"><button class="catalog-page-nav__btn catalog-page-nav__btn-filter"><img
+                class="btn-filter__icon" src="/src/assets/images/globalImages/catalog-btn-nav-filters.svg"
+                alt="Фильтры"></button></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="catalog-page-container container">
       <h2 class="catalog-page-title">Платья и сарафаны</h2>
       <div class="products-sort">
         <p class="products-sort__text">Сортировать по:</p>
@@ -141,7 +153,7 @@
                 <img src="../src/assets/images/globalImages/catalog-page-dashicons_arrow.svg" alt="" />
               </button>
             </div>
-            <div class="color-filtr display">
+            <div class="catalog-color-filtr color-filtr display">
               <div class="color-filtr__wrap">
               </div>
             </div>

@@ -18,6 +18,9 @@ import {
   btnRange,
   btnSize,
   btnColor,
+  pageNavBtnSort,
+  pageNavBtnFilter,
+  productsSort,
 } from "../vars";
 
 export async function loadProductsCatalog() {
@@ -58,27 +61,28 @@ function renderProducts(products, container) {
       let finalPrice = product.price - (product.price * product.discount) / 100;
       const productSaleHTML = `
       <div class="card-item" data-id='${product.id}'>
-  <div class="card-item__image">
-    <img src='.${product.picture[0]}' alt='${product.name}'/>
-  </div>
-  <div class="card-item__price">
-    <span class='card-item__discount'>${finalPrice} ₽</span>
-    <span class='card-item__start-price'>${product.price} ₽</span>
-  </div>
-  <div class="card-item__info">
-    <h3 class="card-item__name">${product.name}</h3>
-      <button class="card-item__shop-btn">
-      <img src="../src/assets/images/globalImages/header_shopping-bag-line.svg" alt="" class="card-item__icon" />
-    </button>
-  </div>
-  <div class="card-item__links">
-    <a href="#" class="card-item__btn">Подробнее<svg class="card-item__link-arrow" width="27" height="4" viewBox="0 0 27 4" xmlns="http://www.w3.org/2000/svg">
-<path d="M26.3442 2.17678C26.4418 2.07915 26.4418 1.92085 26.3442 1.82322L24.7532 0.232233C24.6556 0.134602 24.4973 0.134602 24.3997 0.232233C24.302 0.329864 24.302 0.488155 24.3997 0.585786L25.8139 2L24.3997 3.41421C24.302 3.51184 24.302 3.67014 24.3997 3.76777C24.4973 3.8654 24.6556 3.8654 24.7532 3.76777L26.3442 2.17678ZM0.951172 2.25H26.1674V1.75H0.951172V2.25Z" fill="#514A7E"/>
-</svg></a>
-    <div class="card-item__rating">${product.rating} ★</div>
-  </div>
-</div>
-`;
+        <div class="card-item__image">
+            <img src='.${product.picture[0]}' alt='${product.name}'/>
+        </div>
+        <div class="card-item__price">
+          <span class='card-item__discount'>${finalPrice} ₽</span>
+          <span class='card-item__start-price'>${product.price} ₽</span>
+        </div>
+        <div class="card-item__info-wrap">
+          <div class="card-item__info">
+            <h3 class="card-item__name">${product.name}</h3>
+            <a href="#" class="card-item__btn">Подробнее<svg class="card-item__link-arrow" width="27" height="4" viewBox="0 0 27 4" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26.3442 2.17678C26.4418 2.07915 26.4418 1.92085 26.3442 1.82322L24.7532 0.232233C24.6556 0.134602 24.4973 0.134602 24.3997 0.232233C24.302 0.329864 24.302 0.488155 24.3997 0.585786L25.8139 2L24.3997 3.41421C24.302 3.51184 24.302 3.67014 24.3997 3.76777C24.4973 3.8654 24.6556 3.8654 24.7532 3.76777L26.3442 2.17678ZM0.951172 2.25H26.1674V1.75H0.951172V2.25Z" fill="#514A7E"/>
+            </svg></a>
+          </div>
+          <div class="card-item__info-right">
+            <button class="card-item__shop-btn">
+              <img src="../src/assets/images/globalImages/header_shopping-bag-line.svg" alt="" class="card-item__icon" />
+            </button>
+            <div class="card-item__rating">${product.rating} ★</div>
+          </div>
+        </div>
+      </div>`;
       container.insertAdjacentHTML("beforeend", productSaleHTML);
     } else {
       const productHTML = `
@@ -87,17 +91,19 @@ function renderProducts(products, container) {
     <img src='.${product.picture[0]}' alt='${product.name}'/>
   </div>
   <div class="card-item__price">${product.price} ₽</div>
+  <div class="card-item__info-wrap">
   <div class="card-item__info">
     <h3 class="card-item__name">${product.name}</h3>
-    <button class="card-item__shop-btn">
-      <img src="../src/assets/images/globalImages/header_shopping-bag-line.svg" alt="" class="card-item__icon" />
-    </button>
-  </div>
-  <div class="card-item__links">
-    <a href="#" class="card-item__btn">Подробнее<svg class="card-item__link-arrow" width="27" height="4" viewBox="0 0 27 4" xmlns="http://www.w3.org/2000/svg">
+      <a href="#" class="card-item__btn">Подробнее<svg class="card-item__link-arrow" width="27" height="4" viewBox="0 0 27 4" xmlns="http://www.w3.org/2000/svg">
 <path d="M26.3442 2.17678C26.4418 2.07915 26.4418 1.92085 26.3442 1.82322L24.7532 0.232233C24.6556 0.134602 24.4973 0.134602 24.3997 0.232233C24.302 0.329864 24.302 0.488155 24.3997 0.585786L25.8139 2L24.3997 3.41421C24.302 3.51184 24.302 3.67014 24.3997 3.76777C24.4973 3.8654 24.6556 3.8654 24.7532 3.76777L26.3442 2.17678ZM0.951172 2.25H26.1674V1.75H0.951172V2.25Z" fill="#514A7E"/>
 </svg></a>
+  </div>
+  <div class="card-item__info-right">
+      <button class="card-item__shop-btn">
+      <img src="../src/assets/images/globalImages/header_shopping-bag-line.svg" alt="" class="card-item__icon" />
+    </button>
     <div class="card-item__rating">${product.rating} ★</div>
+  </div>
   </div>
 </div>
 `;
@@ -380,7 +386,11 @@ function renderSortedProducts(arr) {
   const container = getCatalogProductsContainer();
 
   if (arr.length === 0) {
-    container.innerHTML = "Товаров не найдено";
+    container.innerHTML = "";
+    const messageHTML = `
+    <p class="not-found-message">Товаров не найдено</p>
+    `;
+    container.insertAdjacentHTML("beforeend", messageHTML);
     return;
   }
 
@@ -402,3 +412,14 @@ function getCatalogProductsContainer() {
 
   return null;
 }
+
+function handlPageNavBtnSort() {
+  productsSort.classList.toggle("display-block");
+}
+function handlPageNavBtnFilter() {
+  productFilters.classList.toggle("display-block");
+}
+
+pageNavBtnSort.addEventListener("click", handlPageNavBtnSort);
+productsSort.addEventListener("click", handlPageNavBtnSort);
+pageNavBtnFilter.addEventListener("click", handlPageNavBtnFilter);
