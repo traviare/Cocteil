@@ -7,11 +7,20 @@
     &__wrap {
         display: flex;
         justify-content: space-between;
+        gap: 20px;
+
+        @media (max-width: $mobile) {
+            flex-direction: column-reverse;
+        }
     }
 
     &__title {
         font-size: $titleSizeThree;
         margin-bottom: 20px;
+
+        @media (max-width: $mobile) {
+            font-size: $homePagetextSize;
+        }
     }
 
     &__description-contacts {
@@ -23,6 +32,12 @@
     &__item {
         font-size: $textSizeTwo;
         margin-bottom: 10px;
+    }
+
+    &__info {
+        @media (max-width: $mobile) {
+            display: none;
+        }
     }
 }
 
@@ -48,6 +63,10 @@
         justify-content: space-between;
         align-items: center;
         gap: 11px;
+
+        @media (max-width: $mobile) {
+            justify-content: start;
+        }
     }
 
 }
@@ -57,6 +76,10 @@
     align-self: flex-end;
     max-width: 84px;
     max-height: 84px;
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
 
     img {
         width: 100%;
