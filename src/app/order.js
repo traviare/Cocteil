@@ -1,4 +1,4 @@
-import { orderForm, confirmationButton, confirmationBlock } from "../vars";
+import { orderForm, confirmationButton, confirmationBlock } from "./vars";
 import { CartProducts, addOrderDB } from "./database";
 import {
   nameValidation,
