@@ -2,7 +2,11 @@
     font-family: $fontFamilyText;
     background-color: $backgroundColorDark;
     color: $backgroundColorLight;
-    padding: 81px 120px 85px;
+    padding: 81px 0;
+
+    @media (max-width: $mobile) {
+        padding: 41px 0;
+    }
 
     &__wrap {
         display: flex;

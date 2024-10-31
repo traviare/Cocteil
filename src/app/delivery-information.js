@@ -1,10 +1,9 @@
-import { deliveryInfo } from "../vars";
+import { deliveryInfo } from "./vars";
 
 export function openPopupWindow(evt) {
   console.log("2");
   evt.preventDefault();
   deliveryInfo.style.display = "flex";
-  
 }
 
 export function closePopupWindowClickButton(evt) {

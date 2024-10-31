@@ -1,4 +1,5 @@
-// Функции для аккордеона / faqS
+import { itemsToShow, carouselInner } from "./vars";
+
 const toggleAccordionItem = (item) => {
   item.classList.toggle("open");
 };
@@ -19,26 +20,8 @@ export const handleDocumentClick = (event) => {
     closeOtherAccordionItems(item);
   }
 };
-//end faqS
 
-/*carousel*/
-import { itemsToShow, carouselInner } from "../vars";
-
-export async function loadProducts() {
-  try {
-    const response = await fetch("./db.json");
-    if (!response.ok) {
-      throw new Error("Сеть не отвечает");
-    }
-    const data = await response.json();
-    displayProducts(data["products-catalog"]);
-    startCarousel(); // Запускаем карусель после загрузки продуктов
-  } catch (error) {
-    console.error("Ошибка загрузки данных:", error);
-  }
-}
-
-function displayProducts(products) {
+export function displayProducts(products) {
   const filteredProducts = products.filter(
     (product) => product.discount && product.discount > 0
   );
@@ -107,7 +90,7 @@ function displayProducts(products) {
 //   console.log(`${product.name} добавлен в корзину!`);
 // }
 
-function startCarousel() {
+export function startCarousel() {
   const totalCards = document.querySelectorAll(".buyNow__carousel-card").length;
   let currentIndex = 0; // Текущий индекс для прокрутки
 
@@ -120,5 +103,3 @@ function startCarousel() {
     }%)`;
   }, 5000); // Интервал в 5 секунды
 }
-
-/*end*/
