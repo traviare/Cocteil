@@ -70,6 +70,8 @@ export const wordsDictionary = [
   ["коричневый", "brown"],
   ["фиолетовый", "violet"],
 ];
+export const shopBtn = document.querySelector(".card-item__shop-btn");
+export const sizeList = document.querySelector(".card-item__size-list");
 
 export const pageNavBtnSort = document.querySelector(
   ".catalog-page-nav__btn-sort"
@@ -105,3 +107,8 @@ export const productColor = document.querySelector(
   ".product-color__select-list"
 );
 export const productRating = document.querySelector(".product-rating");
+export const productShopBtn = document.querySelector(".to-cart__btn");
+export const productSizeErrorMessage = document.querySelector(
+  ".product-size-error-message"
+);
+export const cardItemBtn = document.querySelector(".card-item__btn");

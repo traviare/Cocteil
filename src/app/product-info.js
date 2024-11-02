@@ -12,10 +12,16 @@ import {
   productSize,
   productColor,
   productRating,
+  productShopBtn,
+  productSizeErrorMessage,
 } from "./vars";
 import { addColor, getFinalPrice, getRuSize } from "./common";
 
-const getProductId = () => JSON.parse(localStorage.getItem("cardID"));
+function getProductId() {
+  const url = new URLSearchParams(window.location.search);
+  const getId = url.get("id");
+  return getId;
+}
 
 function addProductImages(product) {
   const images = product.picture;
@@ -47,7 +53,7 @@ function addSize(product) {
     const sizeHTML = `
                     <div class="size__select-btn">
                   <label class="size__label">
-                    <input class="size__input" type="radio" name="size-btn">
+                    <input class="size__input" type="radio" name="size-btn" value="${size}">
                     <div class="size__content">
                       <span class="size__letter">${size.toUpperCase()}</span>
                       <span class="size__figure">${getRuSize(size)}</span>
@@ -104,13 +110,13 @@ function productImageSlider() {
     updateMainImage(indexImage);
   }
 
-  productSliderMainBtn
-    ? productSliderMainBtn.addEventListener("click", updateIndexImage)
-    : "";
+  if (productSliderMainBtn) {
+    productSliderMainBtn.addEventListener("click", updateIndexImage);
+  }
 
-  productSliderListItemBtn
-    ? productSliderListItemBtn.addEventListener("click", updateIndexImage)
-    : "";
+  if (productSliderListItemBtn) {
+    productSliderListItemBtn.addEventListener("click", updateIndexImage);
+  }
 }
 
 function addProductInfo(product) {
@@ -129,4 +135,24 @@ export function renderProductInfo(product) {
     addProductInfo(getProduct);
     productImageSlider();
   } else productInfoContainer.innerHTML = "Товара не найдено";
+}
+
+function addProductInBasket() {
+  const checked = document.querySelector(`input[name="size-btn"]:checked`);
+  const btns = document.querySelectorAll(".size__select-btn");
+  const inputs = document.querySelectorAll(`input[name="size-btn"]`);
+  if (!checked) {
+    btns.forEach((item) => item.classList.add("size-btn-validation"));
+    productSizeErrorMessage.textContent = "Выберите размер";
+  } else {
+    btns.forEach((item) => item.classList.remove("size-btn-validation"));
+    inputs.forEach((item) => (item.checked = false));
+    productSizeErrorMessage.textContent = "";
+    const value = checked.value;
+    console.log(value);
+  }
+}
+
+if (productShopBtn) {
+  productShopBtn.addEventListener("click", addProductInBasket);
 }

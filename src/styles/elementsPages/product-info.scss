@@ -29,7 +29,7 @@ body {
   }
 
   &__id {
-    font-size: 20px;
+    font-size: $titleSizeThree;
     font-weight: 300;
     align-self: flex-end;
     line-height: 35px;
@@ -164,7 +164,7 @@ body {
 
   &__title {
     font-family: $fontFamilyText;
-    font-size: 20px;
+    font-size: $titleSizeThree;
     font-weight: 400;
     margin-bottom: 15px;
   }
@@ -210,7 +210,7 @@ body {
 
   &__title {
     font-family: $fontFamilyText;
-    font-size: 20px;
+    font-size: $titleSizeThree;
     font-weight: 400;
     margin-bottom: 15px;
   }
@@ -271,7 +271,7 @@ body {
   }
 
   &__letter {
-    font-size: 16px;
+    font-size: $homePagetextSize;
     color: #514a7e;
   }
 
@@ -313,7 +313,7 @@ body {
 
   &__text {
     font-family: $fontFamilyText;
-    font-size: 14px;
+    font-size: $textSizeOne;
     font-weight: 400;
     margin-right: 5px;
   }
@@ -331,9 +331,28 @@ body {
 
   &__text {
     font-family: $fontFamilyText;
-    font-size: 16px;
+    font-size: $homePagetextSize;
     font-weight: 300;
     color: #7d7d7d;
     width: 83%;
   }
+}
+
+.size-btn-validation {
+  .size__content {
+    border: 0.3px solid $errorColor;
+  }
+
+  .size__letter {
+    color: $errorColor;
+  }
+
+  .size__figure {
+    color: $errorColor;
+  }
+}
+
+.product-size-error-message {
+  color: $errorColor;
+  font-size: $textSizeOne;
 }
