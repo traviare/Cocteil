@@ -2,8 +2,29 @@
   width: 24%;
 
   &__image {
-    object-fit: cover;
     margin-bottom: 5px;
+    position: relative;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__size-list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 8px 5px;
+    background-color: $backgroundColorLight;
+    opacity: 0.8;
+
+    @media (max-width: $mobile) {
+      font-size: $textSizeOne;
+    }
   }
 
   &__price {
@@ -48,6 +69,10 @@
     border: none;
     background-color: inherit;
     cursor: pointer;
+
+    img {
+      pointer-events: none;
+    }
   }
 
   &__info-right {
@@ -103,4 +128,34 @@
   &__rating {
     color: $backgroundColorDark;
   }
+}
+
+.size-list {
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked+.size-list__content {
+      color: $backgroundColorDark;
+      font-weight: bold;
+    }
+  }
+
+  &__content {
+
+    &:hover {
+      color: $backgroundColorDark;
+      font-weight: bold;
+    }
+  }
+}
+
+.size-list-display {
+  display: none;
 }
