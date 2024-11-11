@@ -3,24 +3,42 @@
     @include fontTextLight;
     color: $textColor;
     display: flex;
-}
+    align-items: center;
 
-.page-nav ul {
-    display: flex;
-}
+    @media (max-width: $mobile) {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background-color: $backgroundColorDark;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+        color: $backgroundColorLight;
+        font-size: $textSizeOne;
+    }
 
-.page-nav li {
-    margin-right: 5px;
-}
+    &__ul {
+        display: flex;
+    }
 
-.page-nav li:not(:last-child)::after {
-    content: "/";
-}
+    &__li {
+        margin-right: 5px;
 
-.page-nav li:last-child {
-    color: $backgroundColorDark;
-}
+        &:not(:last-child)::after {
+            content: "/";
+        }
 
-.page-nav li:not(:last-child):hover {
-    color: $textColorTitle;
+        &:last-child {
+            color: $backgroundColorDark;
+
+            @media (max-width: $mobile) {
+                color: $backgroundColorLight;
+                font-weight: bold;
+            }
+        }
+
+        &:not(:last-child):hover {
+            color: $backgroundColorDark;
+        }
+    }
+
 }

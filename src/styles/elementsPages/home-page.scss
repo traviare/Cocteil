@@ -1,76 +1,131 @@
 .home-page {
+    @media (max-width: $mobile) {
+        height: 89vh;
+    }
+
     &__wrap {
         display: flex;
         justify-content: space-between;
         margin-top: 50px;
+
+        @media (max-width: $mobile) {
+            margin-top: 0;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
     }
 
     &__link-wrap {
         width: 193px;
         margin: 0 auto;
     }
+
+    @media (max-width: $mobile) {
+        background-image: url("/src/assets/images/globalImages/home-page-img1.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $backgroundColorLight;
+    }
 }
 
 .wrap__left-content {
     display: flex;
     flex-direction: column;
+
+    @media (max-width: $mobile) {
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .left-content {
-    &__img {
-        width: 278px;
-        height: 242px;
+    &__image {
+        width: 21vw;
+        padding: 0 0 45% 0;
+        overflow: hidden;
+        position: relative;
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
     }
 
     &__title {
-        font-size: $homePageTitleSize;
+        font-size: $mainTitleSize;
+        line-height: 130%;
         font-weight: 300;
         color: $textColorTitle;
-        margin-top: 60px;
+        padding-top: 60px;
         max-width: 537px;
+
+        @media (max-width: $tablet) {
+            font-size: $mainTitleSizeTablet;
+        }
+
+        @media (max-width: $mobile) {
+            font-size: $mainTitleSizeMobile;
+            font-weight: 400;
+            color: $backgroundColorLight;
+            padding-top: 25vh;
+        }
     }
 
     &__title-accent {
         @include fontBadScript;
         color: $backgroundColorDark;
+
+        @media (max-width: $mobile) {
+            color: $backgroundColorLight;
+        }
     }
 
     &__text {
         max-width: 249px;
-        margin-top: 60px;
+        padding-top: 60px;
+        font-size: $homePagetextSize;
+
+        // @media (max-width: $tablet) {
+        //     font-size: $mainTitleSizeMobile;
+        // }
+
+        @media (max-width: $mobile) {
+            font-size: $textSizeOne;
+            font-weight: 400;
+            padding-top: 5vh;
+            // padding-bottom: 30vh;
+        }
     }
 }
 
 .right-content {
-    &__img {
-        width: 476px;
-        height: 416px;
-    }
-}
+    &__image {
+        width: 35vw;
+        padding: 0 0 88% 0;
+        overflow: hidden;
+        position: relative;
 
-.link {
-    &__content-wrap {
-        width: 193px;
-        height: 193px;
-        border-radius: 50%;
-        border: 1px solid $backgroundColorDark;
-        display: flex;
-        align-items: center;
-    }
+        @media (max-width: $mobile) {
+            display: none;
+        }
 
-    &__text {
-        color: $backgroundColorDark;
-        font-weight: 400;
-        font-size: $titleSizeThree;
-        margin-left: 38px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
-
-    &__icon {
-        margin-left: 77px;
-    }
-}
-
-.link__content-wrap:hover {
-    // background-color: $backgroundColorDark;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

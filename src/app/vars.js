@@ -1,6 +1,3 @@
-// для переменных
-
-/*Dasha*/
 export const databaseAddress = "http://localhost:3001";
 export const deliveryCloseButton = document.querySelector(
   ".delivery-message__close-button"
@@ -15,14 +12,12 @@ export const confirmationButton = document.querySelector(
   ".confirmation__button"
 );
 export const confirmationBlock = document.querySelector(".confirmation");
-/*end*/
+export const itemsToShow = 3;
+export const carouselInner = document.querySelector(".buyNow__carousel-inner");
 
-/*Violetta*/
-// бургер меню
 export const burgerMenuBtn = document.querySelector(".menu-btn");
 export const burgerMenu = document.querySelector(".burger-menu");
 
-// ранжирование цены
 export const rangeInputs = document.querySelectorAll(".range-input input");
 export const rangeValue = document.querySelector(
   ".price-range__slider-progress"
@@ -30,13 +25,13 @@ export const rangeValue = document.querySelector(
 export const priceInputs = document.querySelectorAll(
   ".price-range__inputs input"
 );
-//каталог товаров
 export const catalogJeans = document.querySelector(".product-catalog-jeans");
 export const catalogDress = document.querySelector(".product-catalog-dress");
 export const catalogShirts = document.querySelector(".product-catalog-shirts");
 
-export const container = document.querySelector(".product-catalog");
+export const containerCatalog = document.querySelector(".product-catalog");
 
+export const productsSort = document.querySelector(".products-sort");
 export const btnRating = document.querySelector(".products-sort__btn-rating");
 export const btnPrice = document.querySelector(".products-sort__btn-price");
 export const btnDiscount = document.querySelector(
@@ -64,9 +59,56 @@ export const selectedBtnDate = document.querySelector(`button[name="date"]`);
 export const btnFilter = document.querySelector(".product-filtr__btn");
 export const productFilters = document.querySelector(".product-filtr");
 
-/*end*/
+export const wordsDictionary = [
+  ["серый", "grey"],
+  ["белый", "white"],
+  ["голубой", "blue"],
+  ["черный", "black"],
+  ["красный", "red"],
+  ["розовый", "pink"],
+  ["желтый", "yellow"],
+  ["коричневый", "brown"],
+  ["фиолетовый", "violet"],
+];
+export const shopBtn = document.querySelector(".card-item__shop-btn");
+export const sizeList = document.querySelector(".card-item__size-list");
 
-/*Alice*/
-export const itemsToShow = 3; // Количество карточек для отображения
-export const carouselInner = document.querySelector(".buyNow__carousel-inner");
-/*end*/
+export const pageNavBtnSort = document.querySelector(
+  ".catalog-page-nav__btn-sort"
+);
+export const pageNavBtnFilter = document.querySelector(
+  ".catalog-page-nav__btn-filter"
+);
+
+export const productInfoContainer = document.querySelector(
+  ".product-info-container"
+);
+export const productSliderList = document.querySelector(
+  ".product-slider__list"
+);
+export const productSliderMainBtn = document.querySelector(
+  ".product-slider__main-arrow"
+);
+export const productSliderListItemBtn = document.querySelector(
+  ".product-slider__item-arrow"
+);
+export const productImageMain = document.querySelector(
+  ".product-slider__main-image"
+);
+export const productPrice = document.querySelector(".product-price");
+export const productTitle = document.querySelector(".product-title__text");
+export const productPageNavTitle = document.querySelector(
+  ".page-nav__product-info"
+);
+export const productArticle = document.querySelector(".product-title__id");
+export const productDescription = document.querySelector(".product-desc__text");
+export const productSize = document.querySelector(".product-size__select-item");
+export const productColor = document.querySelector(
+  ".product-color__select-list"
+);
+export const productRating = document.querySelector(".product-rating");
+export const productShopBtn = document.querySelector(".to-cart__btn");
+export const productSizeErrorMessage = document.querySelector(
+  ".product-size-error-message"
+);
+export const cardItemBtn = document.querySelector(".card-item__btn");

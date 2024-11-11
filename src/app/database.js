@@ -1,4 +1,12 @@
-import { databaseAddress } from "../vars";
+import {
+  databaseAddress,
+  carouselInner,
+  containerCatalog,
+  productInfoContainer,
+} from "./vars";
+import { displayProducts, startCarousel } from "./home-page";
+import { loadProductCatalog } from "./catalog-page";
+import { renderProductInfo } from "./product-info";
 
 export class CartProducts {
   //get data about products in the cart data about products in the cart
@@ -69,5 +77,31 @@ export async function addOrderDB(orderInfo) {
     console.log(error);
   } finally {
     console.log("Запрос POST был, заказ добавлен");
+  }
+}
+
+export async function loadProducts() {
+  try {
+    const response = await fetch("/db.json");
+    if (!response.ok) {
+      throw new Error("Сеть не отвечает");
+    }
+    const data = await response.json();
+    if (data["products-catalog"].length > 0) {
+      if (carouselInner) {
+        displayProducts(data["products-catalog"]);
+        startCarousel();
+      }
+
+      if (containerCatalog) {
+        loadProductCatalog(data["products-catalog"]);
+      }
+
+      if (productInfoContainer) {
+        renderProductInfo(data["products-catalog"]);
+      }
+    }
+  } catch (error) {
+    console.error("Ошибка загрузки данных:", error);
   }
 }

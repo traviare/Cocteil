@@ -18,24 +18,21 @@ import {
   btnRange,
   btnSize,
   btnColor,
-} from "../vars";
+  pageNavBtnSort,
+  pageNavBtnFilter,
+  productsSort,
+  containerCatalog,
+  wordsDictionary,
+} from "./vars";
 
-export async function loadProductsCatalog() {
-  try {
-    const response = await fetch("/db.json");
-    if (!response.ok) {
-      throw new Error("Сеть не отвечает");
-    }
-    const data = await response.json();
-    globalFunction(data["products-catalog"]);
-  } catch (error) {
-    console.error("Ошибка загрузки данных:", error);
-  }
-}
+import {
+  renderProducts,
+  translateWordToRussian,
+  addColor,
+  getFinalPrice,
+} from "./common";
 
-document.addEventListener("DOMContentLoaded", loadProductsCatalog());
-
-function globalFunction(products) {
+export function loadProductCatalog(products) {
   const filtrJeans = products.filter((product) => product.category == "Джинсы");
   const filtrDress = products.filter(
     (product) => product.category == "Платья и сарафаны"
@@ -47,69 +44,13 @@ function globalFunction(products) {
   filtersRender(catalogJeans, filtrJeans);
   filtersRender(catalogDress, filtrDress);
   filtersRender(catalogShirts, filtrShirts);
-  getFiltersValue(products);
-}
-
-function renderProducts(products, container) {
-  container.innerHTML = "";
-
-  products.forEach((product) => {
-    if (product.discount > 0) {
-      let finalPrice = product.price - (product.price * product.discount) / 100;
-      const productSaleHTML = `
-      <div class="card-item" data-id='${product.id}'>
-  <div class="card-item__image">
-    <img src='.${product.picture[0]}' alt='${product.name}'/>
-  </div>
-  <div class="card-item__price">
-    <span class='card-item__discount'>${finalPrice} ₽</span>
-    <span class='card-item__start-price'>${product.price} ₽</span>
-  </div>
-  <div class="card-item__info">
-    <h3 class="card-item__name">${product.name}</h3>
-      <button class="card-item__shop-btn">
-      <img src="../src/assets/images/globalImages/header_shopping-bag-line.svg" alt="" class="card-item__icon" />
-    </button>
-  </div>
-  <div class="card-item__links">
-    <a href="#" class="card-item__btn">Подробнее<svg class="card-item__link-arrow" width="27" height="4" viewBox="0 0 27 4" xmlns="http://www.w3.org/2000/svg">
-<path d="M26.3442 2.17678C26.4418 2.07915 26.4418 1.92085 26.3442 1.82322L24.7532 0.232233C24.6556 0.134602 24.4973 0.134602 24.3997 0.232233C24.302 0.329864 24.302 0.488155 24.3997 0.585786L25.8139 2L24.3997 3.41421C24.302 3.51184 24.302 3.67014 24.3997 3.76777C24.4973 3.8654 24.6556 3.8654 24.7532 3.76777L26.3442 2.17678ZM0.951172 2.25H26.1674V1.75H0.951172V2.25Z" fill="#514A7E"/>
-</svg></a>
-    <div class="card-item__rating">${product.rating} ★</div>
-  </div>
-</div>
-`;
-      container.insertAdjacentHTML("beforeend", productSaleHTML);
-    } else {
-      const productHTML = `
-      <div class="card-item" data-id='${product.id}'>
-  <div class="card-item__image">
-    <img src='.${product.picture[0]}' alt='${product.name}'/>
-  </div>
-  <div class="card-item__price">${product.price} ₽</div>
-  <div class="card-item__info">
-    <h3 class="card-item__name">${product.name}</h3>
-    <button class="card-item__shop-btn">
-      <img src="../src/assets/images/globalImages/header_shopping-bag-line.svg" alt="" class="card-item__icon" />
-    </button>
-  </div>
-  <div class="card-item__links">
-    <a href="#" class="card-item__btn">Подробнее<svg class="card-item__link-arrow" width="27" height="4" viewBox="0 0 27 4" xmlns="http://www.w3.org/2000/svg">
-<path d="M26.3442 2.17678C26.4418 2.07915 26.4418 1.92085 26.3442 1.82322L24.7532 0.232233C24.6556 0.134602 24.4973 0.134602 24.3997 0.232233C24.302 0.329864 24.302 0.488155 24.3997 0.585786L25.8139 2L24.3997 3.41421C24.302 3.51184 24.302 3.67014 24.3997 3.76777C24.4973 3.8654 24.6556 3.8654 24.7532 3.76777L26.3442 2.17678ZM0.951172 2.25H26.1674V1.75H0.951172V2.25Z" fill="#514A7E"/>
-</svg></a>
-    <div class="card-item__rating">${product.rating} ★</div>
-  </div>
-</div>
-`;
-      container.insertAdjacentHTML("beforeend", productHTML);
-    }
-  });
+  getFiltersValueAndRenderProducts(products);
 }
 
 function filtersRender(catalogPage, products) {
   if (catalogPage != null) {
     addSize(products);
-    addColor(products);
+    addColorCatalog(products);
   }
 }
 
@@ -134,64 +75,12 @@ function addSize(category) {
   });
 }
 
-const wordsDictionary = [
-  ["серый", "grey"],
-  ["белый", "white"],
-  ["голубой", "blue"],
-  ["черный", "black"],
-  ["красный", "red"],
-  ["розовый", "pink"],
-  ["желтый", "yellow"],
-  ["коричневый", "brown"],
-  ["фиолетовый", "violet"],
-];
-
-// Функции для перевода цветов
-function translateWordsEnglish(ruWordsColors, wordsDictionary) {
-  const wordMap = Object.fromEntries(wordsDictionary);
-  return ruWordsColors.map((word) => wordMap[word] || word);
-}
-
-function translateWordToRussian(enWordColor, wordsDictionary) {
-  const wordMap = Object.fromEntries(
-    wordsDictionary.map(([ru, en]) => [en, ru])
-  );
-  return wordMap[enWordColor] || enWordColor;
-}
-
-function addColor(category) {
+function addColorCatalog(category) {
   const color = category.map((product) => product.color);
   const arr = [].concat(...color);
   const ruWordsColors = [...new Set(arr)];
-
-  translateWordsEnglish(ruWordsColors, wordsDictionary).forEach((color) => {
-    const colorBtnHTML = `
-      <label class="color-filtr__color">
-        <input type="radio" name="color" value="${color}" class="${color}">
-      </label>
-    `;
-    colorFilterWrap.insertAdjacentHTML("beforeend", colorBtnHTML);
-  });
+  addColor(colorFilterWrap, ruWordsColors);
 }
-
-btnRange.addEventListener("click", handlBtnPrice);
-btnSize.addEventListener("click", handlBtnSize);
-btnColor.addEventListener("click", handlBtnColor);
-
-function handlBtnPrice() {
-  priceFilterWrap.classList.toggle("display");
-  btnRange.classList.toggle("icon-rotate");
-}
-function handlBtnSize() {
-  sizeFilter.classList.toggle("display");
-  btnSize.classList.toggle("icon-rotate");
-}
-function handlBtnColor() {
-  colorFilter.classList.toggle("display");
-  btnColor.classList.toggle("icon-rotate");
-}
-
-// заменить на суммы с json
 
 function priceRange(onPriceChange) {
   const priceGap = 100;
@@ -257,7 +146,7 @@ function priceRange(onPriceChange) {
   });
 }
 
-function getFiltersValue(productsJSON) {
+function getFiltersValueAndRenderProducts(productsJSON) {
   let filters = {
     category: null,
     color: null,
@@ -333,11 +222,6 @@ function getFiltersValue(productsJSON) {
 
   return filters;
 }
-function getFinalPrice(product) {
-  return product.discount > 0
-    ? product.price - (product.price * product.discount) / 100
-    : product.price;
-}
 
 function filterAndSortProducts(products, filters) {
   let filteredProducts = products.filter((product) => {
@@ -380,7 +264,11 @@ function renderSortedProducts(arr) {
   const container = getCatalogProductsContainer();
 
   if (arr.length === 0) {
-    container.innerHTML = "Товаров не найдено";
+    container.innerHTML = "";
+    const messageHTML = `
+    <p class="not-found-message">Товаров не найдено</p>
+    `;
+    container.insertAdjacentHTML("beforeend", messageHTML);
     return;
   }
 
@@ -401,4 +289,33 @@ function getCatalogProductsContainer() {
   }
 
   return null;
+}
+
+function handlBtnPrice() {
+  priceFilterWrap.classList.toggle("display");
+  btnRange.classList.toggle("icon-rotate");
+}
+function handlBtnSize() {
+  sizeFilter.classList.toggle("display");
+  btnSize.classList.toggle("icon-rotate");
+}
+function handlBtnColor() {
+  colorFilter.classList.toggle("display");
+  btnColor.classList.toggle("icon-rotate");
+}
+
+function handlPageNavBtnSort() {
+  productsSort.classList.toggle("display-block");
+}
+function handlPageNavBtnFilter() {
+  productFilters.classList.toggle("display-block");
+}
+
+if (containerCatalog) {
+  btnRange.addEventListener("click", handlBtnPrice);
+  btnSize.addEventListener("click", handlBtnSize);
+  btnColor.addEventListener("click", handlBtnColor);
+  pageNavBtnSort.addEventListener("click", handlPageNavBtnSort);
+  productsSort.addEventListener("click", handlPageNavBtnSort);
+  pageNavBtnFilter.addEventListener("click", handlPageNavBtnFilter);
 }

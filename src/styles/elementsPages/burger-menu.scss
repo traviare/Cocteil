@@ -7,11 +7,21 @@
     height: 890px;
     transition: 5s;
 
+    @media (max-width: $mobile) {
+        position: fixed;
+        height: 89vh;
+    }
+
     &__wrap {
         width: 278px;
         height: 100%;
         background-color: $backgroundColorMenu;
         margin-left: 15px;
+
+        @media (max-width: $mobile) {
+            width: 100%;
+            margin-left: 0;
+        }
     }
 
     &__logo {

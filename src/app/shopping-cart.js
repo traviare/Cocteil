@@ -10,7 +10,7 @@ import {
   productsContainer,
   totalQuantity,
   buyButton,
-} from "../vars";
+} from "./vars";
 
 buyButton.addEventListener("click", function (evt) {
   document.location = "/pages/order.html";
