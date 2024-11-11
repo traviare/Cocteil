@@ -57,7 +57,7 @@ function addProductToContainer(product) {
   const totalPriceProduct = (product.price * product.quantity).toFixed(2);
   const productElement = `<div class="product">
             <div class="product__image-container">
-              <img class="product__image" src="../src/assets/images/cardImages/${product.picture}" alt="picture of product" />
+              <img class="product__image" src="${product.picture}" alt="picture of product" />
             </div>
             <div class="product__description">
               <div class="product__names">

@@ -4,7 +4,7 @@ export class CartProducts {
   //get data about products in the cart data about products in the cart
   static async getCartProducts() {
     try {
-      const response = await fetch(`${databaseAddress}/cart`);
+      const response = await fetch(`${databaseAddress}/basket`);
       const data = await response.json();
       return data;
     } catch (error) {

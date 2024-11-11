@@ -2,7 +2,6 @@
 @import "/src/styles/_vars";
 @import "../elementsPages/body.scss";
 @import "../elementsPages/container.scss";
-@import "../elementsPages/button.scss";
 @import "../elementsPages/header.scss";
 @import "../elementsPages/burger-menu.scss";
 @import "../elementsPages/home-page.scss";
@@ -14,4 +13,5 @@
 @import "../elementsPages/page-nav.scss";
 @import "../elementsPages/category-catalog.scss";
 @import "../elementsPages/card-item.scss";
-@import "../elementsPages/_flashSale";@import "../elementsPages/order.scss";
+@import "../elementsPages/flashSale.scss";
+@import "../elementsPages/order.scss";

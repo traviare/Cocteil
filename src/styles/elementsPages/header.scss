@@ -1,8 +1,10 @@
 .header {
     position: sticky;
     top: 0px;
+    z-index: 999;
     background-color: $backgroundColorLight;
     padding-top: 49px;
+    padding-bottom: 10px;
 
     &__container {
         position: relative;
@@ -50,6 +52,7 @@
         font-size: $textSizeTwo;
         width: 308px;
         outline: none;
+
     }
 }
 
@@ -61,4 +64,10 @@
 .header-form__input:focus {
     border-bottom: 1px solid $textColor;
     color: $textColorTitle;
+}
+
+.header-form,
+.header-form input,
+.personal-account img {
+    display: none;
 }
