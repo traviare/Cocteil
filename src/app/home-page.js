@@ -39,8 +39,6 @@ export async function loadProducts() {
   }
 }
 
-function displayProducts(products) {
-
 export function displayProducts(products) {
   const filteredProducts = products.filter(
     (product) => product.discount && product.discount > 0
