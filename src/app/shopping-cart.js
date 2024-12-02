@@ -16,7 +16,6 @@ buyButton.addEventListener("click", function (evt) {
   document.location = "/pages/order.html";
 });
 
-//displaying products in the cart
 CartProducts.getCartProducts().then((data) => {
   if (data.length > 0) {
     buyButton.classList.remove("disabled");
@@ -26,7 +25,6 @@ CartProducts.getCartProducts().then((data) => {
   calculateTotalPriceByData(data);
   calculateTotalQuantityByData(data);
 
-  //buttons to decrease, increase and remove products from the cart
   const minusButtons = document.querySelectorAll(".product__minus-btn");
   const plusButtons = document.querySelectorAll(".product__plus-btn");
   const deleteButtons = document.querySelectorAll(".product__delete-btn");
@@ -41,7 +39,6 @@ CartProducts.getCartProducts().then((data) => {
     item.addEventListener("click", removeProduct)
   );
 
-  //open and close popup window with delivery information
   const deliveryShowButtons = document.querySelectorAll(
     ".product__delivery-info"
   );
@@ -52,7 +49,6 @@ CartProducts.getCartProducts().then((data) => {
   document.addEventListener("click", closePopupWindowClickOutside);
 });
 
-//function of displaying products in the cart
 function addProductToContainer(product) {
   const totalPriceProduct = (product.price * product.quantity).toFixed(2);
   const productElement = `<div class="product">
@@ -98,7 +94,6 @@ function addProductToContainer(product) {
   productsContainer.insertAdjacentHTML("afterbegin", productElement);
 }
 
-//function of changing the quantity of each product on the page and in the database
 function changeNumberProducts(currentButton, action) {
   const productContainer = currentButton.closest(".product");
   const quantityProduct = productContainer.querySelector(
@@ -108,8 +103,6 @@ function changeNumberProducts(currentButton, action) {
 
   CartProducts.getCartProducts()
     .then((data) => {
-      // const indexProduct = getIndexProductByArticle(productItem, data);
-      //let currentProduct = data[indexProduct];
       let curProduct = getCurrentProduct(productContainer, data);
       if (curProduct.quantity === 1 && action === "minus") {
         deleteProduct(productContainer, curProduct);
@@ -132,19 +125,16 @@ function changeNumberProducts(currentButton, action) {
     .catch((error) => console.log(error));
 }
 
-//function to decrease the quantity of product by 1
 function decreaseNumberProducts(evt) {
   const curButton = evt.target;
   changeNumberProducts(curButton, "minus");
 }
 
-//function to increase the quantity of product by 1
 function increaseNumberProducts(evt) {
   const curButton = evt.target;
   changeNumberProducts(curButton, "plus");
 }
 
-//function for delete product from page and database
 function removeProduct(evt) {
   const productContainer = evt.target.closest(".product");
   CartProducts.getCartProducts()
@@ -155,7 +145,6 @@ function removeProduct(evt) {
     .catch((error) => console.log(error));
 }
 
-//function to calculate the total price using data from the database
 function calculateTotalPriceByData(cartData) {
   let totalValue = cartData.reduce(
     (totalValue, n) => totalValue + n.price * n.quantity,
@@ -164,13 +153,11 @@ function calculateTotalPriceByData(cartData) {
   totalPrice.textContent = totalValue.toFixed(2);
 }
 
-//function to calculate the total price using change value
 function changeTotalPrice(changeValue) {
   const newValue = (Number(totalPrice.textContent) + changeValue).toFixed(2);
   totalPrice.textContent = newValue;
 }
 
-//function to calculate the total quantity using data from the database
 function calculateTotalQuantityByData(cartData) {
   let totalValue = cartData.reduce(
     (totalValue, n) => totalValue + n.quantity,
@@ -179,13 +166,11 @@ function calculateTotalQuantityByData(cartData) {
   totalQuantity.forEach((item) => (item.textContent = totalValue));
 }
 
-//function to calculate the total quantity using change value
 function changeTotalQuantity(changeValue) {
   const newValue = Number(totalQuantity[0].textContent) + changeValue;
   totalQuantity.forEach((item) => (item.textContent = newValue));
 }
 
-//search function for product index in the database by article
 function getCurrentProduct(productContainer, cartData) {
   const article = productContainer.querySelector(
     ".product__art-number"
@@ -194,7 +179,6 @@ function getCurrentProduct(productContainer, cartData) {
   return cartData[index];
 }
 
-//function of deleting a product from the page and database
 function deleteProduct(productContainer, curProduct) {
   changeTotalPrice(-curProduct.price * curProduct.quantity);
   changeTotalQuantity(-curProduct.quantity);

@@ -15,7 +15,12 @@ import {
   productShopBtn,
   productSizeErrorMessage,
 } from "./vars";
-import { addColor, getFinalPrice, getRuSize } from "./common";
+import {
+  addColor,
+  getFinalPrice,
+  getRuSize,
+  addProductInBasket,
+} from "./common";
 
 function getProductId() {
   const url = new URLSearchParams(window.location.search);
@@ -29,11 +34,11 @@ function addProductImages(product) {
   images.forEach((image) => {
     const imageHTML = `
               <div class="product-slider__item">
-                <img class="product-slider__item-image" src=".${image}" alt="${product.name}" />
+                <img class="product-slider__item-image" src="../src/assets/images/cardImages/${image}" alt="${product.name}" />
               </div>
               `;
     productSliderList.insertAdjacentHTML("beforeend", imageHTML);
-    productImageMain.src = `.${images[0]}`;
+    productImageMain.src = `../src/assets/images/cardImages/${images[0]}`;
     productImageMain.alt = `${product.name}`;
   });
 }
@@ -137,7 +142,7 @@ export function renderProductInfo(product) {
   } else productInfoContainer.innerHTML = "Товара не найдено";
 }
 
-function addProductInBasket() {
+function handleProductBasketBtn() {
   const checked = document.querySelector(`input[name="size-btn"]:checked`);
   const btns = document.querySelectorAll(".size__select-btn");
   const inputs = document.querySelectorAll(`input[name="size-btn"]`);
@@ -148,11 +153,12 @@ function addProductInBasket() {
     btns.forEach((item) => item.classList.remove("size-btn-validation"));
     inputs.forEach((item) => (item.checked = false));
     productSizeErrorMessage.textContent = "";
-    const value = checked.value;
-    console.log(value);
+    const value = checked.value.toUpperCase();
+    const id = getProductId();
+    addProductInBasket(value, id);
   }
 }
 
 if (productShopBtn) {
-  productShopBtn.addEventListener("click", addProductInBasket);
+  productShopBtn.addEventListener("click", handleProductBasketBtn);
 }

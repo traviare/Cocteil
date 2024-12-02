@@ -8,7 +8,6 @@ import {
   hideHelper,
 } from "./validation-fields";
 
-//form fields
 const inputs = Array.from(orderForm.elements[0].elements);
 const deliveryTypes = orderForm.elements["delivery-type"];
 const payTypes = orderForm.elements["pay-type"];
@@ -33,7 +32,6 @@ document
     document.location = "../index.html";
   });
 
-//processing input fields
 function changeInputData(evt) {
   const curField = evt.target;
   let curValue = curField.value.trim();
@@ -72,7 +70,6 @@ function changeInputData(evt) {
   inputValues[fieldName] = result ? curValue : "";
 }
 
-//validation of the entire form
 function validationForm(evt) {
   evt.preventDefault();
   for (let key in inputValues) {
@@ -90,7 +87,6 @@ function validationForm(evt) {
   }
 }
 
-//show order confirmation message
 function orderConfirmation() {
   const orderFormBlock = document.querySelector(".order");
   orderFormBlock.style.display = "none";
@@ -98,7 +94,6 @@ function orderConfirmation() {
   fillConfirmationFields();
 }
 
-//adding an order to the database
 function createOrder() {
   confirmationBlock.style.display = "none";
   const messageOrder = document.querySelector(".order-message");
@@ -112,7 +107,6 @@ function createOrder() {
   orderForm.reset();
 }
 
-//filling fields of the confirmation message
 function fillConfirmationFields() {
   for (let key in inputValues) {
     if (["comment", "agreement"].includes(key)) {
@@ -155,7 +149,6 @@ function fillConfirmationFields() {
   inputValues["delivery-time"] = timeDelivery;
 }
 
-//delivery date calculation
 function getTimeDelivery(typeDelivery) {
   const optionsData = {
     year: "numeric",
@@ -171,14 +164,12 @@ function getTimeDelivery(typeDelivery) {
   return currentDate.toLocaleString("ru", optionsData);
 }
 
-//getting the value of a field with radio buttons
 function getOptionsValue(evt) {
   inputValues[evt.target.name] = evt.target.value;
   validField[evt.target.name] = true;
   hideHelper(evt.target.name);
 }
 
-//message about required field completion
 function mandatoryFillingMessage(fieldName) {
   hideHelper(fieldName);
   const curHelper = document.querySelector(`.helper--${fieldName}`);
@@ -189,7 +180,6 @@ function mandatoryFillingMessage(fieldName) {
   curHelper.textContent = "Обязательное поле для заполнения.";
 }
 
-//field input style on focus
 function focusStyle(evt) {
   evt.target.style.borderBottom = "2px solid #514a7e";
   evt.target.style.color = "#514a7e";
@@ -199,7 +189,6 @@ function focusStyle(evt) {
   }
 }
 
-//field input style when focus is lost
 function blurStyle(evt) {
   if (evt.target.value.length === 0 && evt.target.name !== "comment") {
     mandatoryFillingMessage(evt.target.name);
@@ -207,7 +196,6 @@ function blurStyle(evt) {
   evt.target.style.borderBottom = "0.5px solid #7d7d7d";
 }
 
-//initialization of data on validation and value of input fields
 function initializationInputsInformation() {
   const validInfo = {},
     inputValues = {};
@@ -224,7 +212,6 @@ function initializationInputsInformation() {
   return [validInfo, inputValues];
 }
 
-//capitalize the first letter of a line
 function upperCaseFirst(str) {
   if (!str) return str;
 

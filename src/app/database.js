@@ -1,15 +1,6 @@
-import {
-  databaseAddress,
-  carouselInner,
-  containerCatalog,
-  productInfoContainer,
-} from "./vars";
-import { displayProducts, startCarousel } from "./home-page";
-import { loadProductCatalog } from "./catalog-page";
-import { renderProductInfo } from "./product-info";
+import { databaseAddress } from "./vars";
 
 export class CartProducts {
-  //get data about products in the cart data about products in the cart
   static async getCartProducts() {
     try {
       const response = await fetch(`${databaseAddress}/cart`);
@@ -22,7 +13,6 @@ export class CartProducts {
     }
   }
 
-  //changing product details in cart
   static async changeCartProducts(product, id) {
     try {
       const response = await fetch(`${databaseAddress}/cart/${id}`, {
@@ -40,7 +30,6 @@ export class CartProducts {
     }
   }
 
-  //removing a product from the cart
   static async deleteProductFromCartProducts(id) {
     try {
       const response = await fetch(`${databaseAddress}/cart/${id}`, {
@@ -54,7 +43,6 @@ export class CartProducts {
     }
   }
 
-  //delete cart
   static async clearCartProduct(quantity) {
     for (let i = 1; i <= quantity; i++) {
       await this.deleteProductFromCartProducts(i);
@@ -62,7 +50,6 @@ export class CartProducts {
   }
 }
 
-//adding order information to the database
 export async function addOrderDB(orderInfo) {
   try {
     const resp = await fetch(`${databaseAddress}/orders`, {
@@ -80,28 +67,14 @@ export async function addOrderDB(orderInfo) {
   }
 }
 
-export async function loadProducts() {
+export async function getProductsCatalog() {
   try {
-    const response = await fetch("/db.json");
-    if (!response.ok) {
-      throw new Error("Сеть не отвечает");
-    }
+    const response = await fetch(`${databaseAddress}/products-catalog`);
     const data = await response.json();
-    if (data["products-catalog"].length > 0) {
-      if (carouselInner) {
-        displayProducts(data["products-catalog"]);
-        startCarousel();
-      }
-
-      if (containerCatalog) {
-        loadProductCatalog(data["products-catalog"]);
-      }
-
-      if (productInfoContainer) {
-        renderProductInfo(data["products-catalog"]);
-      }
-    }
+    return data;
   } catch (error) {
-    console.error("Ошибка загрузки данных:", error);
+    console.log(error);
+  } finally {
+    console.log("Запрос GET");
   }
 }

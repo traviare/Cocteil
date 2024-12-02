@@ -1,6 +1,5 @@
 import { getAddress } from "./data-suggest";
 
-//name field validation
 export function nameValidation(strValue, fieldName) {
   hideHelper(fieldName);
   const regexp = /^[А-Яа-яёa-zA-Z]*$/;
@@ -14,8 +13,6 @@ export function nameValidation(strValue, fieldName) {
     messageError =
       "Поле может содержать только буквы белорусского и латинского алфавитов.";
   } else {
-    //validField[fieldName] = true;
-    //inputValues[fieldName] = strValue;
     return true;
   }
   if (messageError) {
@@ -24,7 +21,6 @@ export function nameValidation(strValue, fieldName) {
   }
 }
 
-//email field validation
 export function emailValidation(strValue) {
   hideHelper("email");
   const regexp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -34,8 +30,6 @@ export function emailValidation(strValue) {
   } else if (!regexp.test(strValue)) {
     messageError = "Некорректный формат адреса электронной почты.";
   } else {
-    //validField["email"] = true;
-    //inputValues["email"] = strValue;
     return true;
   }
   if (messageError) {
@@ -44,7 +38,6 @@ export function emailValidation(strValue) {
   }
 }
 
-//telephone number field validation
 export function telephoneNumberValidation(strValue, inputField) {
   hideHelper("telephone");
   const regexp = /^\+[1-9]{1}\d{10,11}$/;
@@ -65,7 +58,6 @@ export function telephoneNumberValidation(strValue, inputField) {
   }
 }
 
-//address validation
 export function addressValidation(strValue) {
   hideHelper("address");
   showSuggest(strValue);
@@ -83,7 +75,6 @@ export function addressValidation(strValue) {
   }
 }
 
-//show address hints
 function showSuggest(strValue) {
   const datalist = document.querySelector("#suggested-addresses");
   const suggestList = Array.from(datalist.children);
@@ -94,14 +85,12 @@ function showSuggest(strValue) {
   });
 }
 
-//show error messages
 function showHelper(errorMsg, fieldName) {
   const curHelper = document.querySelector(`.helper--${fieldName}`);
   curHelper.textContent = "Поле заполнено некорректно." + errorMsg;
   curHelper.style.display = "block";
 }
 
-//hide error messages
 export function hideHelper(fieldName) {
   const curHelper = document.querySelector(`.helper--${fieldName}`);
   curHelper.style.display = "none";

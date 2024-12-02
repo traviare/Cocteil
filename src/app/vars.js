@@ -13,7 +13,7 @@ export const confirmationButton = document.querySelector(
 );
 export const confirmationBlock = document.querySelector(".confirmation");
 export const itemsToShow = 3;
-export const carouselInner = document.querySelector(".buyNow__carousel-inner");
+export const carouselInner = document.querySelector(".buy-now__carousel-inner");
 
 export const burgerMenuBtn = document.querySelector(".menu-btn");
 export const burgerMenu = document.querySelector(".burger-menu");

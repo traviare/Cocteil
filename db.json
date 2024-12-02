@@ -1,44 +1,44 @@
 {
   "cart": [
     {
-      "id": "1",
-      "name": "Платье женское",
-      "article": "09456786",
-      "color": "синий",
-      "size": 35,
-      "price": 40,
-      "quantity": 1,
-      "picture": "dress1.png"
+      "id": "item5015",
+      "name": "Рубашка",
+      "article": "58330289830025",
+      "color": "серый",
+      "size": "XS",
+      "price": 6500,
+      "picture": "shirts-5-1.webp",
+      "quantity": 2
     },
     {
-      "id": "2",
-      "name": "Платье женское",
-      "article": "09456787",
-      "color": "красный",
-      "size": 36,
-      "price": 30,
-      "quantity": 4,
-      "picture": "dress2.png"
+      "id": "item4115",
+      "name": "Платье",
+      "article": "48330289833025",
+      "color": "розовый",
+      "size": "XL",
+      "price": 9000,
+      "picture": "dress-5-1.webp",
+      "quantity": 1
     },
     {
-      "id": "3",
-      "name": "Платье женское",
-      "article": "09456788",
-      "color": "зеленый",
-      "size": 34,
-      "price": 20,
-      "quantity": 2,
-      "picture": "dress2.png"
+      "id": "item4112",
+      "name": "Сарафан",
+      "article": "48330289833022",
+      "color": "черный",
+      "size": "XS",
+      "price": 8000,
+      "picture": "dress-2-1.webp",
+      "quantity": 1
     },
     {
-      "id": "4",
-      "name": "Платье женское",
-      "article": "09456789",
-      "color": "красный",
-      "size": 38,
-      "price": 10,
-      "quantity": 3,
-      "picture": "dress1.png"
+      "id": "item4111",
+      "name": "Сарафан",
+      "article": "48330289833021",
+      "color": "черный",
+      "size": "S",
+      "price": 8000,
+      "picture": "dress-1-1.webp",
+      "quantity": 1
     }
   ],
   "orders": [],
@@ -48,14 +48,20 @@
       "category": "Джинсы",
       "name": "Джинсы",
       "article": "98330289833021",
-      "color": ["серый"],
-      "size": ["s", "m", "xl"],
+      "color": [
+        "серый"
+      ],
+      "size": [
+        "s",
+        "m",
+        "xl"
+      ],
       "price": 6000,
       "picture": [
-        "./src/assets/images/cardImages/jeans-1-1.webp",
-        "./src/assets/images/cardImages/jeans-1-2.webp",
-        "./src/assets/images/cardImages/jeans-1-3.webp",
-        "./src/assets/images/cardImages/jeans-1-4.webp"
+        "jeans-1-1.webp",
+        "jeans-1-2.webp",
+        "jeans-1-3.webp",
+        "jeans-1-4.webp"
       ],
       "description": "Эти универсальные джинсы идеально подойдут для любого повседневного образа. Изготовленные из высококачественного денима, они обеспечивают комфорт и долговечность.",
       "rating": "9",
@@ -67,14 +73,21 @@
       "category": "Джинсы",
       "name": "Джинсы",
       "article": "98330289833022",
-      "color": ["белый"],
-      "size": ["xs", "s", "l", "xl"],
+      "color": [
+        "белый"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "l",
+        "xl"
+      ],
       "price": 7000,
       "picture": [
-        "./src/assets/images/cardImages/jeans-2-1.webp",
-        "./src/assets/images/cardImages/jeans-2-2.webp",
-        "./src/assets/images/cardImages/jeans-2-3.webp",
-        "./src/assets/images/cardImages/jeans-2-4.webp"
+        "jeans-2-1.webp",
+        "jeans-2-2.webp",
+        "jeans-2-3.webp",
+        "jeans-2-4.webp"
       ],
       "description": "Эти универсальные джинсы идеально подойдут для любого повседневного образа. Изготовленные из высококачественного денима, они обеспечивают комфорт и долговечность.",
       "rating": "9",
@@ -86,14 +99,21 @@
       "category": "Джинсы",
       "name": "Джинсы",
       "article": "98330289833023",
-      "color": ["белый"],
-      "size": ["xs", "m", "l", "xl"],
+      "color": [
+        "белый"
+      ],
+      "size": [
+        "xs",
+        "m",
+        "l",
+        "xl"
+      ],
       "price": 6500,
       "picture": [
-        "./src/assets/images/cardImages/jeans-3-1.webp",
-        "./src/assets/images/cardImages/jeans-3-2.webp",
-        "./src/assets/images/cardImages/jeans-3-3.webp",
-        "./src/assets/images/cardImages/jeans-3-4.webp"
+        "jeans-3-1.webp",
+        "jeans-3-2.webp",
+        "jeans-3-3.webp",
+        "jeans-3-4.webp"
       ],
       "description": "Эти универсальные джинсы идеально подойдут для любого повседневного образа. Изготовленные из высококачественного денима, они обеспечивают комфорт и долговечность.",
       "rating": "8",
@@ -105,14 +125,21 @@
       "category": "Джинсы",
       "name": "Джинсы",
       "article": "98330289833024",
-      "color": ["голубой"],
-      "size": ["xs", "s", "m", "l"],
+      "color": [
+        "голубой"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l"
+      ],
       "price": 7500,
       "picture": [
-        "./src/assets/images/cardImages/jeans-4-1.webp",
-        "./src/assets/images/cardImages/jeans-4-2.webp",
-        "./src/assets/images/cardImages/jeans-4-3.webp",
-        "./src/assets/images/cardImages/jeans-4-4.webp"
+        "jeans-4-1.webp",
+        "jeans-4-2.webp",
+        "jeans-4-3.webp",
+        "jeans-4-4.webp"
       ],
       "description": "Эти универсальные джинсы идеально подойдут для любого повседневного образа. Изготовленные из высококачественного денима, они обеспечивают комфорт и долговечность.",
       "rating": "7",
@@ -124,14 +151,22 @@
       "category": "Джинсы",
       "name": "Джинсы",
       "article": "98330289833025",
-      "color": ["серый"],
-      "size": ["xs", "s", "m", "l", "xl"],
+      "color": [
+        "серый"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
       "price": 6000,
       "picture": [
-        "./src/assets/images/cardImages/jeans-5-1.webp",
-        "./src/assets/images/cardImages/jeans-5-2.webp",
-        "./src/assets/images/cardImages/jeans-5-3.webp",
-        "./src/assets/images/cardImages/jeans-5-4.webp"
+        "jeans-5-1.webp",
+        "jeans-5-2.webp",
+        "jeans-5-3.webp",
+        "jeans-5-4.webp"
       ],
       "description": "Эти универсальные джинсы идеально подойдут для любого повседневного образа. Изготовленные из высококачественного денима, они обеспечивают комфорт и долговечность.",
       "rating": "8",
@@ -143,14 +178,21 @@
       "category": "Джинсы",
       "name": "Джинсы",
       "article": "98330289833026",
-      "color": ["серый"],
-      "size": ["xs", "m", "l", "xl"],
+      "color": [
+        "серый"
+      ],
+      "size": [
+        "xs",
+        "m",
+        "l",
+        "xl"
+      ],
       "price": 6000,
       "picture": [
-        "./src/assets/images/cardImages/jeans-6-1.webp",
-        "./src/assets/images/cardImages/jeans-6-2.webp",
-        "./src/assets/images/cardImages/jeans-6-3.webp",
-        "./src/assets/images/cardImages/jeans-6-4.webp"
+        "jeans-6-1.webp",
+        "jeans-6-2.webp",
+        "jeans-6-3.webp",
+        "jeans-6-4.webp"
       ],
       "description": "Эти универсальные джинсы идеально подойдут для любого повседневного образа. Изготовленные из высококачественного денима, они обеспечивают комфорт и долговечность.",
       "rating": "7",
@@ -162,14 +204,21 @@
       "category": "Джинсы",
       "name": "Джинсы",
       "article": "98330289833027",
-      "color": ["голубой"],
-      "size": ["xs", "m", "l", "xl"],
+      "color": [
+        "голубой"
+      ],
+      "size": [
+        "xs",
+        "m",
+        "l",
+        "xl"
+      ],
       "price": 7000,
       "picture": [
-        "./src/assets/images/cardImages/jeans-7-1.webp",
-        "./src/assets/images/cardImages/jeans-7-2.webp",
-        "./src/assets/images/cardImages/jeans-7-3.webp",
-        "./src/assets/images/cardImages/jeans-7-4.webp"
+        "jeans-7-1.webp",
+        "jeans-7-2.webp",
+        "jeans-7-3.webp",
+        "jeans-7-4.webp"
       ],
       "description": "Эти универсальные джинсы идеально подойдут для любого повседневного образа. Изготовленные из высококачественного денима, они обеспечивают комфорт и долговечность.",
       "rating": "8",
@@ -181,14 +230,22 @@
       "category": "Джинсы",
       "name": "Джинсы",
       "article": "98330289833028",
-      "color": ["серый"],
-      "size": ["xs", "s", "m", "l", "xl"],
+      "color": [
+        "серый"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
       "price": 6500,
       "picture": [
-        "./src/assets/images/cardImages/jeans-8-1.webp",
-        "./src/assets/images/cardImages/jeans-8-2.webp",
-        "./src/assets/images/cardImages/jeans-8-3.webp",
-        "./src/assets/images/cardImages/jeans-8-4.webp"
+        "jeans-8-1.webp",
+        "jeans-8-2.webp",
+        "jeans-8-3.webp",
+        "jeans-8-4.webp"
       ],
       "description": "Эти универсальные джинсы идеально подойдут для любого повседневного образа. Изготовленные из высококачественного денима, они обеспечивают комфорт и долговечность.",
       "rating": "9",
@@ -200,14 +257,21 @@
       "category": "Джинсы",
       "name": "Джинсы",
       "article": "98330289833029",
-      "color": ["серый"],
-      "size": ["xs", "s", "m", "xl"],
+      "color": [
+        "серый"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "xl"
+      ],
       "price": 7000,
       "picture": [
-        "./src/assets/images/cardImages/jeans-9-1.webp",
-        "./src/assets/images/cardImages/jeans-9-2.webp",
-        "./src/assets/images/cardImages/jeans-9-3.webp",
-        "./src/assets/images/cardImages/jeans-9-4.webp"
+        "jeans-9-1.webp",
+        "jeans-9-2.webp",
+        "jeans-9-3.webp",
+        "jeans-9-4.webp"
       ],
       "description": "Эти универсальные джинсы идеально подойдут для любого повседневного образа. Изготовленные из высококачественного денима, они обеспечивают комфорт и долговечность.",
       "rating": "6.5",
@@ -219,14 +283,21 @@
       "category": "Джинсы",
       "name": "Джинсы",
       "article": "98330289833020",
-      "color": ["серый"],
-      "size": ["s", "m", "l", "xl"],
+      "color": [
+        "серый"
+      ],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
       "price": 8000,
       "picture": [
-        "./src/assets/images/cardImages/jeans-10-1.webp",
-        "./src/assets/images/cardImages/jeans-10-2.webp",
-        "./src/assets/images/cardImages/jeans-10-3.webp",
-        "./src/assets/images/cardImages/jeans-10-4.webp"
+        "jeans-10-1.webp",
+        "jeans-10-2.webp",
+        "jeans-10-3.webp",
+        "jeans-10-4.webp"
       ],
       "description": "Эти универсальные джинсы идеально подойдут для любого повседневного образа. Изготовленные из высококачественного денима, они обеспечивают комфорт и долговечность.",
       "rating": "9",
@@ -238,14 +309,21 @@
       "category": "Платья и сарафаны",
       "name": "Сарафан",
       "article": "48330289833021",
-      "color": ["черный"],
-      "size": ["xs", "s", "l", "xl"],
+      "color": [
+        "черный"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "l",
+        "xl"
+      ],
       "price": 8000,
       "picture": [
-        "./src/assets/images/cardImages/dress-1-1.webp",
-        "./src/assets/images/cardImages/dress-1-2.webp",
-        "./src/assets/images/cardImages/dress-1-3.webp",
-        "./src/assets/images/cardImages/dress-1-4.webp"
+        "dress-1-1.webp",
+        "dress-1-2.webp",
+        "dress-1-3.webp",
+        "dress-1-4.webp"
       ],
       "description": "Этот сарафан идеально сочетает в себе удобство и стиль. Изготовленный из мягкого и приятного на ощупь материала, он идеально подходит для тёплых дней. Лёгкий и воздушный фасон позволяет свободно двигаться и чувствовать себя комфортно. Доступен в разных размерах, что позволяет подобрать идеальный сарафан для любого летнего образа.",
       "rating": "9",
@@ -257,14 +335,21 @@
       "category": "Платья и сарафаны",
       "name": "Сарафан",
       "article": "48330289833022",
-      "color": ["черный"],
-      "size": ["xs", "s", "m", "l"],
+      "color": [
+        "черный"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l"
+      ],
       "price": 8000,
       "picture": [
-        "./src/assets/images/cardImages/dress-2-1.webp",
-        "./src/assets/images/cardImages/dress-2-2.webp",
-        "./src/assets/images/cardImages/dress-2-3.webp",
-        "./src/assets/images/cardImages/dress-2-4.webp"
+        "dress-2-1.webp",
+        "dress-2-2.webp",
+        "dress-2-3.webp",
+        "dress-2-4.webp"
       ],
       "description": "Этот сарафан идеально сочетает в себе удобство и стиль. Изготовленный из мягкого и приятного на ощупь материала, он идеально подходит для тёплых дней. Лёгкий и воздушный фасон позволяет свободно двигаться и чувствовать себя комфортно. Доступен в разных размерах, что позволяет подобрать идеальный сарафан для любого летнего образа.",
       "rating": "9",
@@ -276,14 +361,21 @@
       "category": "Платья и сарафаны",
       "name": "Платье",
       "article": "48330289833023",
-      "color": ["черный"],
-      "size": ["xs", "s", "l", "xl"],
+      "color": [
+        "черный"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "l",
+        "xl"
+      ],
       "price": 7000,
       "picture": [
-        "./src/assets/images/cardImages/dress-3-1.webp",
-        "./src/assets/images/cardImages/dress-3-2.webp",
-        "./src/assets/images/cardImages/dress-3-3.webp",
-        "./src/assets/images/cardImages/dress-3-4.webp"
+        "dress-3-1.webp",
+        "dress-3-2.webp",
+        "dress-3-3.webp",
+        "dress-3-4.webp"
       ],
       "description": "Это элегантное платье станет отличным дополнением вашего гардероба. Выполненное из лёгкого и дышащего материала, оно обеспечивает комфорт на протяжении всего дня. Стильные детали делают его подходящим как для прогулок, так и для вечерних выходов. Доступно в различных размерах, чтобы вы могли найти идеальный вариант для любого случая.",
       "rating": "7.5",
@@ -295,14 +387,22 @@
       "category": "Платья и сарафаны",
       "name": "Сарафан",
       "article": "48330289833024",
-      "color": ["красный"],
-      "size": ["xs", "s", "m", "l", "xl"],
+      "color": [
+        "красный"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
       "price": 6000,
       "picture": [
-        "./src/assets/images/cardImages/dress-4-1.webp",
-        "./src/assets/images/cardImages/dress-4-2.webp",
-        "./src/assets/images/cardImages/dress-4-3.webp",
-        "./src/assets/images/cardImages/dress-4-4.webp"
+        "dress-4-1.webp",
+        "dress-4-2.webp",
+        "dress-4-3.webp",
+        "dress-4-4.webp"
       ],
       "description": "Этот сарафан идеально сочетает в себе удобство и стиль. Изготовленный из мягкого и приятного на ощупь материала, он идеально подходит для тёплых дней. Лёгкий и воздушный фасон позволяет свободно двигаться и чувствовать себя комфортно. Доступен в разных размерах, что позволяет подобрать идеальный сарафан для любого летнего образа.",
       "rating": "7",
@@ -314,14 +414,20 @@
       "category": "Платья и сарафаны",
       "name": "Платье",
       "article": "48330289833025",
-      "color": ["розовый"],
-      "size": ["s", "m", "xl"],
+      "color": [
+        "розовый"
+      ],
+      "size": [
+        "s",
+        "m",
+        "xl"
+      ],
       "price": 9000,
       "picture": [
-        "./src/assets/images/cardImages/dress-5-1.webp",
-        "./src/assets/images/cardImages/dress-5-2.webp",
-        "./src/assets/images/cardImages/dress-5-3.webp",
-        "./src/assets/images/cardImages/dress-5-4.webp"
+        "dress-5-1.webp",
+        "dress-5-2.webp",
+        "dress-5-3.webp",
+        "dress-5-4.webp"
       ],
       "description": "Это элегантное платье станет отличным дополнением вашего гардероба. Выполненное из лёгкого и дышащего материала, оно обеспечивает комфорт на протяжении всего дня. Стильные детали делают его подходящим как для прогулок, так и для вечерних выходов. Доступно в различных размерах, чтобы вы могли найти идеальный вариант для любого случая.",
       "rating": "9",
@@ -333,14 +439,21 @@
       "category": "Платья и сарафаны",
       "name": "Платье",
       "article": "48330289833026",
-      "color": ["розовый"],
-      "size": ["xs", "m", "l", "xl"],
+      "color": [
+        "розовый"
+      ],
+      "size": [
+        "xs",
+        "m",
+        "l",
+        "xl"
+      ],
       "price": 8000,
       "picture": [
-        "./src/assets/images/cardImages/dress-6-1.webp",
-        "./src/assets/images/cardImages/dress-6-2.webp",
-        "./src/assets/images/cardImages/dress-6-3.webp",
-        "./src/assets/images/cardImages/dress-6-4.webp"
+        "dress-6-1.webp",
+        "dress-6-2.webp",
+        "dress-6-3.webp",
+        "dress-6-4.webp"
       ],
       "description": "Это элегантное платье станет отличным дополнением вашего гардероба. Выполненное из лёгкого и дышащего материала, оно обеспечивает комфорт на протяжении всего дня. Стильные детали делают его подходящим как для прогулок, так и для вечерних выходов. Доступно в различных размерах, чтобы вы могли найти идеальный вариант для любого случая.",
       "rating": "8",
@@ -352,14 +465,22 @@
       "category": "Платья и сарафаны",
       "name": "Сарафан",
       "article": "48330289833027",
-      "color": ["голубой"],
-      "size": ["xs", "s", "m", "l", "xl"],
+      "color": [
+        "голубой"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
       "price": 8000,
       "picture": [
-        "./src/assets/images/cardImages/dress-7-1.webp",
-        "./src/assets/images/cardImages/dress-7-2.webp",
-        "./src/assets/images/cardImages/dress-7-3.webp",
-        "./src/assets/images/cardImages/dress-7-4.webp"
+        "dress-7-1.webp",
+        "dress-7-2.webp",
+        "dress-7-3.webp",
+        "dress-7-4.webp"
       ],
       "description": "Этот сарафан идеально сочетает в себе удобство и стиль. Изготовленный из мягкого и приятного на ощупь материала, он идеально подходит для тёплых дней. Лёгкий и воздушный фасон позволяет свободно двигаться и чувствовать себя комфортно. Доступен в разных размерах, что позволяет подобрать идеальный сарафан для любого летнего образа.",
       "rating": "7.5",
@@ -371,14 +492,20 @@
       "category": "Платья и сарафаны",
       "name": "Платье",
       "article": "48330289833028",
-      "color": ["голубой"],
-      "size": ["xs", "m", "l"],
+      "color": [
+        "голубой"
+      ],
+      "size": [
+        "xs",
+        "m",
+        "l"
+      ],
       "price": 7000,
       "picture": [
-        "./src/assets/images/cardImages/dress-8-1.webp",
-        "./src/assets/images/cardImages/dress-8-2.webp",
-        "./src/assets/images/cardImages/dress-8-3.webp",
-        "./src/assets/images/cardImages/dress-8-4.webp"
+        "dress-8-1.webp",
+        "dress-8-2.webp",
+        "dress-8-3.webp",
+        "dress-8-4.webp"
       ],
       "description": "Это элегантное платье станет отличным дополнением вашего гардероба. Выполненное из лёгкого и дышащего материала, оно обеспечивает комфорт на протяжении всего дня. Стильные детали делают его подходящим как для прогулок, так и для вечерних выходов. Доступно в различных размерах, чтобы вы могли найти идеальный вариант для любого случая.",
       "rating": "6.5",
@@ -390,14 +517,21 @@
       "category": "Платья и сарафаны",
       "name": "Платье",
       "article": "48330289833029",
-      "color": ["желтый"],
-      "size": ["xs", "s", "m", "xl"],
+      "color": [
+        "желтый"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "xl"
+      ],
       "price": 7000,
       "picture": [
-        "./src/assets/images/cardImages/dress-9-1.webp",
-        "./src/assets/images/cardImages/dress-9-2.webp",
-        "./src/assets/images/cardImages/dress-9-3.webp",
-        "./src/assets/images/cardImages/dress-9-4.webp"
+        "dress-9-1.webp",
+        "dress-9-2.webp",
+        "dress-9-3.webp",
+        "dress-9-4.webp"
       ],
       "description": "Это элегантное платье станет отличным дополнением вашего гардероба. Выполненное из лёгкого и дышащего материала, оно обеспечивает комфорт на протяжении всего дня. Стильные детали делают его подходящим как для прогулок, так и для вечерних выходов. Доступно в различных размерах, чтобы вы могли найти идеальный вариант для любого случая.",
       "rating": "8",
@@ -409,14 +543,21 @@
       "category": "Платья и сарафаны",
       "name": "Платье",
       "article": "48330289833020",
-      "color": ["белый"],
-      "size": ["xs", "s", "l", "xl"],
+      "color": [
+        "белый"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "l",
+        "xl"
+      ],
       "price": 10000,
       "picture": [
-        "./src/assets/images/cardImages/dress-10-1.webp",
-        "./src/assets/images/cardImages/dress-10-2.webp",
-        "./src/assets/images/cardImages/dress-10-3.webp",
-        "./src/assets/images/cardImages/dress-10-4.webp"
+        "dress-10-1.webp",
+        "dress-10-2.webp",
+        "dress-10-3.webp",
+        "dress-10-4.webp"
       ],
       "description": "Это элегантное платье станет отличным дополнением вашего гардероба. Выполненное из лёгкого и дышащего материала, оно обеспечивает комфорт на протяжении всего дня. Стильные детали делают его подходящим как для прогулок, так и для вечерних выходов. Доступно в различных размерах, чтобы вы могли найти идеальный вариант для любого случая.",
       "rating": "9",
@@ -428,14 +569,20 @@
       "category": "Платья и сарафаны",
       "name": "Сарафан",
       "article": "48330289830021",
-      "color": ["белый"],
-      "size": ["m", "l", "xl"],
+      "color": [
+        "белый"
+      ],
+      "size": [
+        "m",
+        "l",
+        "xl"
+      ],
       "price": 10000,
       "picture": [
-        "./src/assets/images/cardImages/dress-11-1.webp",
-        "./src/assets/images/cardImages/dress-11-2.webp",
-        "./src/assets/images/cardImages/dress-11-3.webp",
-        "./src/assets/images/cardImages/dress-11-4.webp"
+        "dress-11-1.webp",
+        "dress-11-2.webp",
+        "dress-11-3.webp",
+        "dress-11-4.webp"
       ],
       "description": "Этот сарафан идеально сочетает в себе удобство и стиль. Изготовленный из мягкого и приятного на ощупь материала, он идеально подходит для тёплых дней. Лёгкий и воздушный фасон позволяет свободно двигаться и чувствовать себя комфортно. Доступен в разных размерах, что позволяет подобрать идеальный сарафан для любого летнего образа.",
       "rating": "9.5",
@@ -447,14 +594,21 @@
       "category": "Блузки и рубашки",
       "name": "Рубашка",
       "article": "58330289830021",
-      "color": ["черный"],
-      "size": ["xs", "s", "m", "xl"],
+      "color": [
+        "черный"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "xl"
+      ],
       "price": 6000,
       "picture": [
-        "./src/assets/images/cardImages/shirts-1-1.webp",
-        "./src/assets/images/cardImages/shirts-1-2.webp",
-        "./src/assets/images/cardImages/shirts-1-3.webp",
-        "./src/assets/images/cardImages/shirts-1-4.webp"
+        "shirts-1-1.webp",
+        "shirts-1-2.webp",
+        "shirts-1-3.webp",
+        "shirts-1-4.webp"
       ],
       "description": "Эта фланелевая рубашка – идеальный выбор для холодных дней. Изготовленная из мягкого и тёплого фланелевого материала, она обеспечивает непревзойдённый комфорт и уют. Классический дизайн с карманами и пуговицами делает её универсальным предметом одежды, который легко сочетать с джинсами или брюками.",
       "rating": "7",
@@ -466,14 +620,21 @@
       "category": "Блузки и рубашки",
       "name": "Рубашка",
       "article": "58330289830022",
-      "color": ["серый"],
-      "size": ["xs", "m", "l", "xl"],
+      "color": [
+        "серый"
+      ],
+      "size": [
+        "xs",
+        "m",
+        "l",
+        "xl"
+      ],
       "price": 6500,
       "picture": [
-        "./src/assets/images/cardImages/shirts-2-1.webp",
-        "./src/assets/images/cardImages/shirts-2-2.webp",
-        "./src/assets/images/cardImages/shirts-2-3.webp",
-        "./src/assets/images/cardImages/shirts-2-4.webp"
+        "shirts-2-1.webp",
+        "shirts-2-2.webp",
+        "shirts-2-3.webp",
+        "shirts-2-4.webp"
       ],
       "description": "Эта фланелевая рубашка – идеальный выбор для холодных дней. Изготовленная из мягкого и тёплого фланелевого материала, она обеспечивает непревзойдённый комфорт и уют. Классический дизайн с карманами и пуговицами делает её универсальным предметом одежды, который легко сочетать с джинсами или брюками.",
       "rating": "8",
@@ -485,14 +646,20 @@
       "category": "Блузки и рубашки",
       "name": "Рубашка",
       "article": "58330289830023",
-      "color": ["розовый"],
-      "size": ["s", "m", "l"],
+      "color": [
+        "розовый"
+      ],
+      "size": [
+        "s",
+        "m",
+        "l"
+      ],
       "price": 6500,
       "picture": [
-        "./src/assets/images/cardImages/shirts-3-1.webp",
-        "./src/assets/images/cardImages/shirts-3-2.webp",
-        "./src/assets/images/cardImages/shirts-3-3.webp",
-        "./src/assets/images/cardImages/shirts-3-4.webp"
+        "shirts-3-1.webp",
+        "shirts-3-2.webp",
+        "shirts-3-3.webp",
+        "shirts-3-4.webp"
       ],
       "description": "Эта фланелевая рубашка – идеальный выбор для холодных дней. Изготовленная из мягкого и тёплого фланелевого материала, она обеспечивает непревзойдённый комфорт и уют. Классический дизайн с карманами и пуговицами делает её универсальным предметом одежды, который легко сочетать с джинсами или брюками.",
       "rating": "8",
@@ -504,14 +671,21 @@
       "category": "Блузки и рубашки",
       "name": "Рубашка",
       "article": "58330289830024",
-      "color": ["коричневый"],
-      "size": ["xs", "s", "m", "xl"],
+      "color": [
+        "коричневый"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "xl"
+      ],
       "price": 6500,
       "picture": [
-        "./src/assets/images/cardImages/shirts-4-1.webp",
-        "./src/assets/images/cardImages/shirts-4-2.webp",
-        "./src/assets/images/cardImages/shirts-4-3.webp",
-        "./src/assets/images/cardImages/shirts-4-4.webp"
+        "shirts-4-1.webp",
+        "shirts-4-2.webp",
+        "shirts-4-3.webp",
+        "shirts-4-4.webp"
       ],
       "description": "Эта фланелевая рубашка – идеальный выбор для холодных дней. Изготовленная из мягкого и тёплого фланелевого материала, она обеспечивает непревзойдённый комфорт и уют. Классический дизайн с карманами и пуговицами делает её универсальным предметом одежды, который легко сочетать с джинсами или брюками.",
       "rating": "8",
@@ -523,14 +697,21 @@
       "category": "Блузки и рубашки",
       "name": "Рубашка",
       "article": "58330289830025",
-      "color": ["серый"],
-      "size": ["xs", "s", "l", "xl"],
+      "color": [
+        "серый"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "l",
+        "xl"
+      ],
       "price": 6500,
       "picture": [
-        "./src/assets/images/cardImages/shirts-5-1.webp",
-        "./src/assets/images/cardImages/shirts-5-2.webp",
-        "./src/assets/images/cardImages/shirts-5-3.webp",
-        "./src/assets/images/cardImages/shirts-5-4.webp"
+        "shirts-5-1.webp",
+        "shirts-5-2.webp",
+        "shirts-5-3.webp",
+        "shirts-5-4.webp"
       ],
       "description": "Эта фланелевая рубашка – идеальный выбор для холодных дней. Изготовленная из мягкого и тёплого фланелевого материала, она обеспечивает непревзойдённый комфорт и уют. Классический дизайн с карманами и пуговицами делает её универсальным предметом одежды, который легко сочетать с джинсами или брюками.",
       "rating": "8",
@@ -542,14 +723,22 @@
       "category": "Блузки и рубашки",
       "name": "Рубашка",
       "article": "58330289830026",
-      "color": ["серый"],
-      "size": ["xs", "s", "m", "l", "xl"],
+      "color": [
+        "серый"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
       "price": 6500,
       "picture": [
-        "./src/assets/images/cardImages/shirts-6-1.webp",
-        "./src/assets/images/cardImages/shirts-6-2.webp",
-        "./src/assets/images/cardImages/shirts-6-3.webp",
-        "./src/assets/images/cardImages/shirts-6-4.webp"
+        "shirts-6-1.webp",
+        "shirts-6-2.webp",
+        "shirts-6-3.webp",
+        "shirts-6-4.webp"
       ],
       "description": "Эта фланелевая рубашка – идеальный выбор для холодных дней. Изготовленная из мягкого и тёплого фланелевого материала, она обеспечивает непревзойдённый комфорт и уют. Классический дизайн с карманами и пуговицами делает её универсальным предметом одежды, который легко сочетать с джинсами или брюками.",
       "rating": "7",
@@ -561,14 +750,20 @@
       "category": "Блузки и рубашки",
       "name": "Рубашка",
       "article": "58330289830027",
-      "color": ["розовый"],
-      "size": ["s", "m", "l"],
+      "color": [
+        "розовый"
+      ],
+      "size": [
+        "s",
+        "m",
+        "l"
+      ],
       "price": 6500,
       "picture": [
-        "./src/assets/images/cardImages/shirts-7-1.webp",
-        "./src/assets/images/cardImages/shirts-7-2.webp",
-        "./src/assets/images/cardImages/shirts-7-3.webp",
-        "./src/assets/images/cardImages/shirts-7-4.webp"
+        "shirts-7-1.webp",
+        "shirts-7-2.webp",
+        "shirts-7-3.webp",
+        "shirts-7-4.webp"
       ],
       "description": "Эта фланелевая рубашка – идеальный выбор для холодных дней. Изготовленная из мягкого и тёплого фланелевого материала, она обеспечивает непревзойдённый комфорт и уют. Классический дизайн с карманами и пуговицами делает её универсальным предметом одежды, который легко сочетать с джинсами или брюками.",
       "rating": "9",
@@ -580,14 +775,22 @@
       "category": "Блузки и рубашки",
       "name": "Рубашка",
       "article": "58330289830028",
-      "color": ["красный"],
-      "size": ["xs", "s", "m", "l", "xl"],
+      "color": [
+        "красный"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
       "price": 7000,
       "picture": [
-        "./src/assets/images/cardImages/shirts-8-1.webp",
-        "./src/assets/images/cardImages/shirts-8-2.webp",
-        "./src/assets/images/cardImages/shirts-8-3.webp",
-        "./src/assets/images/cardImages/shirts-8-4.webp"
+        "shirts-8-1.webp",
+        "shirts-8-2.webp",
+        "shirts-8-3.webp",
+        "shirts-8-4.webp"
       ],
       "description": "Эта фланелевая рубашка – идеальный выбор для холодных дней. Изготовленная из мягкого и тёплого фланелевого материала, она обеспечивает непревзойдённый комфорт и уют. Классический дизайн с карманами и пуговицами делает её универсальным предметом одежды, который легко сочетать с джинсами или брюками.",
       "rating": "8",
@@ -599,14 +802,19 @@
       "category": "Блузки и рубашки",
       "name": "Рубашка",
       "article": "58330289830029",
-      "color": ["фиолетовый"],
-      "size": ["s", "m"],
+      "color": [
+        "фиолетовый"
+      ],
+      "size": [
+        "s",
+        "m"
+      ],
       "price": 7000,
       "picture": [
-        "./src/assets/images/cardImages/shirts-9-1.webp",
-        "./src/assets/images/cardImages/shirts-9-2.webp",
-        "./src/assets/images/cardImages/shirts-9-3.webp",
-        "./src/assets/images/cardImages/shirts-9-4.webp"
+        "shirts-9-1.webp",
+        "shirts-9-2.webp",
+        "shirts-9-3.webp",
+        "shirts-9-4.webp"
       ],
       "description": "Эта вельветовая рубашка станет стильным акцентом вашего гардероба. Изготовленная из мягкого вельвета, она обладает приятной текстурой и обеспечивает комфорт в прохладную погоду. Легко комбинируется с различными аксессуарами и верхней одеждой, обеспечивая универсальность и стиль.",
       "rating": "9",
@@ -618,14 +826,21 @@
       "category": "Блузки и рубашки",
       "name": "Рубашка",
       "article": "58330289330021",
-      "color": ["красный"],
-      "size": ["xs", "s", "l", "xl"],
+      "color": [
+        "красный"
+      ],
+      "size": [
+        "xs",
+        "s",
+        "l",
+        "xl"
+      ],
       "price": 7000,
       "picture": [
-        "./src/assets/images/cardImages/shirts-10-1.webp",
-        "./src/assets/images/cardImages/shirts-10-2.webp",
-        "./src/assets/images/cardImages/shirts-10-3.webp",
-        "./src/assets/images/cardImages/shirts-10-4.webp"
+        "shirts-10-1.webp",
+        "shirts-10-2.webp",
+        "shirts-10-3.webp",
+        "shirts-10-4.webp"
       ],
       "description": "Эта вельветовая рубашка станет стильным акцентом вашего гардероба. Изготовленная из мягкого вельвета, она обладает приятной текстурой и обеспечивает комфорт в прохладную погоду. Легко комбинируется с различными аксессуарами и верхней одеждой, обеспечивая универсальность и стиль.",
       "rating": "6.5",

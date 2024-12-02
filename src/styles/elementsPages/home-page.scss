@@ -95,15 +95,10 @@
         padding-top: 60px;
         font-size: $homePagetextSize;
 
-        // @media (max-width: $tablet) {
-        //     font-size: $mainTitleSizeMobile;
-        // }
-
         @media (max-width: $mobile) {
             font-size: $textSizeOne;
             font-weight: 400;
             padding-top: 5vh;
-            // padding-bottom: 30vh;
         }
     }
 }
