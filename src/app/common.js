@@ -1,4 +1,40 @@
-import { burgerMenu, wordsDictionary } from "./vars";
+import {
+  burgerMenu,
+  wordsDictionary,
+  carouselInner,
+  containerCatalog,
+  productInfoContainer,
+} from "./vars";
+import { displayProducts, startCarousel } from "./home-page";
+import { loadProductCatalog } from "./catalog-page";
+import { renderProductInfo } from "./product-info";
+import { CartProducts, getProductsCatalog } from "./database";
+
+export async function loadProducts() {
+  try {
+    const response = await fetch("/db.json");
+    if (!response.ok) {
+      throw new Error("Сеть не отвечает");
+    }
+    const data = await response.json();
+    if (data["products-catalog"].length > 0) {
+      if (carouselInner) {
+        displayProducts(data["products-catalog"]);
+        startCarousel();
+      }
+
+      if (containerCatalog) {
+        loadProductCatalog(data["products-catalog"]);
+      }
+
+      if (productInfoContainer) {
+        renderProductInfo(data["products-catalog"]);
+      }
+    }
+  } catch (error) {
+    console.error("Ошибка загрузки данных:", error);
+  }
+}
 
 export function handlBurgerMenu() {
   burgerMenu.classList.toggle("burger-menu-display");
@@ -31,7 +67,7 @@ export function renderProducts(products, container) {
       const productSaleHTML = `
       <div class="card-item" id='${product.id}'>
         <div class="card-item__image">
-            <img src='.${product.picture[0]}' alt='${product.name}'/>
+            <img src='../src/assets/images/cardImages/${product.picture[0]}' alt='${product.name}'/>
             <div class="card-item__size-list size-list-display"></div>
         </div>
         <div class="card-item__price">
@@ -63,7 +99,7 @@ export function renderProducts(products, container) {
       const productHTML = `
       <div class="card-item" id='${product.id}'>
   <div class="card-item__image">
-    <img src='.${product.picture[0]}' alt='${product.name}'/>
+    <img src='../src/assets/images/cardImages/${product.picture[0]}' alt='${product.name}'/>
     <div class="card-item__size-list size-list-display"></div>
   </div>
   <div class="card-item__price">${product.price} ₽</div>
@@ -101,7 +137,7 @@ export function handlCardItemShopBtn(event) {
     sizeList.classList.remove("size-list-display");
     setInputCheckedFalse(sizeList);
     setSizeListActiveTimer(sizeList);
-    sizeList.addEventListener("click", addCardItemInBasket);
+    sizeList.addEventListener("click", hadleCardItemBasketBtn);
   }
 }
 
@@ -110,9 +146,56 @@ function setInputCheckedFalse(element) {
   findInputs.forEach((btn) => (btn.checked = false));
 }
 
-function addCardItemInBasket(event, id) {
+function hadleCardItemBasketBtn(event) {
   if (event.target.className === "size-list__input") {
-    console.log(event.target.value);
+    const checkedSize = event.target.value.toUpperCase();
+    const id = getCardItemId(event);
+    addProductInBasket(checkedSize, id);
+  }
+}
+
+export function addProductInBasket(checkedSize, id) {
+  if (checkedSize) {
+    CartProducts.getCartProducts().then((data) => {
+      const validateProduct = data.find(
+        (item) => item.id === id && item.size === checkedSize
+      );
+      if (validateProduct) {
+        const newProduct = {
+          ...validateProduct,
+          quantity: validateProduct.quantity + 1,
+        };
+        fetch(`http://localhost:3001/cart/${validateProduct.id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newProduct),
+        });
+      } else {
+        getProductsCatalog().then((catalog) => {
+          const product = catalog.find((item) => item.id === id);
+          const price = getFinalPrice(product);
+          const newProduct = {
+            id: id,
+            name: product.name,
+            article: product.article,
+            color: product.color[0],
+            size: checkedSize,
+            price: price,
+            picture: product.picture[0],
+            quantity: 1,
+          };
+          fetch(`http://localhost:3001/cart`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newProduct),
+          });
+        });
+      }
+    });
   }
 }
 
@@ -194,36 +277,3 @@ export function getRuSize(size) {
       return null;
   }
 }
-
-// Добавляем обработчик событий для кнопок "Добавить в корзину"
-// const addToCartButtons = document.querySelectorAll('.buyNow__carousel-basket');
-// addToCartButtons.forEach(button => {
-//     button.addEventListener('click', (event) => {
-//         const card = event.target.closest('.buyNow__carousel-card');
-//         const productId = card.dataset.id;
-//         const productName = card.dataset.name;
-//         const productPrice = card.dataset.price;
-
-//         addToCart({ id: productId, name: productName, price: productPrice });
-//     });
-// });
-
-// function addToCart(product) {
-//   let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-//   // Проверяем, есть ли товар уже в корзине
-//   const existingProductIndex = cart.findIndex(item => item.id === product.id);
-
-//   if (existingProductIndex > -1) {
-//       // Если товар уже есть, увеличиваем количество
-//       cart[existingProductIndex].quantity += 1;
-//   } else {
-//       // Если товара нет, добавляем его в корзину с количеством 1
-//       cart.push({ ...product, quantity: 1 });
-//   }
-
-//   // Сохраняем обновлённую корзину в localStorage
-//   localStorage.setItem('cart', JSON.stringify(cart));
-
-//   console.log(`${product.name} добавлен в корзину!`);
-// }

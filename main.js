@@ -1,4 +1,4 @@
-import { loadProducts } from "./src/app/database";
+import { loadProducts } from "./src/app/common";
 import {
   handlBurgerMenu,
   goToProductInfoPage,
